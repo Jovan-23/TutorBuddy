@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TutorBuddy</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <!-- Adding Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="Anonymous">
+  
+  <!-- Adding CSS Stylsheet-->
+  <link rel="stylesheet" type="text/css" href="../css/findTutor.css">
+
+  <!-- Adding JavaScript-->
+  <script defer src="../js/findTutor.js"></script>
+
+  <!-- Adding JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class = "navContainer">
+      <nav>
+        <h2 class = "logo"><a href="../index.html">TutorBuddy</a></h2>
+          <ul>
+            <li class = "findTutor"><a href="#"><b>Find Tutor</b></a></li>
+            <li class = "becomeTutor"><a href="../html/becomeTutor.html">Become Tutor</a></li>
+    
+          </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id = "container">
+    <h3 class = "title">Find Tutor</h3>
+      <forms>      
+        <!-- Select School-->
+        <div>
+          <input id="school" type="text" placeholder="Select School"><br>
+          <span id = "schoolError"></span>
+          <br><br>
+        </div>
+    
+        <!-- Select Class -->
+        <div>
+          <input id="class" type="text" placeholder="Select Class"><br>
+          <span id = "classError"></span>
+          <br><br>
+        </div>
+
+    
+        <button id="findButton" type="submit">Find Tutor</button>
+      </form> <!-- End of form-->
+  </div> <!-- End of id container -->
+
+  <div id="container2">
+    <div id="container3">
+      <h1>Available Tutors</h1>
+
+      <button id="top">Find another class</button>
+    </div> <!-- End of id container3-->
+  </div> <!-- End of id container2-->
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: greenyellow;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(53, 40, 40);
+}
+
+header {
+    width: 100%;
+    height: 100%;
+}
+
+.navContainer {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 0 .1em;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.findTutor {
+    padding-left: 4rem;
+}
+
+#container {
+    padding-top: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#container2 {
+    margin-top: 1000px;
+}
+
+#container3 {
+    background-color: aquamarine;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 800px;
+    margin: 0 auto;
+}
+
+#container3 h1 {
+    text-align: center;
+}
