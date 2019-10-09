@@ -1,0 +1,30 @@
+{
+  "name": "TutorBuddy",
+  "version": "1.0.0",
+  "description": "Tutorbuddy",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivan1120/TutorBuddy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivan1120/TutorBuddy/issues"
+  },
+  "homepage": "https://github.com/Ivan1120/TutorBuddy#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mongodb": "^3.3.2"
+  }
+}
