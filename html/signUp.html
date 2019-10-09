@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TutorBuddy</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <!-- Adding Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="Anonymous">
+  
+  <!-- Adding CSS Stylsheet-->
+  <link rel="stylesheet" type="text/css" href="../css/signUp.css">
+
+  <!-- Adding JavaScript-->
+  <script defer src="../js/signUp.js"></script>
+</head>
+<!--
+
+CHECK OUT MATERIALIZE CSS FOR FORM LAYOUT RATHER THAN BOOTSRAP
+
+-->
+<body>
+  <div id = "container">
+    <h1 class = "title">Sign Up</h1>
+
+    <form onsubmit="return validation()" id="form" method="GET" action="../html/userProfile.html">
+        
+      <!-- First Name Input-->
+      <div>
+        <input id="firstName" type="text" placeholder="First Name"><br>
+        <span id = "firstNameError"></span>
+        <br><br>
+      </div>
+
+      <!-- Last Name Input-->
+      <div>
+        <input id="lastName" type="text" placeholder="Last Name"><br>
+        <span id = "lastNameError"></span>
+        <br><br>
+      </div>
+
+      <!-- Last Name Input-->
+      <div>
+        <input id="email" type="email" placeholder="Email"><br>
+        <span id = "emailError"></span>
+         <br><br>
+      </div>
+
+      <!-- Password Input-->
+      <div>
+        <input id="password" type="password" placeholder="Password"><br>
+        <span id = "passwordError"></span>
+        <br><br>
+      </div>
+
+      <!-- Confirm Password Input-->
+      <div>
+        <input id="confirmPassword" type="password" placeholder="Confirm Password"><br>
+        <span id = "confirmPasswordError"></span>
+        <br><br>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div> <!-- End of id container -->
+</body>
+
+</html>
