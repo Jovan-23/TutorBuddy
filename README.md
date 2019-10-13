@@ -1,2 +1,0 @@
-# TutorBuddy
-Tutorbuddy
