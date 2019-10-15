@@ -1,3 +1,7 @@
+//Connecting to MongoDB
+const MongoClient = require('mongodb').MongoClient;
+var url = "mongodb+srv://admin:admin@tutorbuddy-csxjn.azure.mongodb.net/test?retryWrites=true&w=majority";
+
 // Creating a fucntion that vaidates the information for signing up
  
 // Grabbing first name, error values and placeholder value
@@ -35,6 +39,14 @@ function validation() {
     }
 
     if (isEmpty(lastName, lastNameText, lastNameError)) {
+        return false;
+    }
+    
+    if (isEmpty(email, emailText, emailError)) {
+        return false;
+    }
+    
+    if (isEmpty(password, passwordText, passwordError)) {
         return false;
     }
 
@@ -84,3 +96,18 @@ function confirmPasswordValidation(pass, confirmPass, errorMessage) {
         return true;
     }
 }
+
+var jsonArray = [firstName,
+                 lastName,
+                 email,
+                 confirmPassword];
+
+MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("TutorBuddy");
+    dbo.collection("User").insertOne(jsonArray, function(err, res) {
+        if (err) throw err;
+        console.log("Insert user info into db");
+        db.close();
+    });
+});
