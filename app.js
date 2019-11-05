@@ -46,7 +46,9 @@ app.get('/signUp',(req, res) => {
 app.get('/useProfile',(req, res) => {
     res.render('userProfile');
 })
-
+app.get('/login',(req, res) => {
+    res.render('login');
+})
 
 
 app.listen(port, () => {
