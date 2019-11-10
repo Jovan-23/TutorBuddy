@@ -1,15 +1,31 @@
  
-       var password = document.getElementById("password")
-       , confirm_password = document.getElementById("confirmPassword");
-     
-     function validatePassword(){
-       if(password.value != confirm_password.value) {
-         confirm_password.setCustomValidity("Passwords Don't Match");
-       } else {
-         confirm_password.setCustomValidity('');
-       }
-     }
-     
-     password.onchange = validatePassword;
-     confirm_password.onkeyup = validatePassword;
+
+
+$(document).ready(() => {
+ 
+  $("#submitUP").click(() => {
+      console.log("123");
+      /** Server request that saves user info to database */
+      $.ajax({
+        type: "post",
+        url: "/csignup",
+        dataType: "json",
+        data: {
+          username:$("#firstName").val()+" "+$("#lastName").val(),
+          email:  $("#email").val(),
+          password: $("#password").val()
+        },
+        success: function (data) {
+          console.log(data);
+        
+          if (data.signup == "ok") {
+              window.location.href = "/home";
+          } 
+      }
+       
+      });
+    });
+ 
+})
+   
      
