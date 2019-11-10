@@ -1,0 +1,35 @@
+/* css for the whole form div */
+  #form {
+    text-align: left;
+    margin: 0 2% 0 2%;
+    border-radius: 5px;
+    height: 40px;
+    padding: 1%;
+  }
+
+/* css for drop down schools */
+  #school {
+    margin-left: 50px;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px
+   }
+   
+/* css for drop down subjects and courses */
+  #subject, #course {
+    margin-left: 50px;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    visibility: hidden;
+  }
+
+/** center value in drop down */
+  select { 
+    width: 400px; text-align-last:center; 
+  }
