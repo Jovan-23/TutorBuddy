@@ -2,12 +2,21 @@ const express = require('express');
 const app = express();
 const session = require("express-session");
 const bodyparser = require('body-parser');
-const login = require('./routes/login.js');
-const register = require('./routes/register.js');
+const router = require('./routes/router.js');
+const mongoose = require("mongoose");
 
 const path = require('path');
 const port = process.env.PORT || 3000
-const DB=require('./modules/db.js');  
+
+  
+
+
+mongoose
+  .connect(
+    "mongodb+srv://admin:admin@tutorbuddy-csxjn.azure.mongodb.net/TutorBuddy?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("Connected to mongo...\n"))
+  .catch(err => console.log("Failed connection to mongo ", err));
 
 app.use(session({
     secret: 'keyboard cat',
@@ -22,30 +31,9 @@ app.use(session({
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.set('view engine', 'ejs');
-
+app.use(router);
 app.use(express.static('public'));
 
-app.get('/',(req, res) => {
-    // var data={"fName":"Kag"};
-    // DB.find('User',data,(err,data)=>{
-    //     console.log(data);
-    // })
-    res.render('index');
-})
-
-app.get('/findTutor',(req, res) => {
-    res.render('findTutor');
-})
-
-app.get('/becomeTutor',(req, res) => {
-    res.render('becomeTutor');
-})
-app.get('/signUp',(req, res) => {
-    res.render('signUp');
-})
-app.get('/useProfile',(req, res) => {
-    res.render('userProfile');
-})
 
 
 

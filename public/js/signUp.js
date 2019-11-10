@@ -1,19 +1,15 @@
+<<<<<<< HEAD
 //Connecting to MongoDB
 const MongoClient = require('mongodb').MongoClient;
 var url = "mongodb+srv://admin:admin@tutorbuddy-csxjn.azure.mongodb.net/test?retryWrites=true&w=majority";
 
 // Creating a fucntion that vaidates the information for signing up
+=======
+>>>>>>> 6d7df1f76efcd01c0dd996ae530b99eedb3b811b
  
-// Grabbing first name, error values and placeholder value
-var firstName = document.getElementById('firstName');
-var firstNameText = document.getElementById('firstName').getAttribute('placeholder');
-var firstNameError = document.getElementById('firstNameError');
 
-// Grabbing last name, its error value and placeholder value
-var lastName = document.getElementById('lastName');
-var lastNameText = document.getElementById('lastName').getAttribute('placeholder');
-var lastNameError = document.getElementById('lastNameError');
 
+<<<<<<< HEAD
 // Grabbing email, its error value and placeholder value
 var email = document.getElementById('email');
 var emailText = document.getElementById('email').getAttribute('placeholder');
@@ -111,3 +107,33 @@ MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
         db.close();
     });
 });
+=======
+$(document).ready(() => {
+ 
+  $("#submitUP").click(() => {
+      console.log("123");
+      /** Server request that saves user info to database */
+      $.ajax({
+        type: "post",
+        url: "/csignup",
+        dataType: "json",
+        data: {
+          username:$("#firstName").val()+" "+$("#lastName").val(),
+          email:  $("#email").val(),
+          password: $("#password").val()
+        },
+        success: function (data) {
+          console.log(data);
+        
+          if (data.signup == "ok") {
+              window.location.href = "/home";
+          } 
+      }
+       
+      });
+    });
+ 
+})
+   
+     
+>>>>>>> 6d7df1f76efcd01c0dd996ae530b99eedb3b811b
