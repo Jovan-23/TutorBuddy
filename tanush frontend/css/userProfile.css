@@ -21,9 +21,9 @@ a {
 }
 
 
-#logout{
+#logout,#post,#profile{
     background-color: white;
-    padding: 1px 20px;
+     padding: 1px 55px;
     margin: 8px 0;
 	border: none;
 	cursor: pointer;
@@ -195,5 +195,11 @@ nav a#openup {
 @media screen and (max-height: 580px) {
 	#showcase p.lead {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#logout,#post,#profile {
+		padding: 1px 20px;
 	}
 }

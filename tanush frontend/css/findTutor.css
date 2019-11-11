@@ -255,6 +255,24 @@ button:hover {
 #logout{
     background-color: white;
      text-align: left;
+    padding: 1px 55px;
+    
+	
+}
+
+#post{
+    background-color: white;
+     text-align: left;
+    padding: 1px 55px;
+    
+	
+}
+#profile{
+    background-color: white;
+     text-align: left;
+    padding: 1px 55px;
+    
+	
 }
 
 
@@ -315,5 +333,13 @@ h1 {
 @media screen and (max-width: 450px) {
 	.container {
 		margin-left: 0;
+	}
+}
+
+
+
+@media screen and (max-width: 450px) {
+	#logout,#post,#profile {
+		padding: 1px 20px;
 	}
 }
