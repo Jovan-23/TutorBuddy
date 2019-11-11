@@ -21,6 +21,20 @@ a {
 }
 
 
+#logout{
+    background-color: white;
+    padding: 1px 20px;
+    margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+    text-align: left;
+}
+
+
+
+
 /* Showcase */
 
 #showcase {

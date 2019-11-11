@@ -41,9 +41,10 @@
 
                         </li>
                         <li>
-                            <a href="#" class="ui item">
-                                <i class="bell outline icon" style="font-size:1.4em;" id="edit"></i>
-                            </a>
+                                            <a href='index.html' class="">
+          <button id="logout" style='font-size:17px'>Log out <i class='fas fa-sign-out-alt'></i></button>
+
+        </a>
 
                         </li>
                     </div>
@@ -57,9 +58,9 @@
     <!-- login form -->
 
     <div class="container">
-        <h1> <a href='index.html' style="color:black"><b>Tutor Buddy</b></a></h1>
+     <!--   <h1> <a href='index.html' style="color:black"><b>Tutor Buddy</b></a></h1>-->
         <h1><b>Find Tutor</b></h1>
-        <p>Please select School and Course.</p>
+        <p>Please select School, Subject & Course.</p>
         <hr>
         <form action="#">
 
@@ -79,6 +80,20 @@
                         <option value="UBC">University of British Columbia</option>
                     </select>
                 </div>
+            
+              <!-- subject dropdown -->
+              <label for="subject"><b>Subject</b></label>
+                <div id="subjectDropDown" onclick="selectSubject()">
+                    <select id="subject">
+                        <option value="default">Select Subject</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="English">English</option>
+                    </select>
+                </div>
+    
+            
+            
+            <!-- course dropdown -->
             <label for="course"><b>Course</b></label>
             <div id="courseDropDown" onclick="selectCourse()">
                     <select id="course">
