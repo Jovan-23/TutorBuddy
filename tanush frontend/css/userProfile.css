@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: deepskyblue;
+	background-color: #f3cf4c52;
 	margin: 0;
 	
 	line-height: 1.9;
@@ -22,7 +22,7 @@ a {
 
 
 #logout,#post,#profile{
-    background-color: white;
+    background-color: transparent;
      padding: 1px 55px;
     margin: 8px 0;
 	border: none;
@@ -38,7 +38,7 @@ a {
 /* Showcase */
 
 #showcase {
-	background-color: deepskyblue;
+/*	background-color: #f3cf4c52;*/
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;

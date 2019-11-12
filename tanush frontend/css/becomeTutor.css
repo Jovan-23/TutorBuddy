@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: deepskyblue;
+	background-color: #f3ca3352;
 	margin: 0;
 	/*color: #fff;*/
 	line-height: 1.9;
@@ -26,7 +26,7 @@ a {
 /* Showcase */
 
 #showcase {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
@@ -222,7 +222,9 @@ input[type=password] {
 
 
 
-
+::placeholder{
+    color: black;
+}
 
 
 
@@ -260,7 +262,7 @@ button:hover {
 }
 
 #logout{
-    background-color: white;
+    background-color: transparent;
      text-align: left;
     padding: 1px 55px;
     
@@ -268,7 +270,7 @@ button:hover {
 }
 
 #post{
-    background-color: white;
+    background-color: transparent;
      text-align: left;
     padding: 1px 55px;
     
@@ -277,7 +279,7 @@ button:hover {
 
 
 #profile{
-    background-color: white;
+    background-color: transparent;
      text-align: left;
     padding: 1px 55px;
     

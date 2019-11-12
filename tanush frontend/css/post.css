@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: deepskyblue;
+	background-color: #f3cf4c52;
 	margin: 0;
 	/*color: #fff;*/
 	line-height: 1.9;
@@ -26,7 +26,7 @@ a {
 /* Showcase */
 
 #showcase {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
@@ -171,7 +171,7 @@ nav a#openup {
 	zoom: 1;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1366px) {
 	.cards {
 		grid-template-columns: 1fr;
 	}
@@ -180,7 +180,7 @@ nav a#openup {
 	}
 }
 
-@media screen and (max-height: 580px) {
+@media screen and (max-height: 1366px) {
 	#showcase p.lead {
 		display: none;
 	}
@@ -260,7 +260,7 @@ button:hover {
 }
 
 #logout{
-    background-color: white;
+    background-color: transparent;
      text-align: left;
     padding: 1px 55px;
     
@@ -268,7 +268,7 @@ button:hover {
 }
 
 #post{
-    background-color: white;
+    background-color: transparent;
      text-align: left;
     padding: 1px 55px;
     
@@ -277,7 +277,7 @@ button:hover {
 
 
 #profile{
-    background-color: white;
+    background-color: transparent;
      text-align: left;
     padding: 1px 55px;
     
@@ -323,6 +323,10 @@ h1 {
 	/*  margin-bottom: 10%;*/
 }
 
+::placeholder{
+    color: black;
+}
+
 
 /* Clear floats */
 
@@ -335,7 +339,7 @@ h1 {
 
 /* Change styles for cancel button and signup button on extra small screens */
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 1366px) {
 	.cancelbtn,
 	.signupbtn {
 		width: 100%;

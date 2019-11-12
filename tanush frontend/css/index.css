@@ -12,14 +12,17 @@
 
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: #252529;
+	background-color: #f3ca3352;
 	margin: 0;
-	color: #fff;
+	color: black;
 	line-height: 1.9;
+}
+#mus2{
+    background-color: white;
 }
 
 #signup{
-    background-color: deepskyblue;
+    background-color: #f3ca3352;
 }
 
 .topnav-right {
@@ -71,7 +74,7 @@ section#entertainment {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	background-image: url('../img/image14.jpg');
+	/*background-image: url('../img/image8.jpg');*/
 	/* width: 100%;*/
 	height: 100vh;
 	position: relative;
@@ -120,7 +123,7 @@ footer .footer-cols ul li:first-child {
 }
 
 footer .footer-bottom {
-	background: #333;
+	background-color:white;
 	padding: 1rem;
 }
 
@@ -140,6 +143,7 @@ footer .footer-bottom {
 
 .text-center {
 	text-align: center;
+    font-weight: bold;
 }
 
 
@@ -179,7 +183,7 @@ footer .footer-bottom {
 }
 
 .text-light {
-	color: var(--light-color);
+	color: black;
 }
 
 .bg-light {
