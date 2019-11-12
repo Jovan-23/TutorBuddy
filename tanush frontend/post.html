@@ -3,18 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
    
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-
+   <!--   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css">-->
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
  
-    <link rel="stylesheet" href="css/becomeTutor.css">
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/post.css">
+    
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
  
 
@@ -33,7 +34,7 @@
                     </li>
                     <div class="topnav-right">
                         <li>
-                            <a href='becomeTutor.html' style='font-size:17px'><b>Become Tutor</b></a>
+                            <a href='becomeTutor.html' style='font-size:17px'>Become Tutor</a>
                         </li>
                         <li>
                             <a href='findTutor.html' style='font-size:17px'>Find Tutor</a>
@@ -41,8 +42,8 @@
                         
                         
                          <li>
-                            <a href='post.html' class="">
-          <button id="post" style='font-size:17px'>Post <i class='far fa-calendar-alt'></i></button>
+                            <a href='post.html' >
+                                <button id="post" style='font-size:17px'><b>Post</b> <i class='far fa-calendar-alt'></i></button>
 
         </a>
 
@@ -72,18 +73,18 @@
 
     </div>
 
-    <!-- Become tutor form -->
+    <!-- Post form -->
 
     <div class="container">
-       
-        <h1><b>Become Tutor</b></h1>
-        <p>Please select School, Subject, Education & GPA.</p>
+      
+        <h1><b>Post Tutor Session</b></h1>
+        <p>Please select School, Subject, Course, Location, Date & Time.</p>
         <hr>
         <form action="#">
 
            <!-- school dropdown -->
               <label for="school"><b>School</b></label>
-                <div id="schoolDropDown" onclick="selectSchool()">
+                <div id="schoolDropDown" onclick="selectSchool()" >
                     <select id="school" required>
                         <option value="">Select School</option>
                         <option value="UVic">University of Victoria</option>
@@ -115,45 +116,41 @@
             
             
             
-            <!-- education dropdown -->
-              <label for="education"><b>Education</b></label>
-                <div id="educationDropDown" onclick="selectEducation()">
-                    <select id="education" required>
-                        <option value="">None</option>
-                        <option value="HighSchool">High School</option>
-                        <option value="Diploma">Diploma</option>
-                        <option value="BachelorDegree">Bachelor Degree</option>
-                          <option value="MasterDegree">Master's Degree</option>
-                    </select>
-                </div>
-            
-            
-            
-            <!-- gpa Input-->
-            <div>
-                <label for="GPA"><b>GPA</b></label>
-                <input id="GPA" type="number" step=0.1 placeholder="Select GPA" name="GPA" autocomplete="off" min="1" max="4" required>
+            <!-- location dropdown -->
+              <label for="location"><b>Location</b></label>
+               
+                    <input id="location" type="text" placeholder="Type in Location" name="location" autocomplete="off" onclick="selectLocation()" required>
                 
-
-            </div>
+            
+            <!-- date dropdown -->
+              <label for="date"><b>Date and Time</b></label>
+            
+  <input type="datetime-local" name="dateTime" id="dateTime" required>
+  
             
             
-         
+            
+            
+            
+            
+            
 
            
 
             <div class="clearfix">
 
-                <button type="submit" name="submit" value="submit " class="signupbtn"><b>Apply</b></button>
+                <button type="submit" name="submit" value="submit " class="signupbtn"><b>Post</b></button>
             </div>
             <br>
             <div class="extra">
+                <p style="font-size: 10pt;">Want to become a Tutor? <a class="ui item" href='becomeTutor.html' style="color:dodgerblue"><b>Become Tutor</b></a></p>
+                
                 <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor.html' style="color:dodgerblue"><b>Find Tutor</b></a></p>
             </div>
         </form>
     </div>
 
- 
+   
     
   
 

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: #fff;
+	background-color: #f3cf4c52;
 	margin: 0;
-	color: #fff;
+	
 	line-height: 1.9;
 }
 
@@ -21,10 +21,24 @@ a {
 }
 
 
+#logout,#post,#profile{
+    background-color: transparent;
+     padding: 1px 55px;
+    margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+    text-align: left;
+}
+
+
+
+
 /* Showcase */
 
 #showcase {
-	background-color: #fff;
+/*	background-color: #f3cf4c52;*/
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
@@ -94,7 +108,7 @@ nav a#openup {
 	display: none;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width:1366px) {
 	.hide-on-small {
 		display: none;
 	}
@@ -181,5 +195,11 @@ nav a#openup {
 @media screen and (max-height: 580px) {
 	#showcase p.lead {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#logout,#post,#profile {
+		padding: 1px 20px;
 	}
 }
