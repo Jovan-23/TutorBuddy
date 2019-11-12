@@ -18,6 +18,10 @@ body {
 	line-height: 1.9;
 }
 
+#signup{
+    background-color: deepskyblue;
+}
+
 .topnav-right {
 	float: right;
 }
@@ -67,9 +71,9 @@ section#entertainment {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	background-image: url('../img/image2.jpg');
+	background-image: url('../img/image14.jpg');
 	/* width: 100%;*/
-	height: 110vh;
+	height: 100vh;
 	position: relative;
 	overflow-y: hidden;
 	background-size: 100% 100%;

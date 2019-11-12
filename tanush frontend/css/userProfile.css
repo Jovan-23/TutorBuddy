@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: #fff;
+	background-color: deepskyblue;
 	margin: 0;
-	color: #fff;
+	
 	line-height: 1.9;
 }
 
@@ -38,7 +38,7 @@ a {
 /* Showcase */
 
 #showcase {
-	background-color: #fff;
+	background-color: deepskyblue;
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
