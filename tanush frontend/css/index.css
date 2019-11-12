@@ -17,12 +17,13 @@ body {
 	color: black;
 	line-height: 1.9;
 }
-#mus2{
-    background-color: white;
+
+#mus2 {
+	background-color: white;
 }
 
-#signup{
-    background-color: #f3ca3352;
+#signup {
+	background-color: #f3ca3352;
 }
 
 .topnav-right {
@@ -123,7 +124,7 @@ footer .footer-cols ul li:first-child {
 }
 
 footer .footer-bottom {
-	background-color:white;
+	background-color: white;
 	padding: 1rem;
 }
 
@@ -143,7 +144,7 @@ footer .footer-bottom {
 
 .text-center {
 	text-align: center;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 

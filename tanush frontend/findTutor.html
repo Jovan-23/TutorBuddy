@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
- 
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/findTutor.css">
-    
-    
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
- 
 
     <title>Tutor Buddy</title>
 </head>
@@ -38,39 +35,27 @@
                         <li>
                             <a href='findTutor.html' style='font-size:17px'><b>Find Tutor</b></a>
                         </li>
-                        
-                        
-                                <li>
-                            <a href='post.html' class="">
-          <button id="post" style='font-size:17px'>Post <i class='far fa-calendar-alt'></i></button>
 
-        </a>
+                        <li>
+                            <a href='post.html' class="">
+                                <button id="post" style='font-size:17px'>Post <i class='far fa-calendar-alt'></i></button>
+
+                            </a>
 
                         </li>
-                        
-                        
-                        
-                        
-                        
-                        
-                       <li>
+
+                        <li>
                             <a href='userProfile.html' class="ui item">
                                 <button id="profile" style='font-size:17px'> Profile <i class='far fa-user' style="font-size:18px;" id="edit"></i></button>
                             </a>
 
                         </li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li>
-                                            <a href='index.html' class="">
-          <button id="logout" style='font-size:17px'>Log out <i class='fas fa-sign-out-alt'></i></button>
 
-        </a>
+                        <li>
+                            <a href='index.html' class="">
+                                <button id="logout" style='font-size:17px'>Log out <i class='fas fa-sign-out-alt'></i></button>
+
+                            </a>
 
                         </li>
                     </div>
@@ -84,45 +69,41 @@
     <!-- Find Tutor form -->
 
     <div class="container">
-    
+
         <h1><b>Find Tutor</b></h1>
         <p>Please select School, Subject & Course.</p>
         <hr>
         <form action="#">
 
-             <!-- school dropdown -->
+            <!-- school dropdown -->
             <label for="school"><b>School</b></label>
-                <div id="schoolDropDown" type  onclick="selectSchool()">
-                    <select id="school" required>
-                        <option value="">Select School</option>
-                        <option value="UVic">University of Victoria</option>
-                        <option value="UBC">University of British Columbia</option>
-                    </select>
-                </div>
-            
-              <!-- subject dropdown -->
-              <label for="subject"><b>Subject</b></label>
-                <div id="subjectDropDown" onclick="selectSubject()">
-                    <select id="subject" required>
-                        <option value="">Select Subject</option>
-                        <option value="Mathematics">Mathematics</option>
-                        <option value="English">English</option>
-                    </select>
-                </div>
-    
-            
-            
+            <div id="schoolDropDown" type onclick="selectSchool()">
+                <select id="school" required>
+                    <option value="">Select School</option>
+                    <option value="UVic">University of Victoria</option>
+                    <option value="UBC">University of British Columbia</option>
+                </select>
+            </div>
+
+            <!-- subject dropdown -->
+            <label for="subject"><b>Subject</b></label>
+            <div id="subjectDropDown" onclick="selectSubject()">
+                <select id="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="English">English</option>
+                </select>
+            </div>
+
             <!-- course dropdown -->
             <label for="course"><b>Course</b></label>
             <div id="courseDropDown" onclick="selectCourse()">
-                    <select id="course" required>
-                        <option value="">Select Course</option>
-                        <option value="MATH 101">MATH 101</option>
-                        <option value="abc">abc</option>
-                    </select>
-                </div>
-
-            
+                <select id="course" required>
+                    <option value="">Select Course</option>
+                    <option value="MATH 101">MATH 101</option>
+                    <option value="abc">abc</option>
+                </select>
+            </div>
 
             <div class="clearfix">
 
@@ -134,8 +115,6 @@
             </div>
         </form>
     </div>
-
-  
 
 </body>
 
