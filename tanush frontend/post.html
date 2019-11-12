@@ -81,9 +81,9 @@
 
            <!-- school dropdown -->
               <label for="school"><b>School</b></label>
-                <div id="schoolDropDown" onclick="selectSchool()">
-                    <select id="school">
-                        <option value="default">Select School</option>
+                <div id="schoolDropDown" onclick="selectSchool()" >
+                    <select id="school" required>
+                        <option value="">Select School</option>
                         <option value="UVic">University of Victoria</option>
                         <option value="UBC">University of British Columbia</option>
                     </select>
@@ -93,8 +93,8 @@
                 <!-- subject dropdown -->
               <label for="subject"><b>Subject</b></label>
                 <div id="subjectDropDown" onclick="selectSubject()">
-                    <select id="subject">
-                        <option value="default">Select Subject</option>
+                    <select id="subject" required>
+                        <option value="">Select Subject</option>
                         <option value="Mathematics">Mathematics</option>
                         <option value="English">English</option>
                     </select>
@@ -104,8 +104,8 @@
                 <!-- course dropdown -->
               <label for="course"><b>Course</b></label>
                 <div id="courseDropDown" onclick="selectCourse()">
-                    <select id="course">
-                        <option value="default">Select Course</option>
+                    <select id="course" required>
+                        <option value="">Select Course</option>
                         <option value="MATH 101">MATH 101</option>
                         <option value="abc">abc</option>
                     </select>
@@ -116,8 +116,8 @@
             <!-- location dropdown -->
               <label for="location"><b>Location</b></label>
                 <div id="locationDropDown" onclick="selectLocation()">
-                    <select id="location">
-                        <option value="default">Select Location</option>
+                    <select id="location" required>
+                        <option value="">Select Location</option>
                         <option value="Library">Library</option>
                         <option value="Eh Pod">Eh Pod</option>
                         <option value="Class Lab">Class Lab</option>
@@ -125,30 +125,18 @@
                     </select>
                 </div>
             
+            <!-- date dropdown -->
+              <label for="date"><b>Date and Time</b></label>
             
-            
-            <!-- gpa Input
-            <div>
-                <label for="GPA"><b>GPA</b></label>
-                <input id="GPA" type="number" step=0.1 placeholder="Select GPA" name="GPA" autocomplete="off" min="1" max="4" required>
-                
-
-            </div>-->
+  <input type="datetime-local" name="dateTime" id="dateTime" required>
+  
             
             
             
             
-           <!-- <div>
-                <label for="email"><b>Location</b></label>
-                <input id="email" type="text" placeholder="Select Location" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
-            </div>
-
-            <div>
-                <label for="email"><b>Schedule</b></label>
-                <input id="email" type="text" placeholder="Select Schedule" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
-            </div>-->
+            
+            
+            
 
            
 
@@ -158,6 +146,8 @@
             </div>
             <br>
             <div class="extra">
+                <p style="font-size: 10pt;">Want to become a Tutor? <a class="ui item" href='becomeTutor.html' style="color:dodgerblue"><b>Become Tutor</b></a></p>
+                
                 <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor.html' style="color:dodgerblue"><b>Find Tutor</b></a></p>
             </div>
         </form>

@@ -94,7 +94,7 @@ nav a#openup {
 	display: none;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 1366px) {
 	.hide-on-small {
 		display: none;
 	}
@@ -333,6 +333,7 @@ h1 {
 @media screen and (max-width: 450px) {
 	.container {
 		margin-left: 0;
+        margin: auto;
 	}
 }
 
@@ -343,3 +344,15 @@ h1 {
 		padding: 1px 20px;
 	}
 }
+
+
+
+@media screen and (min-device-width: 760px) and (max-device-width: 1025px) { 
+    /* STYLES HERE */
+    .container {
+		margin:auto;
+	}
+}
+
+
+

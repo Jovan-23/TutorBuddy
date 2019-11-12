@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
    
 
@@ -82,8 +82,8 @@
            <!-- school dropdown -->
               <label for="school"><b>School</b></label>
                 <div id="schoolDropDown" onclick="selectSchool()">
-                    <select id="school">
-                        <option value="default">Select School</option>
+                    <select id="school" required>
+                        <option value="">Select School</option>
                         <option value="UVic">University of Victoria</option>
                         <option value="UBC">University of British Columbia</option>
                     </select>
@@ -93,8 +93,8 @@
                 <!-- subject dropdown -->
               <label for="subject"><b>Subject</b></label>
                 <div id="subjectDropDown" onclick="selectSubject()">
-                    <select id="subject">
-                        <option value="default">Select Subject</option>
+                    <select id="subject" required>
+                        <option value="">Select Subject</option>
                         <option value="Mathematics">Mathematics</option>
                         <option value="English">English</option>
                     </select>
@@ -104,8 +104,8 @@
                 <!-- course dropdown -->
               <label for="course"><b>Course</b></label>
                 <div id="courseDropDown" onclick="selectCourse()">
-                    <select id="course">
-                        <option value="default">Select Course</option>
+                    <select id="course" required>
+                        <option value="">Select Course</option>
                         <option value="MATH 101">MATH 101</option>
                         <option value="abc">abc</option>
                     </select>
@@ -116,8 +116,8 @@
             <!-- education dropdown -->
               <label for="education"><b>Education</b></label>
                 <div id="educationDropDown" onclick="selectEducation()">
-                    <select id="education">
-                        <option value="default">None</option>
+                    <select id="education" required>
+                        <option value="">None</option>
                         <option value="HighSchool">High School</option>
                         <option value="Diploma">Diploma</option>
                         <option value="BachelorDegree">Bachelor Degree</option>
@@ -136,19 +136,7 @@
             </div>
             
             
-            
-            
-           <!-- <div>
-                <label for="email"><b>Location</b></label>
-                <input id="email" type="text" placeholder="Select Location" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
-            </div>
-
-            <div>
-                <label for="email"><b>Schedule</b></label>
-                <input id="email" type="text" placeholder="Select Schedule" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
-            </div>-->
+         
 
            
 
