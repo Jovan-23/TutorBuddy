@@ -17,7 +17,7 @@ $(document).ready(() => {
           success: function (data) {
             console.log(data);
             if (data.login == "ok") {
-                window.location.href = "/home";
+                window.location.href = "/becomeTutor";
             } 
         }
          
