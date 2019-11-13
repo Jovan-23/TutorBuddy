@@ -26,12 +26,11 @@ app.use(session({
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.set('view engine', 'ejs');
-app.use(router);
+app.use(router);  
 app.use(express.static('public'));
-
-
-
 
 app.listen(port, () => {
     console.log('run');
 });
+
+

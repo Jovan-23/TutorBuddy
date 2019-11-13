@@ -1,3 +1,7 @@
+
+var School = require('../../src/models/school');
+var Subject = require('../../src/models/subject');
+var Course = require('../../src/models/course');
 // school selection
 var schoolSelection;
 // subject selection
