@@ -21,8 +21,7 @@ exports.doRegister = (req, res) => {
 
                     req.session.userinfo = user;
                     req.app.locals['userinfo'] = user;
-                    console.log(data);
-                    console.log(122);
+                   
                     res.json({ "signup": "ok" })
 
 
@@ -51,8 +50,7 @@ exports.doLogin = (req, res) => {
         if (data.length > 0) {
             req.session.userinfo = data[0];
             req.app.locals['userinfo'] = data[0];
-            console.log(123);
-            console.log(req.session.userinfo);
+            
             res.json({ "login": "ok" })
 
 
@@ -83,7 +81,7 @@ exports.logout = (req, res) => {
         if (err) {
             throw err;
         } else {
-            res.render('/');
+            res.render('index');
         }
     })
 

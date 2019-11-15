@@ -1,18 +1,18 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const register = require('./register.js');
+const credentials = require('./credentials.js');
 
 
 
 router.get('/', (req, res) => {
     res.render('index');
 })
-router.post('/clogin', register.doLogin);
-router.post('/csignup', register.doRegister);
-router.get('/signUp', register.showRegister);
-router.get('/login', register.showLogin);
-router.get('/logout', register.logout);
+router.post('/clogin', credentials.doLogin);
+router.post('/csignup', credentials.doRegister);
+router.get('/signUp', credentials.showRegister);
+router.get('/login', credentials.showLogin);
+router.get('/logout', credentials.logout);
 
 
 
@@ -25,6 +25,22 @@ router.get('/findTutor', (req, res) => {
 
 })
 
+router.get('/findTutor', (req, res) => {
+    
+    res.render('findTutor');
+
+
+
+
+})
+router.get('/post', (req, res) => {
+    
+    res.render('post');
+
+
+
+
+})
 router.get('/becomeTutor', (req, res) => {
 
 
@@ -33,17 +49,14 @@ router.get('/becomeTutor', (req, res) => {
 
 })
 
-router.get('/useProfile', (req, res) => {
+router.get('/userProfile', (req, res) => {
 
     res.render('userProfile');
 
 
 })
 
-router.get("/home", (req, res) => {
 
-    res.render("home");
-});
 
 
 

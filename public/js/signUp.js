@@ -19,7 +19,7 @@ $(document).ready(() => {
           console.log(data);
         
           if (data.signup == "ok") {
-              window.location.href = "/home";
+              window.location.href = "/becomeTutor";
           } 
       }
        
