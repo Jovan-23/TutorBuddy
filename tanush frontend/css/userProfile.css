@@ -7,7 +7,7 @@ body {
 }
 
 .topnav-right {
-	float: right;
+	float: left;
 }
 
 img {
@@ -22,15 +22,34 @@ a {
 #logout,
 #post,
 #profile {
-	background-color: transparent;
-	padding: 1px 55px;
+	
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
 	width: 100%;
 	opacity: 0.9;
-	text-align: left;
+	
 }
+
+
+#logout {
+	background-color: transparent;
+	text-align: left;
+	padding: 1px 455px;
+}
+
+#post {
+	background-color: transparent;
+	text-align: left;
+	padding: 1px 700px;
+}
+
+#profile {
+	background-color: transparent;
+	text-align: left;
+	padding: 1px 580px;
+}
+
 
 
 /* Showcase */
@@ -88,7 +107,7 @@ nav li {
 }
 
 nav a {
-	letter-spacing: 5px;
+	letter-spacing: 2.0px;
 	display: inline-block;
 	width: 190px;
 	text-align: center;
@@ -196,7 +215,7 @@ nav a#openup {
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1366px) {
 	#logout,
 	#post,
 	#profile {
