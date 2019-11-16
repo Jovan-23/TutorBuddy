@@ -7,8 +7,12 @@ body {
 	line-height: 1.9;
 }
 
+.topnav-left {
+	float: left;
+}
+
 .topnav-right {
-	float: right;
+	float:right;
 }
 
 img {
@@ -36,9 +40,9 @@ a {
 	background-size: 100% 100%;
 }
 
-#showcase a:hover {
+/*#showcase a:hover {
 	background-color: gainsboro;
-}
+}*/
 
 #showcase .container {
 	margin-top: 25vh;
@@ -66,7 +70,7 @@ nav {
 }
 
 nav ul {
-	padding: 14px;
+	padding: 10px;
 	margin: 0;
 }
 
@@ -76,25 +80,25 @@ nav li {
 }
 
 nav a {
-	letter-spacing: 3.5px;
+	letter-spacing: 2.0px;
 	display: inline-block;
-	width: 190px;
+	/*width: 190px;*/
 	text-align: center;
 	text-decoration: none;
-	padding: 10px 0;
+	padding: 10px 22px;
 	color: #333;
 	text-decoration: none;
 }
 
-nav li:hover {
+/*nav li:hover {
 	background-color: #444;
-}
+}*/
 
 nav a#openup {
 	display: none;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
 	.hide-on-small {
 		display: none;
 	}
@@ -124,6 +128,7 @@ nav a#openup {
 		position: relative;
 	}
 	nav a {
+		padding:  10px 26px;
 		text-align: left;
 		width: 100%;
 		text-indent: 25px;
@@ -148,6 +153,7 @@ nav a#openup {
 		top: 20px;
 	}
 	nav a#openup {
+        padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
@@ -218,6 +224,10 @@ input[type=password] {
 	background: #f1f1f1;
 }
 
+::placeholder {
+	color: black;
+}
+
 input[type=text]:focus,
 input[type=password]:focus {
 	background-color: #ddd;
@@ -235,7 +245,7 @@ hr {
 button {
 	background-color: #f1f1f1;
 	/* color: white;*/
-	padding: 1px 20px;
+	/*padding: 1px 20px;*/
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
@@ -249,20 +259,26 @@ button:hover {
 
 #logout {
 	background-color: transparent;
-	text-align: left;
-	padding: 1px 55px;
+    float: right;
+    width: 80%;
+	/*text-align: right;
+	padding: 1px 455px;*/
 }
 
 #post {
 	background-color: transparent;
-	text-align: left;
-	padding: 1px 55px;
+     float: right;
+     width: 31%;
+	/*text-align: right;
+	padding: 1px 700px;*/
 }
 
 #profile {
 	background-color: transparent;
-	text-align: left;
-	padding: 1px 55px;
+     float: right;
+     width: 31%;
+	/*text-align: right;
+	padding: 1px 580px;*/
 }
 
 
@@ -302,9 +318,7 @@ h1 {
 	/*  margin-bottom: 10%;*/
 }
 
-::placeholder {
-	color: black;
-}
+
 
 
 /* Clear floats */
@@ -331,13 +345,19 @@ h1 {
 	}
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
 	#logout,
 	#post,
 	#profile {
-		padding: 1px 20px;
+		padding:  1px 57px;
+        float: left;
+        width: 20%;
 	}
 }
+
+
+
+
 
 @media screen and (min-device-width: 760px) and (max-device-width: 1025px) {
 	/* STYLES HERE */
@@ -351,4 +371,60 @@ h1 {
 	.container {
 		margin: 20%;
 	}
+   
+    .topnav-right{
+        letter-spacing: 2.0px;
+	display: inline-block;
+	/*width: 190px;*/
+	text-align: center;
+	text-decoration: none;
+	/*padding: 10px 419px;*/
+	color: #333;
+	text-decoration: none;
+    }
+    
+    
+    #logout,
+	#post,
+	#profile {
+		padding:  1px 200px;
+        float: left;
+        width: 20%;
+	}
+    
 }
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* STYLES HERE */
+    
+    
+    
+    nav a {
+	letter-spacing: 2.0px;
+	display: inline-block;
+	/*width: 190px;*/
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 290px;
+	color: #333;
+	text-decoration: none;
+}
+    nav a#openup {
+        padding: 10px 0px;
+		display: block;
+		background-color: #333;
+		width: 100%;
+		position: relative;
+	}
+	
+}
+

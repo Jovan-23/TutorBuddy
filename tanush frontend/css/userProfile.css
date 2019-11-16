@@ -83,9 +83,9 @@ button:hover {
 }
 
 
-#showcase a:hover {
+/*#showcase a:hover {
 	background-color: gainsboro;
-}
+}*/
 
 #showcase .container {
 	margin-top: 25vh;
@@ -178,9 +178,9 @@ nav a#openup {
 		background: #fff!important;
 		border-bottom: 1px solid #555;
 	}
-	nav a:hover {
+	/*nav a:hover {
 		background: #444;
-	}
+	}*/
 	nav a#openup:after {
 		content: '|||';
 		transform: rotate(-90deg);
