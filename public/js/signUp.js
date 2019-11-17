@@ -1,8 +1,4 @@
- 
-
-
 $(document).ready(() => {
- 
   $("#submitUP").click(() => {
       console.log("123");
       /** Server request that saves user info to database */
@@ -11,7 +7,7 @@ $(document).ready(() => {
         url: "/csignup",
         dataType: "json",
         data: {
-          username:$("#firstName").val()+" "+$("#lastName").val(),
+          username: $("#firstName").val()+" "+$("#lastName").val(),
           email:  $("#email").val(),
           password: $("#password").val()
         },
@@ -19,13 +15,9 @@ $(document).ready(() => {
           console.log(data);
         
           if (data.signup == "ok") {
-              window.location.href = "/becomeTutor";
+              window.location.href = "/userProfile";
           } 
       }
-       
       });
     });
- 
 })
-   
-     

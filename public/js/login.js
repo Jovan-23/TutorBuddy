@@ -1,10 +1,6 @@
-
-
-
+// user login username, password
 $(document).ready(() => {
- 
     $("#submitIN").click(() => {
-    
         /** Server request that saves user info to database */
         $.ajax({
           type: "post",
@@ -17,11 +13,9 @@ $(document).ready(() => {
           success: function (data) {
             console.log(data);
             if (data.login == "ok") {
-                window.location.href = "/becomeTutor";
+                window.location.href = "/userProfile";
             } 
         }
-         
         });
       });
-   
 })
