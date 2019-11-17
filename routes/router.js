@@ -14,8 +14,6 @@ router.get('/signUp', credentials.showRegister);
 router.get('/login', credentials.showLogin);
 router.get('/logout', credentials.logout);
 
-// get user booked sessions
-router.get('/getSessions', tutorsession.getTutorSessions);
 
 router.get('/findTutor', (req, res) => {
     
