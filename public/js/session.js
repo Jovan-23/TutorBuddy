@@ -1,4 +1,5 @@
 $(document).ready(() => {
+ 
     $.ajax({
       type: "get",
       url: "/getSessions",
