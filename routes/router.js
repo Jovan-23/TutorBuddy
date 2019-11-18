@@ -42,4 +42,20 @@ router.get('/userProfile', (req, res) => {
     res.render('userProfile');
 })
 
+// administrator view index page
+router.get('/indexAdminView', (req, res) => {
+    res.render('indexAdminView');
+})
+
+// administrator view pending tutors page
+router.get('/pendingTutors', (req, res) => {
+    res.render('pendingTutors');
+})
+
+// administrator view current tutors page
+router.get('/currentTutors', (req, res) => {
+    res.render('currentTutors');
+})
+
+
 module.exports = router;
