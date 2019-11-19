@@ -3,50 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
- 
+
     <link rel="stylesheet" href="css/becomeTutor.css">
- 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 
     <title>Tutor Buddy</title>
 </head>
 
 <body>
-    <!-- Showcase & Nav -->
+    <!-- Showcase & Navigation -->
     <div id="showcase">
         <header>
             <nav class='cf'>
                 <ul class='cf'>
 
                     <li class="hide-on-small">
-                        <a href='index.html' style="font-size:1.4em;"><b>Tutor Buddy</b></a>
+                        <a href='index.html'  style="font-size:24px"><b>Tutor Buddy</b></a>
                     </li>
+                    <div class="topnav-left">
+                        <li>
+                            <a href='becomeTutor.html' style='font-size:17px'>
+                                <button id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> <u>Become Tutor</u></i></button>
+                            
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href='findTutor.html' style='font-size:17px'>
+                            <button id="ft" style='font-size:20px'><i class='fas fa-search'> Find Tutor</i></button>
+                            
+                            </a>
+                        </li>
+
+
+                       
+
+                      
+  
+
+                    </div>
+                    
+                    
                     <div class="topnav-right">
+                       
                         <li>
-                            <a href='becomeTutor.html'><b>Become Tutor</b></a>
+                            <a href='post.html' class="">
+                                <button id="post" style='font-size:20px'><i class='far fa-calendar-alt'></i></button>
+
+                            </a>
+
                         </li>
-                        <li>
-                            <a href='findTutor.html'>Find Tutor</a>
-                        </li>
+
                         <li>
                             <a href='userProfile.html' class="ui item">
-                                <i class="user outline icon" style="font-size:1.4em;" id="edit"></i>
+                                <button id="profile" ><i class='far fa-user' style="font-size:20px;" id="edit"></i></button>
                             </a>
 
                         </li>
-                        <li>
-                            <a href="#" class="ui item">
-                                <i class="bell outline icon" style="font-size:1.4em;" id="edit"></i>
+    <li>
+                            <a href='index.html' class="">
+                                <button id="logout" style='font-size:20px'><i class='fas fa-sign-out-alt'></i></button>
+
                             </a>
 
                         </li>
+
                     </div>
+                
+                    
+                    
+                        
+                    
                 </ul>
                 <a href='#' id='openup'>Tutor Buddy</a>
             </nav>
@@ -54,48 +88,67 @@
 
     </div>
 
-    <!-- login form -->
+    <!-- Become tutor form -->
 
     <div class="container">
-        <h1> <a href='index.html' style="color:black"><b>Tutor Buddy</b></a></h1>
+
         <h1><b>Become Tutor</b></h1>
-        <p>Please select School, Class, Location & Schedule.</p>
+     <!--     <p>Please select School, Subject, Education & GPA.</p>-->
         <hr>
         <form action="#">
 
-            <!-- email Input-->
-            <div>
-                <label for="email"><b>School</b></label>
-                <input id="email" type="text" placeholder="Select School" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
+            <!-- school dropdown -->
+            <label for="school"><b>School</b></label>
+            <div id="schoolDropDown" onclick="selectSchool()">
+                <select id="school" required>
+                    <option value="">Select School</option>
+                    <option value="UVic">University of Victoria</option>
+                    <option value="UBC">University of British Columbia</option>
+                </select>
             </div>
 
-            <!-- Password Input-->
-            <div>
-                <label for="password"><b>Class</b></label>
-                <input id="password" type="password" placeholder="Select Class" name="password" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-
+            <!-- subject dropdown -->
+            <label for="subject"><b>Subject</b></label>
+            <div id="subjectDropDown" onclick="selectSubject()">
+                <select id="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="English">English</option>
+                </select>
             </div>
 
-            <div>
-                <label for="email"><b>Location</b></label>
-                <input id="email" type="text" placeholder="Select Location" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
+            <!-- course dropdown -->
+            <label for="course"><b>Course</b></label>
+            <div id="courseDropDown" onclick="selectCourse()">
+                <select id="course" required>
+                    <option value="">Select Course</option>
+                    <option value="MATH 101">MATH 101</option>
+                    <option value="abc">abc</option>
+                </select>
             </div>
 
-            <div>
-                <label for="email"><b>Schedule</b></label>
-                <input id="email" type="text" placeholder="Select Schedule" name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
+            <!-- education dropdown -->
+            <label for="education"><b>Education</b></label>
+            <div id="educationDropDown" onclick="selectEducation()">
+                <select id="education" required>
+                    <option value="">None</option>
+                    <option value="HighSchool">High School</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="BachelorDegree">Bachelor Degree</option>
+                    <option value="MasterDegree">Master's Degree</option>
+                </select>
             </div>
 
-            <!-- <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
-            </label>-->
+            <!-- gpa Input-->
+            <div>
+                <label for="GPA"><b>GPA</b></label>
+                <input id="GPA" type="number" step=0.1 placeholder="Select GPA" name="GPA" autocomplete="off" min="1" max="4" required>
+
+            </div>
 
             <div class="clearfix">
 
-                <button type="submit" name="submit" value="submit " class="signupbtn"><b>POST</b></button>
+                <button type="submit" name="submit" value="submit " class="signupbtn"><b>Apply</b></button>
             </div>
             <br>
             <div class="extra">
@@ -103,11 +156,6 @@
             </div>
         </form>
     </div>
-
-    <script src="js/signup.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
 
 </body>
 

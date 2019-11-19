@@ -12,10 +12,21 @@
 
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: #252529;
+	background-color: #f3ca3352;
 	margin: 0;
-	color: #fff;
+	color: black;
 	line-height: 1.9;
+}
+
+
+
+
+#mus2 {
+	background-color: white;
+}
+
+#signup {
+	background-color: #f3ca3352;
 }
 
 .topnav-right {
@@ -48,7 +59,7 @@ a {
 }
 
 section#entertainment {
-	background: url(../img/image6.png) no-repeat bottom/cover;
+/*	background: url(../img/image6.png) no-repeat bottom/cover;*/
 	padding: 10rem 0;
 	background-size: 100% 100%;
 }
@@ -67,23 +78,32 @@ section#entertainment {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	background-image: url('../img/image2.jpg');
+	background-image: url('../img/homepage18.jpg');
 	/* width: 100%;*/
-	height: 110vh;
+	height: 100vh;
 	position: relative;
 	overflow-y: hidden;
 	background-size: 100% 100%;
 }
 
-#showcase a:hover {
+/*#showcase a:hover {
 	background-color: gainsboro;
-}
+}*/
 
 #showcase .container {
 	margin-top: 25vh;
+/*
+      background-color:rgba(243, 202, 51, 0.32);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+*/
 }
 
 #showcase h1 {
+/*    float: left;*/
 	font-size: 4rem;
 	margin-bottom: 0;
 }
@@ -116,7 +136,7 @@ footer .footer-cols ul li:first-child {
 }
 
 footer .footer-bottom {
-	background: #333;
+	background-color: white;
 	padding: 1rem;
 }
 
@@ -136,6 +156,7 @@ footer .footer-bottom {
 
 .text-center {
 	text-align: center;
+	font-weight: bold;
 }
 
 
@@ -175,7 +196,7 @@ footer .footer-bottom {
 }
 
 .text-light {
-	color: var(--light-color);
+	color: black;
 }
 
 .bg-light {
@@ -204,7 +225,7 @@ nav {
 }
 
 nav ul {
-	padding: 14px;
+	padding: 10px;
 	margin: 0;
 }
 
@@ -215,7 +236,7 @@ nav li {
 
 nav a {
 	font-size: 17px;
-	letter-spacing: 5px;
+	letter-spacing: 2.0px;
 	display: inline-block;
 	width: 190px;
 	text-align: center;
@@ -225,9 +246,9 @@ nav a {
 	text-decoration: none;
 }
 
-nav li:hover {
+/*nav li:hover {
 	background-color: #444;
-}
+}*/
 
 nav a#openup {
 	display: none;
@@ -269,9 +290,9 @@ nav a#openup {
 		background: #fff!important;
 		border-bottom: 1px solid #555;
 	}
-	nav a:hover {
+	/*nav a:hover {
 		background: #444;
-	}
+	}*/
 	nav a#openup:after {
 		content: '|||';
 		transform: rotate(-90deg);

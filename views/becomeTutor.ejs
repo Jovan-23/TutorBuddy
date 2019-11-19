@@ -1,85 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/becomeTutorForm.css">
-        <link rel="stylesheet" href="/css/becomeTutor.css">
-        <!-- Js -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="/js/becomeTutor.js"></script>
-        <title>Tutor Buddy</title>
-    </head>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
-    <body>
-        <!-- Showcase & Nav -->
-        <div id="showcase">
-            <header>
-                <nav class='cf'>
-                    <ul class='cf'>
-                        <li class="hide-on-small">
-                            <a href='index' style="font-size:1.4em;"><b>Tutor Buddy</b></a>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/becomeTutor.css">
+    <!-- Js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/js/jquery.js"></script>
+
+    <script src="/js/becomeTutor.js"></script>
+    <script src="/js/index.js"></script>
+    <title>Tutor Buddy</title>
+</head>
+
+<body>
+    <!-- Showcase & Navigation -->
+    <div id="showcase">
+        <header>
+            <nav class='cf'>
+                <ul class='cf'>
+
+                    <li class="hide-on-small">
+                        <a href='index'  style="font-size:24px"><b>Tutor Buddy</b></a>
+                    </li>
+                    <div class="topnav-left">
+                        <li>
+                            <a href='becomeTutor' style='font-size:17px'>
+                                <button id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> <u>Become Tutor</u></i></button>
+                            
+                            </a>
                         </li>
-                        <div class="topnav-right">
-                            <li>
-                                <a href='becomeTutor'><b>Become Tutor</b></a>
-                            </li>
-                            <li>
-                                <a href='findTutor'>Find Tutor</a>
-                            </li>
-                            <li>
-                                <a href='userProfile' class="ui item">
-                                    <i class="user outline icon" style="font-size:1.4em;" id="edit"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="ui item">
-                                    <i class="bell outline icon" style="font-size:1.4em;" id="edit"></i>
-                                </a>
-                            </li>
-                        </div>
-                    </ul>
-                    <a href='#' id='openup'>Tutor Buddy</a>
-                </nav>
-            </header>
+
+                        <li>
+                            <a href='findTutor' style='font-size:17px'>
+                            <button id="ft" style='font-size:20px'><i class='fas fa-search'> Find Tutor</i></button>
+                            
+                            </a>
+                        </li>
+
+
+                       
+
+                      
+  
+
+                    </div>
+                    
+                    
+                    <div class="topnav-right">
+                       
+                        <li>
+                            <a href='post' class="">
+                                <button id="post" style='font-size:20px'><i class='far fa-calendar-alt'></i></button>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href='userProfile' class="ui item">
+                                <button id="profile" ><i class='far fa-user' style="font-size:20px;" id="edit"></i></button>
+                            </a>
+
+                        </li>
+    <li>
+                            <a href='/logout' class="">
+                                <button id="logout" style='font-size:20px'><i class='fas fa-sign-out-alt'></i></button>
+
+                            </a>
+
+                        </li>
+
+                    </div>
+                
+                    
+                    
+                        
+                    
+                </ul>
+                <a href='#' id='openup'>Tutor Buddy</a>
+            </nav>
+        </header>
+
+    </div>
+
+    <!-- Become tutor form -->
+
+    <div class="container">
+
+        <h1><b>Become Tutor</b></h1>
+        <!-- <p>Please select School, Subject, Education & GPA.</p> -->
+        <hr>
+
+
+        <!-- school dropdown -->
+        <label for="school"><b>School</b></label>
+        <div id="schoolDropDown">
+            <select id="school" required>
+                <option value="UVic">University of Victoria</option>
+            </select>
         </div>
 
-        <!-- Post tutor session form -->
-        <div class="container">
-            <h1><b>Become Tutor</b></h1>
-            <hr>
-            <div id="form">
-                <!-- school dropdown -->
-                <div id="schoolDropDown" onclick="selectSchool()">
-                    <select id="school">
-                        <option value="default">Select School</option>
-                        <option value="UVic">University of Victoria</option>
-                        <option value="UBC">University of British Columbia</option>
-                    </select>
-                </div>
-                <!-- subject dropdown -->
-                <div id="subjectDropDown" onclick="selectSubject()">
-                    <select id="subject">
-                        <option value="default">Select Subject</option>
-                        <option value="Mathematics">Mathematics</option>
-                        <option value="English">English</option>
-                    </select>
-                </div>
-                <!-- course dropdown -->
-                <div id="courseDropDown" onclick="selectCourse()">
-                    <select id="course">
-                        <option value="default">Select Course</option>
-                        <option value="MATH 101">MATH 101</option>
-                        <option value="abc">abc</option>
-                    </select>
-                </div>
-            </div>
+        <!-- subject dropdown -->
+        <label for="subject"><b>Subject</b></label>
+        <div id="subjectDropDown" >
+            <select id="subject" required>
+               
+            </select>
         </div>
-    </body>
+
+        <!-- course dropdown -->
+        <label for="course"><b>Course</b></label>
+        <div id="courseDropDown" >
+            <select id="course" required>
+              
+            </select>
+        </div>
+
+        <!-- education dropdown -->
+        <label for="education"><b>Education</b></label>
+        <div id="educationDropDown">
+            <select id="education" required>
+                <option value="">None</option>
+                <option value="HighSchool">High School</option>
+                <option value="Diploma">Diploma</option>
+                <option value="BachelorDegree">Bachelor Degree</option>
+                <option value="MasterDegree">Master's Degree</option>
+            </select>
+        </div>
+
+        <!-- gpa Input-->
+        <div>
+            <label for="GPA"><b>GPA</b></label>
+            <input id="GPA" type="number" step=0.1 placeholder="Select GPA" name="GPA" autocomplete="off" min="1"
+                max="4" required>
+
+        </div>
+
+        <div class="clearfix">
+
+            <button name="submit" id="submitApp" value="submit " class="signupbtn"><b>Apply</b></button>
+        </div>
+        <br>
+        <div class="extra">
+            <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor'
+                    style="color:dodgerblue"><b>Find Tutor</b></a></p>
+        </div>
+        </form>
+    </div>
+
+</body>
+
 </html>

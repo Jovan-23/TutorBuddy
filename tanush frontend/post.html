@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+   
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/post.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+    <title>Tutor Buddy</title>
+</head>
+
+<body>
+    <!-- Showcase & Navigation -->
+    <div id="showcase">
+        <header>
+            <nav class='cf'>
+                <ul class='cf'>
+
+                    <li class="hide-on-small">
+                        <a href='index.html'  style="font-size:24px"><b>Tutor Buddy</b></a>
+                    </li>
+                    <div class="topnav-left">
+                        <li>
+                            <a href='becomeTutor.html' style='font-size:17px'>
+                                <button id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> Become Tutor</i></button>
+                            
+                            </a>
+                        </li>
+                        <li>
+                           <a href='findTutor.html' style='font-size:17px'>
+                            <button id="ft" style='font-size:20px'><i class='fas fa-search'> Find Tutor</i></button>
+                            
+                            </a>
+                        </li>
+
+                       
+
+                      
+  
+
+                    </div>
+                    
+                    
+                    <div class="topnav-right">
+                       
+                        <li>
+                            <a href='post.html' class="">
+                                <button id="post" style='font-size:20px'><i class='far fa-calendar-alt'></i></button>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href='userProfile.html' class="ui item">
+                                <button id="profile" ><i class='far fa-user' style="font-size:20px;" id="edit"></i></button>
+                            </a>
+
+                        </li>
+    <li>
+                            <a href='index.html' class="">
+                                <button id="logout" style='font-size:20px'><i class='fas fa-sign-out-alt'></i></button>
+
+                            </a>
+
+                        </li>
+
+                    </div>
+                
+                    
+                    
+                        
+                    
+                </ul>
+                <a href='#' id='openup'>Tutor Buddy</a>
+            </nav>
+        </header>
+
+    </div>
+
+
+    <!-- Post form -->
+
+    <div class="container">
+
+        <h1><b>Post Tutor Session</b></h1>
+       
+        <hr>
+        <form action="#">
+
+            <!-- school dropdown -->
+            <label for="school"><b>School</b></label>
+            <div id="schoolDropDown" onclick="selectSchool()">
+                <select id="school" required>
+                    <option value="">Select School</option>
+                    <option value="UVic">University of Victoria</option>
+                    <option value="UBC">University of British Columbia</option>
+                </select>
+            </div>
+
+            <!-- subject dropdown -->
+            <label for="subject"><b>Subject</b></label>
+            <div id="subjectDropDown" onclick="selectSubject()">
+                <select id="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="English">English</option>
+                </select>
+            </div>
+
+            <!-- course dropdown -->
+            <label for="course"><b>Course</b></label>
+            <div id="courseDropDown" onclick="selectCourse()">
+                <select id="course" required>
+                    <option value="">Select Course</option>
+                    <option value="MATH 101">MATH 101</option>
+                    <option value="abc">abc</option>
+                </select>
+            </div>
+
+            <!-- location dropdown -->
+            <label for="location"><b>Location</b></label>
+
+            <input id="location" type="text" placeholder="Type in Location" name="location" autocomplete="off" onclick="selectLocation()" required>
+
+            <!-- date dropdown -->
+            <label for="date"><b>Date and Time</b></label>
+
+            <input type="datetime-local" name="dateTime" id="dateTime" required>
+
+            <div class="clearfix">
+
+                <button type="submit" name="submit" value="submit " class="signupbtn"><b>Post</b></button>
+            </div>
+            <br>
+            <div class="extra">
+                <p style="font-size: 10pt;">Want to become a Tutor? <a class="ui item" href='becomeTutor.html' style="color:dodgerblue"><b>Become Tutor</b></a></p>
+
+                <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor.html' style="color:dodgerblue"><b>Find Tutor</b></a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

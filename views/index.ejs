@@ -1,5 +1,3 @@
-
-<% include ./common/header.ejs %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,34 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  
+
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
 
     <title>Tutor Buddy</title>
 </head>
 
 <body>
-    <!-- Showcase & Nav -->
+    <!-- Showcase & Navigation -->
     <div id="showcase">
         <header>
             <nav class='cf'>
                 <ul class='cf'>
 
                     <li class="hide-on-small">
-                        <a href="#showcase"><b>Tutor Buddy</b></a>
+                        <a href='index' style="font-size:24px"><b>Tutor Buddy</b></a>
                     </li>
                     <div class="topnav-right">
+
                         <li>
-                            <a href='#showcase'>Become Tutor</a>
+                            <a href='login'>Log In</a>
                         </li>
                         <li>
-                            <a href='#mus2'>Find Tutor</a>
-                        </li>
-                        <li>
-                            <a href='signup'>Sign up</a>
-                        </li>
-                        <li>
-                            <a href='login'>Login</a>
+                            <a href='signUp' id="signup">Sign Up</a>
                         </li>
                     </div>
                 </ul>
@@ -43,14 +40,13 @@
             </nav>
         </header>
         <div class="section-main container">
-            <h1>.</h1>
-            <h2></h2>
+            <h1>Tutor Buddy</h1>
+<!--            <h1>Improve Your Learning Experience</h1>-->
             <p class="lead hide-on-small">
 
             </p>
         </div>
     </div>
-
     <!-- Mus2 Section -->
     <section id="mus2" class="section">
         <div class="container">
@@ -59,19 +55,20 @@ Become a Tutor
       </h2>
             <h3>Students  Teach Students.</h3>
             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam nobis, nisi ut expedita, doloribus reprehenderit explicabo non velit repellat alias saepe inventore repellendus? Molestias suscipit eos tempora? Quae quaerat cumque in veritatis impedit dolorum sapiente recusandae minima quo aperiam quam, excepturi quasi totam ad quas? Ipsam laudantium soluta delectus</p>
-            <a href="#" class="btn btn-primary mb">Book a Tutor</a>
+            <!-- <a href="#" class="btn btn-primary mb">Book a Tutor</a> -->
             <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam nobis, nisi ut expedita, doloribus reprehenderit soluta delectus.</p>
-            <img src="img/image4.jpg" alt="">
+            <img src="" alt="">
         </div>
     </section>
 
+    
     <!-- Vid Section -->
     <section id="vid" class="section bg-light">
         <div class="container">
-            <h3>Students improve through tutoring.</h3>
+            <h3 class="mainSubHeading">Students improve through tutoring.</h3>
             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam nobis, nisi ut expedita, doloribus reprehenderit explicabo non velit repellat alias saepe inventore repellendus? Molestias suscipit eos tempora? Quae quaerat cumque in veritatis impedit dolorum sapiente recusandae minima quo aperiam quam, excepturi quasi totam ad quas? Ipsam laudantium soluta delectus.</p>
-            <a href="#" class="btn btn-secondary">Read More</a>
-            <img src="img/image4.jpg" alt="">
+            <!-- <a href="#" class="btn btn-secondary">Read More</a> -->
+            <img src="#" alt="">
         </div>
     </section>
 
@@ -88,7 +85,7 @@ Become a Tutor
         <div class="container">
             <div class="cards">
                 <div>
-                    <img src="img/image1.jpg" alt="">
+                    <img src="#" alt="">
                 </div>
                 <div>
                     <h2>Find a Tutor</h2>
@@ -155,13 +152,10 @@ Become a Tutor
             </div>
         </div>
         <div class="footer-bottom text-center">
-            Copyright &copy; 2019 3910 Project
+            Copyright &copy; 2019 3900 Project
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="/js/index.js"></script>
-
 </body>
 
-</html>>
+</html>
