@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 /* CSS Variables */
 
@@ -12,7 +13,6 @@
 
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: #f3ca3352;
 	margin: 0;
 	color: black;
 	line-height: 1.9;
@@ -39,6 +39,10 @@ a {
 	color: #ccc;
 }
 
+#cc {
+	z-index: -1;
+}
+
 
 /* Section */
 
@@ -56,7 +60,7 @@ a {
 }
 
 section#entertainment {
-	background: url(../img/image6.png) no-repeat bottom/cover;
+	background: url() no-repeat bottom/cover;
 	padding: 10rem 0;
 	background-size: 100% 100%;
 }
@@ -75,12 +79,79 @@ section#entertainment {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	/*background-image: url('../img/image8.jpg');*/
-	/* width: 100%;*/
+	background-image: url('../img/homepage.png');
 	height: 100vh;
 	position: relative;
 	overflow-y: hidden;
 	background-size: 100% 100%;
+}
+
+.books1 {
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	background-image: url('../img/books_fall.png');
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background-size: 100% 100%;
+	animation: animateSecond 10s infinite linear;
+}
+
+.books2 {
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	background-image: url('../img/books_fall.png');
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background-size: 100% 100%;
+	animation: animateSecond 10s infinite linear;
+}
+
+@keyframes animateOne {
+	0% {
+		background-position: 0px 0px;
+	}
+
+	100% {
+		background-position: 100px 100vh;
+	}
+}
+
+@keyframes animateSecond {
+	0% {
+		background-position: 0px -100px;
+	}
+
+	100% {
+		background-position: 0px 100vh;
+	}
+}
+
+
+
+.books2 {
+
+}
+
+#showcaseColour {
+	background-color:rgba(255, 230, 139, 0.75);
+	overflow: hidden;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #showcase a:hover {
@@ -88,21 +159,39 @@ section#entertainment {
 }
 
 #showcase .container {
-	margin-top: 25vh;
+	margin-top: 36vh;
+	font-family:'Poppins',sans-serif;
+	font-style: bold;
+	text-transform: uppercase;
+	display: block;
+    font-size: 6.3em;
+	font-weight: bold;
+	float: left;
+
 }
 
-#showcase h1 {
-	font-size: 4rem;
-	margin-bottom: 0;
+#showcase .container p span {
+	display: block;
 }
 
-#showcase h2 {
-	font-size: 2rem;
+#showcase .container .showcaseTitleText {
+	margin-right: 290px;
+}
+
+#showcase .container .showcaseCaption {
+	margin-right: 290px;
+	font-size: 20px !important;
+}
+
+
+/* Spacing from the top for the sub headings in 
+   the homepage */
+.mainSubHeading {
+	margin-top: 20px;
 }
 
 
 /* Footer */
-
 footer .footer-cols {
 	display: grid;
 	grid-gap: 20px;
@@ -207,6 +296,7 @@ nav {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	height: auto;
 	width: 100%;
+	z-index: 1000;
 	background-color: #fff!important;
 	color: #eee;
 	position: fixed;
