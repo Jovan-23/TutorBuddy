@@ -49,7 +49,7 @@ $(document).ready(() => {
                     
                     removeButton.addEventListener('click', function(e) {
                         console.log("Remove button clicked")
-                        
+                    
                       });
                 }
             });
