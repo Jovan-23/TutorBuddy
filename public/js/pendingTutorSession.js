@@ -1,5 +1,3 @@
-
-
 $(document).ready(() => {
     $.ajax({
       type: "get",
@@ -34,8 +32,7 @@ $(document).ready(() => {
                     itemDiv.style.boxShadow = "0 0 30px #cccccc";
                     itemDiv.style.overflow = "hidden";
                     itemDiv.style.width = "100%";
-                    itemDiv.style.paddingBottom = "15px"
-                    itemDiv.style.zIndex = "0";
+                    itemDiv.style.paddingBottom = "15px";
 
                     //<h5 class="card-header"><b>TutorName</b></h5>
                     // adding tutor name 
@@ -171,7 +168,7 @@ $(document).ready(() => {
                     rejectedButton.style.fontSize = "1rem";
                     rejectedButton.style.lineHeight = "1.5";
                     rejectedButton.style.borderRadius = ".25rem";
-                    rejectedButton.style.transition = "color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out"
+                    rejectedButton.style.transition = "color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out";
 
                     rejectedButton.addEventListener('click', function(e) {
                         console.log("Rejected button clicked");
@@ -194,9 +191,7 @@ $(document).ready(() => {
                     
                  }
                 
-        });
-        
+        });   
     }
-
   });
 })
