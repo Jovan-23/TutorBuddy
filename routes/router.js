@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require("path");
 const credentials = require('./credentials.js');
 const tutorsession = require('./tutorsession.js');
+const DB = require('../modules/db.js');
 
 router.get('/', (req, res) => {
     res.render('index');
@@ -22,20 +23,47 @@ router.get('/findTutor', (req, res) => {
         res.render('findTutor');
 })
 
-router.get('/findTutor', (req, res) => {
-    
-    res.render('findTutor');
-})
+
 
 router.get('/post', (req, res) => {
     
     res.render('post');
 })
 
+router.post('/doPost', (req, res) => {
+    console.log(req.body);
+    let data = req.body;
+    data.tutorEmail = req.session.userinfo.email;
+    data.tutorName = req.session.userinfo.username;
+    DB.insert('PostedSession', data, (err, data) => {
+        if (!err) {
+            res.json({ "post": "ok" })
+        } else {
+            res.json({ "post": "fail" })
+        }
+    })
+   
+})
 router.get('/becomeTutor', (req, res) => {
 
     res.render('becomeTutor');
 })
+
+
+router.post('/tutorApp', (req, res) => {
+    console.log(req.body);
+    let data = req.body;
+    data.email = req.session.userinfo.email;
+    data.tutorName = req.session.userinfo.username;
+    DB.insert('TutorApplication', data, (err, data) => {
+        if (!err) {
+            res.json({ "apply": "ok" })
+        } else {
+            res.json({ "apply": "fail" })
+        }
+    })
+
+});
 
 router.get('/userProfile', (req, res) => {
 
@@ -55,6 +83,21 @@ router.get('/pendingTutors', (req, res) => {
 // administrator view current tutors page
 router.get('/currentTutors', (req, res) => {
     res.render('currentTutors');
+})
+
+router.get('/getCourseInfo', (req, res) => {
+
+    
+    DB.find('Course',{} , (err, data) => {
+        if (err) throw err;
+       
+        if (data.length <= 0) {
+            console.log("error");
+            return;
+        } else {
+           res.json({"data":data})
+        }
+    })
 })
 
 

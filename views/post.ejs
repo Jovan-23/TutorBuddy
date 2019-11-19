@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/post.css">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/post.js"></script>
     <script src="/js/index.js"></script>
 
     <title>Tutor Buddy</title>
@@ -76,42 +76,38 @@
         <h1><b>Post Tutor Session</b></h1>
         <p>Please select School, Subject, Course, Location, Date & Time.</p>
         <hr>
-        <form action="#">
+      
 
             <!-- school dropdown -->
             <label for="school"><b>School</b></label>
-            <div id="schoolDropDown" onclick="selectSchool()">
+            <div id="schoolDropDown">
                 <select id="school" required>
-                    <option value="">Select School</option>
+                   
                     <option value="UVic">University of Victoria</option>
-                    <option value="UBC">University of British Columbia</option>
+                  
                 </select>
             </div>
 
             <!-- subject dropdown -->
             <label for="subject"><b>Subject</b></label>
-            <div id="subjectDropDown" onclick="selectSubject()">
+            <div id="subjectDropDown">
                 <select id="subject" required>
-                    <option value="">Select Subject</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="English">English</option>
+                   
                 </select>
             </div>
 
             <!-- course dropdown -->
             <label for="course"><b>Course</b></label>
-            <div id="courseDropDown" onclick="selectCourse()">
+            <div id="courseDropDown" >
                 <select id="course" required>
-                    <option value="">Select Course</option>
-                    <option value="MATH 101">MATH 101</option>
-                    <option value="abc">abc</option>
+                    
                 </select>
             </div>
 
             <!-- location dropdown -->
             <label for="location"><b>Location</b></label>
 
-            <input id="location" type="text" placeholder="Type in Location" name="location" autocomplete="off" onclick="selectLocation()" required>
+            <input id="location" type="text" placeholder="Type in Location" name="location" autocomplete="off" required>
 
             <!-- date dropdown -->
             <label for="date"><b>Date and Time</b></label>
@@ -120,7 +116,7 @@
 
             <div class="clearfix">
 
-                <button type="submit" name="submit" value="submit " class="signupbtn"><b>Post</b></button>
+                <button id ="submitPost" name="submit" value="submit " class="signupbtn"><b>Post</b></button>
             </div>
             <br>
             <div class="extra">
@@ -128,7 +124,7 @@
 
                 <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor' style="color:dodgerblue"><b>Find Tutor</b></a></p>
             </div>
-        </form>
+       
     </div>
 
 </body>
