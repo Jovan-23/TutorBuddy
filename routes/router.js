@@ -23,7 +23,7 @@ router.get('/getAdminSession', adminSession.getAdminSession);
 
 // get tutor applications
 router.post('/updateAdminSession', adminSession.updateAdminSession);
-
+router.post('/deleteTutor', adminSession.deleteTutor);
 
 router.get('/findTutor', (req, res) => {    
         res.render('findTutor');

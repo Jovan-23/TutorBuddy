@@ -57,7 +57,10 @@ $(document).ready(() => {
                             data:{"id":value._id},
                             dataType: "json",
                             success: function (data) {
-                            
+                              if(data.update=="ok"){
+                                value.status="accepted";
+                                parent.location.reload(); 
+                              }
                                 
                             }
                       });
@@ -72,11 +75,14 @@ $(document).ready(() => {
 
                         $.ajax({
                             type: "post",
-                            url: "/deleteOne",
+                            url: "/deleteTutor",
                             data:{"id":value._id},
                             dataType: "json",
                             success: function (data) {
-                                
+                              if(data.delete=="ok"){
+                                parent.location.reload(); 
+                         
+                              }
                             }
                       });
 
