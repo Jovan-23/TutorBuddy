@@ -145,9 +145,11 @@ nav a#openup {
 		background: #fff!important;
 		border-bottom: 1px solid #555;
 	}
+/*
 	nav a:hover {
 		background: #444;
 	}
+*/
 	nav a#openup:after {
 		content: '|||';
 		transform: rotate(-90deg);
@@ -421,14 +423,6 @@ h1 {
 	}
     
 }
-
-
-
-
-
-
-
-
 
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {

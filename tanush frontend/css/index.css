@@ -18,6 +18,9 @@ body {
 	line-height: 1.9;
 }
 
+
+
+
 #mus2 {
 	background-color: white;
 }
@@ -75,7 +78,7 @@ section#entertainment {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	/*background-image: url('../img/image8.jpg');*/
+	background-image: url('../img/homepage18.jpg');
 	/* width: 100%;*/
 	height: 100vh;
 	position: relative;
@@ -89,9 +92,18 @@ section#entertainment {
 
 #showcase .container {
 	margin-top: 25vh;
+/*
+      background-color:rgba(243, 202, 51, 0.32);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+*/
 }
 
 #showcase h1 {
+/*    float: left;*/
 	font-size: 4rem;
 	margin-bottom: 0;
 }

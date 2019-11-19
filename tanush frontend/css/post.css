@@ -282,6 +282,25 @@ button:hover {
 }
 
 
+
+#bt {
+	background-color: transparent;
+     float: left;
+/*     width: 31%;*/
+	/*text-align: right;
+	padding: 1px 700px;*/
+}
+
+
+
+#ft {
+	background-color: transparent;
+     float: left;
+/*     width: 31%;*/
+	/*text-align: right;
+	padding: 1px 700px;*/
+}
+
 /* Extra styles for the cancel button */
 
 .cancelbtn {
@@ -348,7 +367,7 @@ h1 {
 @media screen and (max-width: 1024px) {
 	#logout,
 	#post,
-	#profile {
+	#profile,#bt,#ft {
 		padding:  1px 57px;
         float: left;
         width: 20%;
@@ -384,14 +403,13 @@ h1 {
     }
     
     
-    #logout,
+      #logout,
 	#post,
-	#profile {
+	#profile,#bt,#ft {
 		padding:  1px 200px;
         float: left;
         width: 20%;
 	}
-    
 }
 
 
