@@ -10,3 +10,11 @@ exports.getTutorSessions = (req, res) => {
                 });
     });
 }
+
+exports.getPostedSessions = (req, res) => {
+
+    DB.find('PostedSession',{}, (err,data) =>{
+        if(err) throw err;
+        res.json({"data": data});
+    });
+}

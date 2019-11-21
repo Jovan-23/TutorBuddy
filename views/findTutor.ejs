@@ -93,48 +93,48 @@
         <h1><b>Find Tutor</b></h1>
         <!-- <p>Please select School, Subject & Course.</p> -->
         <hr>
-        <form action="#">
-
+        <form>
+            <div id = "inputForm">
             <!-- school dropdown -->
             <label for="school"><b>School</b></label>
-            <div id="schoolDropDown" type onclick="selectSchool()">
+            <div id="schoolDropDown">
                 <select id="school" required>
                     <option value="">Select School</option>
                     <option value="UVic">University of Victoria</option>
-                    <option value="UBC">University of British Columbia</option>
                 </select>
             </div>
 
             <!-- subject dropdown -->
             <label for="subject"><b>Subject</b></label>
-            <div id="subjectDropDown" onclick="selectSubject()">
+            <div id="subjectDropDown">
                 <select id="subject" required>
                     <option value="">Select Subject</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="English">English</option>
                 </select>
             </div>
 
             <!-- course dropdown -->
             <label for="course"><b>Course</b></label>
-            <div id="courseDropDown" onclick="selectCourse()">
+            <div id="courseDropDown">
                 <select id="course" required>
                     <option value="">Select Course</option>
-                    <option value="MATH 101">MATH 101</option>
-                    <option value="abc">abc</option>
                 </select>
             </div>
 
             <div class="clearfix">
 
-                <button type="submit" name="submit" value="submit " class="signupbtn"><b>FIND TUTOR</b></button>
+                <button type="submit" id = "findTutor" value="submit " class="signupbtn"><b>FIND TUTOR</b></button>
             </div>
             <br>
             <div class="extra">
                 <p style="font-size: 10pt;">Want to become a Tutor? <a class="ui item" href='becomeTutor' style="color:dodgerblue"><b>Become Tutor</b></a></p>
             </div>
+        </div>
+        <div id = "result">
+            
+        </div>
         </form>
     </div>
+
 
 </body>
 

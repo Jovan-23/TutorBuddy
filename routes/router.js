@@ -19,6 +19,9 @@ router.get('/logout', credentials.logout);
 // get user booked sessions
 router.get('/getSessions', tutorsession.getTutorSessions);
 
+// get all posted sessions
+router.get('/getPostedSessions', tutorsession.getPostedSessions);
+
 // get tutor applications
 router.get('/getAdminSession', adminSession.getAdminSession);
 
