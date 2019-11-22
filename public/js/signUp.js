@@ -1,9 +1,3 @@
-
-//Connecting to MongoDB
-const MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://admin:admin@tutorbuddy-csxjn.azure.mongodb.net/test?retryWrites=true&w=majority";
-
-// Creating a fucntion that vaidates the information for signing up
 $(document).ready(() => {
   $("#submitUP").click(() => {
       console.log("123");
@@ -26,5 +20,4 @@ $(document).ready(() => {
       }
       });
     });
-})
 

@@ -19,6 +19,7 @@ exports.doRegister = (req, res) => {
             }, (err, data) => {
                 if (!err) {
                     req.session.userinfo = user; // Current user.
+
                     req.app.locals['userinfo'] = user;
                     res.json({ "signup": "ok" })
                 } else {

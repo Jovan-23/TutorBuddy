@@ -98,7 +98,8 @@ nav a#openup {
 	display: none;
 }
 
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1366px) {
 	.hide-on-small {
 		display: none;
 	}
@@ -331,7 +332,8 @@ h1 {
 	padding: 16px;
 	border: 4px solid #f1f1f1;
 	margin: 1%;
-	margin-top: 7%;
+
+	margin-top: 8%;
 	margin-left: 30%;
 	background-color: white;
 	/*  margin-bottom: 10%;*/
