@@ -9,4 +9,38 @@ exports.getTutorSessions = (req, res) => {
                   "email": req.session.userinfo.email
                 });
     });
+
+}
+
+exports.getPostedSessions = (req, res) => {
+
+    DB.find('PostedSession',{}, (err,data) =>{
+        if(err) throw err;
+        res.json({"data": data});
+    });
+}
+
+exports.postBookedSessions = (req, res) => {
+    let tutorEmail = req.body.tutorEmail;
+    let tutorName = req.body.tutorName;
+    let studentEmail = req.session.userinfo.email;
+    let studentName = req.session.userinfo.username;
+    let course = req.body.course;
+    let location = req.body.location;
+    let time = req.body.time;
+    console.log(tutorEmail);
+    DB.insert('BookedSession', 
+    {"tutorEmail" : tutorEmail,
+     "tutorName" : tutorName,
+     "studentEmail" : studentEmail,
+     "studentName" : studentName,
+     "course" : course,
+     "location" : location,
+     "time" : time
+    }, (err,data) =>{
+        if(err) throw err;
+        else {
+            res.json({"Post BookedSession" : "success"})
+        }
+    })
 }
