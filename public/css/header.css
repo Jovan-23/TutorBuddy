@@ -5,14 +5,14 @@ body {
 	margin: 0;
 	line-height: 1.9;
 }
+
 .topnav-left {
 	float: left;
 }
 
 .topnav-right {
-	float:right;
+	float: right;
 }
-
 
 img {
 	width: 100%;
@@ -23,11 +23,8 @@ a {
 	color: #ccc;
 }
 
-
 button {
 	background-color: #f1f1f1;
-	/* color: white;*/
-	/*padding: 1px 20px;*/
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
@@ -41,51 +38,33 @@ button:hover {
 
 #logout {
 	background-color: transparent;
-    float: right;
-    width: 80%;
-	/*text-align: right;
-	padding: 1px 455px;*/
+	float: right;
+	width: 80%;
 }
 
 #post {
 	background-color: transparent;
-     float: right;
-     width: 31%;
-	/*text-align: right;
-	padding: 1px 700px;*/
+	float: right;
+	width: 31%;
 }
 
 #profile {
 	background-color: transparent;
-     float: right;
-     width: 31%;
-	/*text-align: right;
-	padding: 1px 580px;*/
+	float: right;
+	width: 31%;
 }
-
-
-
 
 
 /* Showcase */
 
 #showcase {
-	/*background-color: #fff;*/
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	/* background-image: url('../img/image2.jpg');*/
-	/* width: 100%;*/
-	/*height: 100vh;*/
 	position: relative;
 	overflow-y: hidden;
 	background-size: 100% 100%;
 }
-
-
-/*#showcase a:hover {
-	background-color: gainsboro;
-}*/
 
 #showcase .container {
 	margin-top: 25vh;
@@ -125,17 +104,12 @@ nav li {
 nav a {
 	letter-spacing: 2.0px;
 	display: inline-block;
-	/*width: 190px;*/
 	text-align: center;
 	text-decoration: none;
 	padding: 10px 22px;
 	color: #333;
 	text-decoration: none;
 }
-
-/*nav li:hover {
-	background-color: #444;
-}*/
 
 nav a#openup {
 	display: none;
@@ -145,9 +119,7 @@ nav a#openup {
 	.hide-on-small {
 		display: none;
 	}
-	#showcase {
-		/* height: 100%;*/
-	}
+	#showcase {}
 	#showcase .container {
 		margin-top: 15vh;
 	}
@@ -171,16 +143,13 @@ nav a#openup {
 		position: relative;
 	}
 	nav a {
-		padding:  10px 26px;
+		padding: 10px 26px;
 		text-align: left;
 		width: 100%;
 		text-indent: 25px;
 		background: #fff!important;
 		border-bottom: 1px solid #555;
 	}
-	/*nav a:hover {
-		background: #444;
-	}*/
 	nav a#openup:after {
 		content: '|||';
 		transform: rotate(-90deg);
@@ -188,7 +157,6 @@ nav a#openup {
 		/* IE 9 */
 		-webkit-transform: rotate(-90deg);
 		/* Safari and Chrome */
-		/* width: 30px;*/
 		height: 30px;
 		display: inline-block;
 		position: absolute;
@@ -196,7 +164,7 @@ nav a#openup {
 		top: 20px;
 	}
 	nav a#openup {
-		  padding: 10px 0px;
+		padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
@@ -237,12 +205,11 @@ nav a#openup {
 	#logout,
 	#post,
 	#profile {
-		padding:  1px 57px;
-        float: left;
-        width: 20%;
+		padding: 1px 57px;
+		float: left;
+		width: 20%;
 	}
 }
-
 
 @media screen and (min-device-width: 760px) and (max-device-width: 1025px) {
 	/* STYLES HERE */
@@ -256,59 +223,39 @@ nav a#openup {
 	.container {
 		margin: 20%;
 	}
-   
-    .topnav-right{
-        letter-spacing: 2.0px;
-	display: inline-block;
-	/*width: 190px;*/
-	text-align: center;
-	text-decoration: none;
-	/*padding: 10px 419px;*/
-	color: #333;
-	text-decoration: none;
-    }
-    
-    
-    #logout,
+	.topnav-right {
+		letter-spacing: 2.0px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		color: #333;
+		text-decoration: none;
+	}
+	#logout,
 	#post,
 	#profile {
-		padding:  1px 200px;
-        float: left;
-        width: 20%;
+		padding: 1px 200px;
+		float: left;
+		width: 20%;
 	}
-    
 }
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	/* STYLES HERE */
-    
-    
-    
-    nav a {
-	letter-spacing: 2.0px;
-	display: inline-block;
-	/*width: 190px;*/
-	text-align: center;
-	text-decoration: none;
-	padding: 10px 290px;
-	color: #333;
-	text-decoration: none;
-}
-    nav a#openup {
-        padding: 10px 0px;
+	nav a {
+		letter-spacing: 2.0px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		padding: 10px 290px;
+		color: #333;
+		text-decoration: none;
+	}
+	nav a#openup {
+		padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
 		position: relative;
 	}
-	
 }
