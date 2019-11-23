@@ -78,7 +78,7 @@ section#entertainment {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	background-image: url('../img/homepage18.jpg');
+	background-image: url('../img/homepage20.jpg');
 	/* width: 100%;*/
 	height: 100vh;
 	position: relative;
@@ -103,8 +103,8 @@ section#entertainment {
 }
 
 #showcase h1 {
-/*    float: left;*/
-	font-size: 4rem;
+  float: left;
+	font-size: 9rem;
 	margin-bottom: 0;
 }
 
