@@ -321,7 +321,8 @@ h1 {
 
 @media screen and (max-width: 450px) {
 	.container {
-		margin-left: 0;
+		margin-top: 14%;
+		margin-left: 1%;
 	}
 }
 
