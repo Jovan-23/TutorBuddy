@@ -3,7 +3,6 @@ body {
 	font-family: "Raleway", sans-serif;
 	background-color: #f3ca3352;
 	margin: 0;
-	/*color: #fff;*/
 	line-height: 1.9;
 }
 
@@ -12,12 +11,8 @@ body {
 }
 
 .topnav-right {
-	float:right;
+	float: right;
 }
-
-
-
-
 
 img {
 	width: 100%;
@@ -32,23 +27,13 @@ a {
 /* Showcase */
 
 #showcase {
-	/*background-color: #fff;*/
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	/* background-image: url('../img/image2.jpg');*/
-	/* width: 100%;*/
-	/*height: 100vh;*/
 	position: relative;
 	overflow-y: hidden;
 	background-size: 100% 100%;
 }
-
-/*
-#showcase a:hover {
-	text-decoration: underline;
-}
-*/
 
 #showcase .container {
 	margin-top: 25vh;
@@ -88,7 +73,6 @@ nav li {
 nav a {
 	letter-spacing: 2.0px;
 	display: inline-block;
-	/*width: 190px;*/
 	text-align: center;
 	text-decoration: none;
 	padding: 10px 22px;
@@ -96,26 +80,15 @@ nav a {
 	text-decoration: none;
 }
 
-/*nav li:hover {
-	background-color: #444;
-}*/
-
-
-
-
-
 nav a#openup {
 	display: none;
 }
-
 
 @media screen and (max-width: 1366px) {
 	.hide-on-small {
 		display: none;
 	}
-	#showcase {
-		/* height: 100%;*/
-	}
+	#showcase {}
 	#showcase .container {
 		margin-top: 15vh;
 	}
@@ -139,18 +112,13 @@ nav a#openup {
 		position: relative;
 	}
 	nav a {
-        padding:  10px 26px;
+		padding: 10px 26px;
 		text-align: left;
 		width: 100%;
 		text-indent: 25px;
 		background: #fff!important;
 		border-bottom: 1px solid #555;
 	}
-/*
-	nav a:hover {
-		background: #444;
-	}
-*/
 	nav a#openup:after {
 		content: '|||';
 		transform: rotate(-90deg);
@@ -158,7 +126,6 @@ nav a#openup {
 		/* IE 9 */
 		-webkit-transform: rotate(-90deg);
 		/* Safari and Chrome */
-		/* width: 30px;*/
 		height: 30px;
 		display: inline-block;
 		position: absolute;
@@ -166,7 +133,7 @@ nav a#openup {
 		top: 20px;
 	}
 	nav a#openup {
-        padding: 10px 0px;
+		padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
@@ -185,6 +152,7 @@ nav a#openup {
 }
 
 .cf {
+	z-index: 1;
 	zoom: 1;
 }
 
@@ -211,56 +179,11 @@ body {
 	box-sizing: border-box
 }
 
-/*
-
- Full-width input fields 
-
-input[type=text],
-input[type=password] {
-	width: 100%;
-	padding: 15px;
-	margin: 5px 0 22px 0;
-	display: inline-block;
-	border: none;
-	background: #f1f1f1;
-}
-
-#school,
-#course,
-#subject,
-#education,
-#GPA {
-	width: 100%;
-	padding: 15px;
-	margin: 5px 0 22px 0;
-	display: inline-block;
-	border: none;
-	background: #f1f1f1;
-}
-
-::placeholder {
-	color: black;
-}
-
-input[type=text]:focus,
-input[type=password]:focus {
-	background-color: #ddd;
-	outline: none;
-}
-
-hr {
-	border: 1px solid #f1f1f1;
-	margin-bottom: 25px;
-}
-*/
-
 
 /* Set a style for all buttons */
 
 button {
 	background-color: #f1f1f1;
-	/* color: white;*/
-	/*padding: 1px 20px;*/
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
@@ -274,90 +197,31 @@ button:hover {
 
 #logout {
 	background-color: transparent;
-    float: right;
-    width: 80%;
-	/*text-align: right;
-	padding: 1px 455px;*/
+	float: right;
+	width: 80%;
 }
 
 #post {
 	background-color: transparent;
-     float: right;
-     width: 31%;
-	/*text-align: right;
-	padding: 1px 700px;*/
+	float: right;
+	width: 31%;
 }
 
 #profile {
 	background-color: transparent;
-     float: right;
-     width: 31%;
-	/*text-align: right;
-	padding: 1px 580px;*/
+	float: right;
+	width: 31%;
 }
-
 
 #bt {
 	background-color: transparent;
-     float: left;
-/*     width: 31%;*/
-	/*text-align: right;
-	padding: 1px 700px;*/
+	float: left;
 }
-
-
 
 #ft {
 	background-color: transparent;
-     float: left;
-/*     width: 31%;*/
-	/*text-align: right;
-	padding: 1px 700px;*/
-}
-
-
-
-/* Extra styles for the cancel button */
-
-/*
-.cancelbtn {
-	padding: 14px 20px;
-	background-color: #f44336;
-}
-*/
-
-
-/* Float cancel and signup buttons and add an equal width */
-
-/*
-.cancelbtn,
-.signupbtn {
 	float: left;
-	width: 50%;
-	padding: 13px 20px;
 }
-
-h1 {
-	margin: 0;
-}
-*/
-
-
-/* Add padding to container elements become */
-
-/*
-.container {
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	max-width: 580px;
-	padding: 16px;
-	border: 4px solid #f1f1f1;
-	margin: 1%;
-	margin-top: 8%;
-	margin-left: 30%;
-	background-color: white;
-	  margin-bottom: 10%;
-}
-*/
 
 
 /* Clear floats */
@@ -368,37 +232,17 @@ h1 {
 	display: table;
 }
 
-
-/* Change styles for cancel button and signup button on extra small screens */
-
-/*
-@media screen and (max-width: 1366px) {
-	.cancelbtn,
-	.signupbtn {
-		width: 100%;
-	}
-}
-
-@media screen and (max-width: 450px) {
-	.container {
-		margin-left: 0;
-	}
-}
-*/
-
 @media screen and (max-width: 1024px) {
 	#logout,
 	#post,
-	#profile,#bt,#ft {
-		padding:  1px 57px;
-        float: left;
-        width: 20%;
+	#profile,
+	#bt,
+	#ft {
+		padding: 1px 57px;
+		float: left;
+		width: 20%;
 	}
 }
-
-
-
-
 
 @media screen and (min-device-width: 760px) and (max-device-width: 1025px) {
 	/* STYLES HERE */
@@ -412,112 +256,103 @@ h1 {
 	.container {
 		margin: 20%;
 	}
-   
-    .topnav-right{
-        letter-spacing: 2.0px;
-	display: inline-block;
-	/*width: 190px;*/
-	text-align: center;
-	text-decoration: none;
-	/*padding: 10px 419px;*/
-	color: #333;
-	text-decoration: none;
-    }
-    
-    
-    #logout,
-	#post,
-	#profile,#bt,#ft {
-		padding:  1px 200px;
-        float: left;
-        width: 20%;
+	.topnav-right {
+		letter-spacing: 2.0px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		color: #333;
+		text-decoration: none;
 	}
-    
+	#logout,
+	#post,
+	#profile,
+	#bt,
+	#ft {
+		padding: 1px 200px;
+		float: left;
+		width: 20%;
+	}
 }
-
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	/* STYLES HERE */
-    
-    
-    
-    nav a {
-	letter-spacing: 2.0px;
-	display: inline-block;
-	/*width: 190px;*/
-	text-align: center;
-	text-decoration: none;
-	padding: 10px 290px;
-	color: #333;
-	text-decoration: none;
-}
-    nav a#openup {
-        padding: 10px 0px;
+	nav a {
+		letter-spacing: 2.0px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		padding: 10px 290px;
+		color: #333;
+		text-decoration: none;
+	}
+	nav a#openup {
+		padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
 		position: relative;
 	}
-	
 }
 
 
-
-
-
-
-
 /* css for the whole user session div */
+
 .userSession {
 	float: left;
 	width: 70%;
-	height: 400px;
+	height: 500px;
 	background-color: white;
 	margin: 200px 15% 0 15%;
 	position: absolute;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+
 /* css for user info div */
+
 #userInfo {
 	float: left;
 	width: 35%;
 	height: 450px;
-	margin-top: 25px;
+	margin-top: 55px;
 	margin-left: 2%;
 }
 
+
 /*css for user picture */
-#userPic {
+#userPicName {
 	float: left;
 	position: relative;
 	width: 55%;
 	height: 45%;
-	margin: 12% 20% 0 20%;
+	margin: 20% 20% 0 20%;
 }
 
 /*css for user picture */
-#userName {
-	float: left;
+#name {
 	text-align: center;
 	font-family: 'Alatsi', sans-serif;
-	line-height: 30px;
-	font-size: 28px;
-	width: 55%;
-	margin: 20px 0 0 20%;
+	line-height: 25px;
+	font-size: 22px;
+	font-weight: bold;
 }
 
+
 /* CSS for upcoming session div */
+
 #upcoming {
 	float: left;
 	position: absolute;
 	width: 62%;
-	height: 280px;
-	margin: 30px 0 0 32% ;
+	height: 350px;
+	margin: 20px 0 0 32% ;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+
 /* CSS for upcoming title */
+
 #upcomingTitle {
 	text-align: center;
 	font-family: 'Alatsi', sans-serif;
@@ -525,12 +360,88 @@ h1 {
 	font-size: 18px;
 }
 
+
 /* CSS for sessions holder */
+
 #sessions {
 	overflow: auto;
 	width: 95%;
-	height: 220px;
+	height: 300px;
 	margin-left: 2.5%;
 }
 
+/* media query 1250 */
+@media only screen and (max-width: 1250px) {
+	#sessions {
+		font-size: 12px;
+	}
+	#name {
+		font-size: 18px;
+	}
+}
 
+/* media query 1050 */
+@media only screen and (max-width: 1050px) {
+	.userSession {
+		height: 600px;
+		margin-top: 100px;
+	}
+	#upcoming {
+		width: 95%;
+		position: absolute;
+		margin: 210px 0 0 0;
+	}
+	#sessions {
+		font-size: 12px;
+	}
+	#userPicName {
+		margin: 10px 0 0 100%;
+	}
+	#name {
+		font-size: 15px;
+	}
+}
+
+/* media query 900 */
+@media only screen and (max-width: 900px) {
+	#name {
+		font-size: 13px;
+	}
+	.userSession {
+		height: 550px;
+	}
+	#upcoming {
+		margin: 180px 0 0 0;
+	}
+}
+
+/* media query 760 */
+@media only screen and (max-width: 760px) {
+	#upcoming {
+		margin: 160px 0 0 0;
+	}
+}
+
+/* media query iphone X */
+@media only screen and (max-width: 400px) {
+	
+	#upcomingTitle{
+		font-size: 16px;
+	}
+	.userSession {
+		height: 550px;
+		width: 90%;
+		margin: 110px 0 0 4%;
+	}
+	#userPicName {
+		width: 85%;
+		height: 75%;
+	}
+	#name {
+		line-height: 14px;
+		font-size: 12px;
+	}
+	#sessions {
+		font-size: 10px;
+	}
+}
