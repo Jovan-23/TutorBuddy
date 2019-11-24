@@ -3,7 +3,6 @@ body {
 	font-family: "Raleway", sans-serif;
 	background-color: #f3ca3352;
 	margin: 0;
-	/*color: #fff;*/
 	line-height: 1.9;
 }
 
@@ -12,9 +11,8 @@ body {
 }
 
 .topnav-right {
-	float:right;
+	float: right;
 }
-
 
 img {
 	width: 100%;
@@ -29,21 +27,13 @@ a {
 /* Showcase */
 
 #showcase {
-	/*background-color: #fff;*/
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	/* background-image: url('../img/image2.jpg');*/
-	/* width: 100%;*/
-	/*height: 100vh;*/
 	position: relative;
 	overflow-y: hidden;
 	background-size: 100% 100%;
 }
-
-/*#showcase a:hover {
-	background-color: gainsboro;
-}*/
 
 #showcase .container {
 	margin-top: 25vh;
@@ -83,7 +73,6 @@ nav li {
 nav a {
 	letter-spacing: 2.0px;
 	display: inline-block;
-	/*width: 190px;*/
 	text-align: center;
 	text-decoration: none;
 	padding: 10px 22px;
@@ -91,15 +80,11 @@ nav a {
 	text-decoration: none;
 }
 
-/*nav li:hover {
-	background-color: #444;
-}*/
-
 nav a#openup {
 	display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
 	.hide-on-small {
 		display: none;
 	}
@@ -129,18 +114,13 @@ nav a#openup {
 		position: relative;
 	}
 	nav a {
-        padding:  10px 26px;
+		padding: 10px 26px;
 		text-align: left;
 		width: 100%;
 		text-indent: 25px;
 		background: #fff!important;
 		border-bottom: 1px solid #555;
 	}
-/*
-	nav a:hover {
-		background: #444;
-	}
-*/
 	nav a#openup:after {
 		content: '|||';
 		transform: rotate(-90deg);
@@ -148,7 +128,6 @@ nav a#openup {
 		/* IE 9 */
 		-webkit-transform: rotate(-90deg);
 		/* Safari and Chrome */
-		/* width: 30px;*/
 		height: 30px;
 		display: inline-block;
 		position: absolute;
@@ -156,7 +135,7 @@ nav a#openup {
 		top: 20px;
 	}
 	nav a#openup {
-        padding: 10px 0px;
+		padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
@@ -176,6 +155,21 @@ nav a#openup {
 
 .cf {
 	zoom: 1;
+}
+
+.myContainer {
+	padding: 2px 16px;
+}
+
+.myCard {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 40%;
+	border-radius: 5px;
+}
+
+.myCard:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 1366px) {
@@ -214,9 +208,6 @@ input[type=password] {
 	background: #f1f1f1;
 }
 
-
-/*       */
-
 #school,
 #course,
 #subject {
@@ -244,61 +235,44 @@ hr {
 
 button {
 	background-color: #f1f1f1;
-	/* color: white;*/
-	/*padding: 1px 20px;*/
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
 	width: 100%;
 	opacity: 0.9;
 }
+
 button:hover {
 	opacity: 1;
 }
 
 #logout {
 	background-color: transparent;
-    float: right;
-    width: 80%;
-	/*text-align: right;
-	padding: 1px 455px;*/
+	float: right;
+	width: 80%;
 }
 
 #post {
 	background-color: transparent;
-     float: right;
-     width: 31%;
-	/*text-align: right;
-	padding: 1px 700px;*/
+	float: right;
+	width: 31%;
 }
 
 #profile {
 	background-color: transparent;
-     float: right;
-     width: 31%;
-	/*text-align: right;
-	padding: 1px 580px;*/
+	float: right;
+	width: 31%;
 }
 
 #bt {
 	background-color: transparent;
-     float: left;
-/*     width: 31%;*/
-	/*text-align: right;
-	padding: 1px 700px;*/
+	float: left;
 }
-
-
 
 #ft {
 	background-color: transparent;
-     float: left;
-/*     width: 31%;*/
-	/*text-align: right;
-	padding: 1px 700px;*/
+	float: left;
 }
-
-
 
 
 /* Extra styles for the cancel button */
@@ -334,7 +308,6 @@ h1 {
 	margin-top: 10%;
 	margin-left: 30%;
 	background-color: white;
-	/*  margin-bottom: 10%;*/
 }
 
 
@@ -359,24 +332,20 @@ h1 {
 @media screen and (max-width: 450px) {
 	.container {
 		margin-left: 0;
-/*		margin: auto;*/
 	}
 }
 
 @media screen and (max-width: 1024px) {
 	#logout,
 	#post,
-	#profile,#bt,#ft {
-		padding:  1px 57px;
-        float: left;
-        width: 20%;
+	#profile,
+	#bt,
+	#ft {
+		padding: 1px 57px;
+		float: left;
+		width: 20%;
 	}
 }
-
-
-
-
-
 
 @media screen and (min-device-width: 760px) and (max-device-width: 1025px) {
 	/* STYLES HERE */
@@ -390,54 +359,41 @@ h1 {
 	.container {
 		margin: 20%;
 	}
-   
-    .topnav-right{
-        letter-spacing: 2.0px;
-	display: inline-block;
-	/*width: 190px;*/
-	text-align: center;
-	text-decoration: none;
-	/*padding: 10px 419px;*/
-	color: #333;
-	text-decoration: none;
-    }
-    
-    
-    #logout,
-	#post,
-	#profile,#bt,#ft {
-		padding:  1px 200px;
-        float: left;
-        width: 20%;
+	.topnav-right {
+		letter-spacing: 2.0px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		color: #333;
+		text-decoration: none;
 	}
-    
+	#logout,
+	#post,
+	#profile,
+	#bt,
+	#ft {
+		padding: 1px 200px;
+		float: left;
+		width: 20%;
+	}
 }
-
-
-
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	/* STYLES HERE */
-    
-    
-    
-    nav a {
-	letter-spacing: 2.0px;
-	display: inline-block;
-	/*width: 190px;*/
-	text-align: center;
-	text-decoration: none;
-	padding: 10px 290px;
-	color: #333;
-	text-decoration: none;
-}
-    nav a#openup {
-        padding: 10px 0px;
+	nav a {
+		letter-spacing: 2.0px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		padding: 10px 290px;
+		color: #333;
+		text-decoration: none;
+	}
+	nav a#openup {
+		padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
 		position: relative;
 	}
-	
 }
-

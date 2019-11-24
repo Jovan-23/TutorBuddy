@@ -108,7 +108,7 @@ nav a#openup {
 	display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
 	.hide-on-small {
 		display: none;
 	}
@@ -458,6 +458,73 @@ h1 {
 		position: relative;
 	}
 	
+}
+
+
+/* css for the whole user session div */
+.userSession {
+	float: left;
+	width: 70%;
+	height: 400px;
+	background-color: white;
+	margin: 200px 15% 0 15%;
+	position: absolute;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* css for user info div */
+#userInfo {
+	float: left;
+	width: 35%;
+	height: 450px;
+	margin-top: 25px;
+	margin-left: 2%;
+}
+
+/*css for user picture */
+#userPic {
+	float: left;
+	position: relative;
+	width: 55%;
+	height: 45%;
+	margin: 12% 20% 0 20%;
+}
+
+/*css for user picture */
+#userName {
+	float: left;
+	text-align: center;
+	font-family: 'Alatsi', sans-serif;
+	line-height: 30px;
+	font-size: 28px;
+	width: 55%;
+	margin: 20px 0 0 20%;
+}
+
+/* CSS for upcoming session div */
+#upcoming {
+	float: left;
+	position: absolute;
+	width: 62%;
+	height: 280px;
+	margin: 30px 0 0 32% ;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* CSS for upcoming title */
+#upcomingTitle {
+	text-align: center;
+	font-family: 'Alatsi', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* CSS for sessions holder */
+#sessions {
+	overflow: auto;
+	width: 95%;
+	height: 220px;
+	margin-left: 2.5%;
 }
 
 

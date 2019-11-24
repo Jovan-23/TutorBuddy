@@ -19,12 +19,17 @@ router.get('/logout', credentials.logout);
 // get user booked sessions
 router.get('/getSessions', tutorsession.getTutorSessions);
 
+// get all posted sessions
+router.get('/getPostedSessions', tutorsession.getPostedSessions);
+router.post('/postBookedSessions', tutorsession.postBookedSessions)
+
 // get tutor applications
 router.get('/getAdminSession', adminSession.getAdminSession);
 
 // get tutor applications
 router.post('/updateAdminSession', adminSession.updateAdminSession);
 router.post('/deleteTutor', adminSession.deleteTutor);
+
 
 router.get('/findTutor', (req, res) => {    
         res.render('findTutor');
