@@ -64,10 +64,10 @@ $(document).ready(() => {
            
             for (let index = 0; index < data.data.length; index++) {
                 const element1 = data.data[index];
-                $("#subject").append('<option value=' + element1.subject + '>' + element1.subject + '</option>');
+                $("#subject").append('<option value="' + element1.subject + '">' + element1.subject + '</option>');
                 for (let index = 0; index < element1.courseNumber.length; index++) {
                     const element = element1.courseNumber[index];
-                    $("#course").append('<option value=' + element + '>' + element + '</option>');
+                    $("#course").append('<option value="' + element + '">' + element + '</option>');
 
                 }
 
@@ -83,7 +83,7 @@ $(document).ready(() => {
                         $("#course").html('');
                         for (let index = 0; index < element1.courseNumber.length; index++) {
                             const element = element1.courseNumber[index];
-                            $("#course").append('<option value=' + element + '>' + element + '</option>');
+                            $("#course").append('<option value="' + element + '">' + element + '</option>');
 
                         }
 
@@ -119,7 +119,6 @@ $(document).ready(() => {
             success: function (data) {
                 console.log(data);
                 if (data.apply == "ok") {
-                    emailNotification();
                     window.location.href = "/userProfile";
                 }
             }
@@ -128,10 +127,3 @@ $(document).ready(() => {
     });
 
 })
-
-function emailNotification() {
-    $.ajax({
-        type: "post",
-        url: "/apply"
-    });
-}
