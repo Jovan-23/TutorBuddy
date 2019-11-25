@@ -23,7 +23,7 @@ body {
 }
 
 #signup {
-	background-color: transparent;
+	background-color: #f3ca3352;
 }
 
 .topnav-right {
@@ -40,7 +40,7 @@ a {
 }
 
 #login {
-	background-color: transparent;
+	background-color: #f3ca3352;
 	/* float: left; */
 }
 
