@@ -50,7 +50,6 @@ $(document).ready(() => {
         let userInput = {"school":$("#school").val(),"subject":$("#subject").val(),"course":$("#course").val()};
         console.log(userInput);
         $("#inputForm").hide();
-        console.log(postedSeesionArray);
         for(var i = 0; i < postedSeesionArray.data.length; i++){
             if(userInput.course == postedSeesionArray.data[i].course) {
 
@@ -63,14 +62,15 @@ $(document).ready(() => {
                 let myTutorEmail = postedSeesionArray.data[i].tutorEmail;
                 let myTutorName = postedSeesionArray.data[i].tutorName;
 
-                $("#result").append('<div class="myCard"> <div class="MyContainer"> <h3 id = "outputCourse">')
+                $("#result").append('<div class="card"> <div class="card-header">')
                 $("#result").append(myCourse);
-                $("#result").append('</h3>');
-                $("#result").append('<p>Tutor Email: ' + myTutorEmail + '<p>');
-                $("#result").append('<p>Tutor Name: ' + myTutorName + '<p>');
-                $("#result").append('<p>Location: ' + myLocation + '<p>');
-                $("#result").append('<p>Time: ' + myTime + '<p>');
-                $("#result").append('<button id ="' + myButtonId + '">' + 'select </button>');
+                $("#result").append('</div>');
+                $("#result").append('<div class = "card-body">');
+                $("#result").append('<p class = "card-text">Tutor Email: ' + myTutorEmail + '<p>');
+                $("#result").append('<p class = "card-text">Tutor Name: ' + myTutorName + '<p>');
+                $("#result").append('<p class = "card-text">Location: ' + myLocation + '<p>');
+                $("#result").append('<p class = "card-text">Time: ' + myTime + '<p>');
+                $("#result").append('<button class ="btn btn-primary" id ="' + myButtonId + '">' + 'select </button>');
                 $("#result").append('</div></div>'); 
 
                 $("#"+ myButtonId + "").click(() =>{
@@ -103,6 +103,11 @@ $(document).ready(() => {
                 })
             }
         }
+        if( !$.trim( $('#result').html() ).length ) {
+            $('#result').html('<p>There is currently no available tutors for your selection.</p>');
+
+        }
+        console.log("called");
         $("#result").append('<button id = "back"> Back </button>');
         $("#back").click(() =>{
             $("#result").hide();
