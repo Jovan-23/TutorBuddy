@@ -62,16 +62,18 @@ $(document).ready(() => {
                 let myTutorEmail = postedSeesionArray.data[i].tutorEmail;
                 let myTutorName = postedSeesionArray.data[i].tutorName;
 
-                $("#result").append('<div class="card"> <div class="card-header">')
-                $("#result").append(myCourse);
-                $("#result").append('</div>');
-                $("#result").append('<div class = "card-body">');
-                $("#result").append('<p class = "card-text">Tutor Email: ' + myTutorEmail + '<p>');
-                $("#result").append('<p class = "card-text">Tutor Name: ' + myTutorName + '<p>');
-                $("#result").append('<p class = "card-text">Location: ' + myLocation + '<p>');
-                $("#result").append('<p class = "card-text">Time: ' + myTime + '<p>');
-                $("#result").append('<button class ="btn btn-primary" id ="' + myButtonId + '">' + 'select </button>');
-                $("#result").append('</div></div>'); 
+                $("#result").append(
+                    '<div class = "cardContainer" style = "box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; border : 2px solid transparent;   ">' + 
+                        '<div class = "card-body" style = "padding: 2px 16px;   ">' +
+                        '<h3 style = "color : cornflowerblue; font-family: cursive">' + myCourse + '</h3>' +
+                        '<p class = "card-text" >Tutor Email: ' + myTutorEmail +
+                        '<p class = "card-text">Tutor Name: ' + myTutorName +
+                        '<p class = "card-text">Location: ' + myLocation +
+                        '<p class = "card-text">Time: ' + myTime + '</p>' +
+                            '<button style = "width: 30%; text-align : center; background-color : #428bca;' +
+                            'border-radius : 10px;' +
+                            'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id ="' + myButtonId + '">' + 'select </button>' +
+                        '</div></div>');
 
                 $("#"+ myButtonId + "").click(() =>{
                     let index = myButtonId.substr(6);
@@ -108,7 +110,9 @@ $(document).ready(() => {
 
         }
         console.log("called");
-        $("#result").append('<button id = "back"> Back </button>');
+        $("#result").append('<button style = "width: 30%; text-align : center; background-color : #428bca;' +
+        'border-radius : 10px;' +
+        'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id = "back"> Back </button>');
         $("#back").click(() =>{
             $("#result").hide();
             $("#inputForm").show();
