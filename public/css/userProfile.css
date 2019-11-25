@@ -383,7 +383,7 @@ button:hover {
 /* media query 1050 */
 @media only screen and (max-width: 1050px) {
 	.userSession {
-		height: 600px;
+		height: 630px;
 		margin-top: 100px;
 	}
 	#upcoming {
@@ -408,7 +408,7 @@ button:hover {
 		font-size: 13px;
 	}
 	.userSession {
-		height: 550px;
+		height: 600px;
 	}
 	#upcoming {
 		margin: 180px 0 0 0;
@@ -429,9 +429,9 @@ button:hover {
 		font-size: 16px;
 	}
 	.userSession {
-		height: 550px;
+		height: 580px;
 		width: 90%;
-		margin: 110px 0 0 4%;
+		margin: 100px 0 0 4%;
 	}
 	#userPicName {
 		width: 85%;
