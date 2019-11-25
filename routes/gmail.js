@@ -23,6 +23,7 @@ exports.newApplication = (req, res) => {
                 ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.course + '</li> '+
                 ' <li>Education: ' + req.body.education + '</li> <li>GPA: ' + req.body.GPA + '</li></ul> '  // html body
     };
+    // send the email
     transporter.sendMail(mailOption1, function(err, data) {
         if(err) {
             console.log("Sending Email failed: ", err);
@@ -31,45 +32,3 @@ exports.newApplication = (req, res) => {
         }
     });
 }
-
-// // approved for being a tutor 
-// exports.approvingTutor = (req, res) => {
-//     // send mail with defined transport object
-//     let mailOption2 = {
-//       from: 'Tutorbuddy2019@gmail.com', // sender address
-//       to: req.session.userinfo.email, // list of receivers
-//       subject: "TutorBuddy - Approved!", // Subject line
-//       text: "Hi " + req.session.userinfo.username + "," + 
-//             "\n\nCongratulations! You are now an approved tutor on TutorBuddy! \n " +
-//              "Go ahead and post your first tutor session!\n\n" + "Thank you," // plain text body
-//       };
-  
-//       transporter.sendMail(mailOption2, function(err, data) {
-//           if(err) {
-//               console.log("Sending Email failed: ", err);
-//           } else {
-//               console.log("Email Sent!");
-//           }
-//       });
-//   }
-
-//   // reject for being a tutor 
-// exports.rejectingTutor = (req, res) => {
-//     // send mail with defined transport object
-//     let mailOption2 = {
-//       from: 'Tutorbuddy2019@gmail.com', // sender address
-//       to: req.session.userinfo.email, // list of receivers
-//       subject: "TutorBuddy - Rejected!", // Subject line
-//       text: "Congratulations! You are now an approved tutor on TutorBuddy! \n " +
-//              "Go ahead and post your first tutor session!" // plain text body
-//       };
-  
-//       transporter.sendMail(mailOption2, function(err, data) {
-//           if(err) {
-//               console.log("Sending Email failed: ", err);
-//           } else {
-//               console.log("Email Sent!");
-//           }
-//       });
-//   }
-
