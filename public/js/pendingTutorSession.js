@@ -138,7 +138,12 @@ $(document).ready(() => {
                         $.ajax({
                             type: "post",
                             url: "/updateAdminSession",
-                            data:{"id":value._id},
+                            data:{"id":value._id,
+                                "name" : value.tutorName,
+                                "email" : value.email,
+                                "school": value.school,
+                                "subject": value.subject,
+                                "courseNumber": value.courseNumber},
                             dataType: "json",
                             success: function (data) {
                               if(data.update=="ok"){
@@ -176,7 +181,12 @@ $(document).ready(() => {
                         $.ajax({
                             type: "post",
                             url: "/deleteTutor",
-                            data:{"id":value._id},
+                            data:{"id":value._id,
+                                "name" : value.tutorName,
+                                "email" : value.email,
+                                "school": value.school,
+                                "subject": value.subject,
+                                "courseNumber": value.courseNumber},
                             dataType: "json",
                             success: function (data) {
                               if(data.delete=="ok"){
