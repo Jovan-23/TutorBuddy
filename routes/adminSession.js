@@ -33,7 +33,7 @@ exports.updateAdminSession = (req, res) => {
                     '<ul> <li>School: '  + req.body.school +' </li> ' + 
                         ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.courseNumber + '</li></ul>'
                     + '<p> Go ahead and post your first tutoring session with TutorBody! </p>' +
-                    '<p>Thank you,</p> <p>TutorBuddy</p>'
+                    '<p>Thank you,<br/>TutorBuddy</p>'
             };
         // send the email
         transporter.sendMail(mailOption, function(err, data) {
@@ -62,8 +62,8 @@ exports.deleteTutor = (req, res) => {
                     '<p>Sorry to let you know that your application for: </p> ' + 
                     '<ul> <li>School: '  + req.body.school +' </li> ' + 
                         ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.courseNumber + '</li></ul>'
-                    + '<p> is rejected. Please apply again when you meet our requirements! </p>' +
-                    '<p>Thank you,</p> <p>TutorBuddy</p>'
+                    + '<p> is rejected. <br/>Please apply again when you meet our requirements! </p>' +
+                    '<p>Thank you,<br/>TutorBuddy</p>'
             };
         // send the email
         transporter.sendMail(mailOption, function(err, data) {
