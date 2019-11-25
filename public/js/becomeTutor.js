@@ -65,11 +65,15 @@ $(document).ready(() => {
             for (let index = 0; index < data.data.length; index++) {
                 const element1 = data.data[index];
                 $("#subject").append('<option value="' + element1.subject + '">' + element1.subject + '</option>');
-                for (let index = 0; index < element1.courseNumber.length; index++) {
-                    const element = element1.courseNumber[index];
-                    $("#course").append('<option value="' + element + '">' + element + '</option>');
+                if(index==0){
+                    for (let index = 0; index < element1.courseNumber.length; index++) {
+                        const element = element1.courseNumber[index];
+                        $("#course").append('<option value="' + element + '">' + element + '</option>');
+    
+                    }
 
                 }
+                
 
             }
 

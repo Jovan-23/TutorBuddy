@@ -65,31 +65,34 @@ router.post('/doPost', (req, res) => {
     let subject= req.body.subject;
     let courseNumber=req.body.courseNumber;
     let school=req.body.school;
+    console.log(reqData.time);
+
     
 
-    DB.find('TutorApplication', { email,school,subject,courseNumber}, (err, data) => {
-        if (err) throw err;
+    // DB.find('TutorApplication', { email,school,subject,courseNumber}, (err, data) => {
+    //     if (err) throw err;
        
-       // console.log(data[0].status); 
-        if (data.length ==1&&data[0].status=="accepted") {
-           console.log("accepted");
+      
+    //     if (data.length ==1&&data[0].status=="accepted") {
+    //        console.log("accepted");
+    //        reqData.Rate=data[0].Rate;
            
-            DB.insert('PostedSession', reqData, (err, data) => {
-                console.log("post");
-                console.log(data);
-                console.log("======================")
-                if (!err) {
-                    res.json({ "post": "ok" })
-                } else {
-                    res.json({ "post": "fail" })
-                }
-            })
+    //         DB.insert('PostedSession', reqData, (err, data) => {
+    //             console.log("post");
+    //             console.log(data);
+    //             console.log("======================")
+    //             if (!err) {
+    //                 res.json({ "post": "ok" })
+    //             } else {
+    //                 res.json({ "post": "fail" })
+    //             }
+    //         })
            
-            return;
-        } else {
+    //         return;
+    //     } else {
            
-        }
-    })
+    //     }
+    // })
 
     
    
