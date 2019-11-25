@@ -5,10 +5,16 @@ const credentials = require('./credentials.js');
 const tutorsession = require('./tutorsession.js');
 const DB = require('../modules/db.js');
 const adminSession = require('./adminSession.js');
+// for email notification
+const nodemailer = require('nodemailer');
+const gmail = require('./gmail');
 
 router.get('/', (req, res) => {
     res.render('index');
 })
+
+// apply for being a tutor email notification
+router.post('/apply', gmail.newApplication);
 
 router.post('/clogin', credentials.doLogin);
 router.post('/csignup', credentials.doRegister);

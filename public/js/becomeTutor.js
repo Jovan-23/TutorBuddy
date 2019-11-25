@@ -119,6 +119,7 @@ $(document).ready(() => {
             success: function (data) {
                 console.log(data);
                 if (data.apply == "ok") {
+                    emailNotification();
                     window.location.href = "/userProfile";
                 }
             }
@@ -127,3 +128,10 @@ $(document).ready(() => {
     });
 
 })
+
+function emailNotification() {
+    $.ajax({
+        type: "post",
+        url: "/apply"
+    });
+}
