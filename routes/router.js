@@ -57,17 +57,41 @@ router.get('/post', (req, res) => {
 })
 
 router.post('/doPost', (req, res) => {
-    console.log(req.body);
-    let data = req.body;
-    data.tutorEmail = req.session.userinfo.email;
-    data.tutorName = req.session.userinfo.username;
-    DB.insert('PostedSession', data, (err, data) => {
-        if (!err) {
-            res.json({ "post": "ok" })
+    
+    let reqData = req.body;
+     reqData.tutorEmail = req.session.userinfo.email;
+     reqData.tutorName = req.session.userinfo.username;
+    let email = req.session.userinfo.email;
+    let subject= req.body.subject;
+    let courseNumber=req.body.courseNumber;
+    let school=req.body.school;
+    
+
+    DB.find('TutorApplication', { email,school,subject,courseNumber}, (err, data) => {
+        if (err) throw err;
+       
+       // console.log(data[0].status); 
+        if (data.length ==1&&data[0].status=="accepted") {
+           console.log("accepted");
+           
+            DB.insert('PostedSession', reqData, (err, data) => {
+                console.log("post");
+                console.log(data);
+                console.log("======================")
+                if (!err) {
+                    res.json({ "post": "ok" })
+                } else {
+                    res.json({ "post": "fail" })
+                }
+            })
+           
+            return;
         } else {
-            res.json({ "post": "fail" })
+           
         }
     })
+
+    
    
 })
 router.get('/becomeTutor', (req, res) => {
@@ -80,6 +104,7 @@ router.post('/tutorApp', (req, res) => {
     let dataInfo = req.body;
     dataInfo.email = req.session.userinfo.email;
     dataInfo.tutorName = req.session.userinfo.username;
+
     DB.insert('TutorApplication', dataInfo, (err, data) => {
         if (!err) {
             // send mail with defined transport object
@@ -108,6 +133,8 @@ router.post('/tutorApp', (req, res) => {
         }
     })
 });
+
+
 
 router.get('/userProfile', (req, res) => {
     res.render('userProfile');

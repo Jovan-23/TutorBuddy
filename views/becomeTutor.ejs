@@ -31,34 +31,35 @@
                 <ul class='cf'>
 
                     <li class="hide-on-small">
-                        <a href=''  style="font-size:24px"><b>Tutor Buddy</b></a>
+                        <a href='' style="font-size:24px"><b>Tutor Buddy</b></a>
                     </li>
                     <div class="topnav-left">
                         <li>
                             <a href='becomeTutor' style='font-size:17px'>
-                                <button id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> <u>Become Tutor</u></i></button>
-                            
+                                <button id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> <u>Become
+                                            Tutor</u></i></button>
+
                             </a>
                         </li>
 
                         <li>
                             <a href='findTutor' style='font-size:17px'>
-                            <button id="ft" style='font-size:20px'><i class='fas fa-search'> Find Tutor</i></button>
-                            
+                                <button id="ft" style='font-size:20px'><i class='fas fa-search'> Find Tutor</i></button>
+
                             </a>
                         </li>
 
 
-                       
 
-                      
-  
+
+
+
 
                     </div>
-                    
-                    
+
+
                     <div class="topnav-right">
-                       
+
                         <li>
                             <a href='post' class="">
                                 <button id="post" style='font-size:20px'><i class='far fa-calendar-alt'></i></button>
@@ -69,11 +70,12 @@
 
                         <li>
                             <a href='userProfile' class="ui item">
-                                <button id="profile" ><i class='far fa-user' style="font-size:20px;" id="edit"></i></button>
+                                <button id="profile"><i class='far fa-user' style="font-size:20px;"
+                                        id="edit"></i></button>
                             </a>
 
                         </li>
-    <li>
+                        <li>
                             <a href='/logout' class="">
                                 <button id="logout" style='font-size:20px'><i class='fas fa-sign-out-alt'></i></button>
 
@@ -82,11 +84,11 @@
                         </li>
 
                     </div>
-                
-                    
-                    
-                        
-                    
+
+
+
+
+
                 </ul>
                 <a href='#' id='openup'>Tutor Buddy</a>
             </nav>
@@ -113,17 +115,17 @@
 
         <!-- subject dropdown -->
         <label for="subject"><b>Subject</b></label>
-        <div id="subjectDropDown" >
+        <div id="subjectDropDown">
             <select id="subject" required>
-               
+
             </select>
         </div>
 
         <!-- course dropdown -->
         <label for="course"><b>Course</b></label>
-        <div id="courseDropDown" >
+        <div id="courseDropDown">
             <select id="course" required>
-              
+
             </select>
         </div>
 
@@ -143,6 +145,12 @@
         <div>
             <label for="GPA"><b>GPA</b></label>
             <input id="GPA" type="number" step=0.1 placeholder="Select GPA" name="GPA" autocomplete="off" min="1"
+                max="4" required>
+
+        </div>
+        <div>
+            <label for="Rate($/hour)"><b>Rate</b></label>
+            <input id="Rate" type="currency" step=0.1 placeholder="Enter Rate" name="Rate" autocomplete="off" min="1"
                 max="4" required>
 
         </div>

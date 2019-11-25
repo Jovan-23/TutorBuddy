@@ -47,9 +47,22 @@ $(document).ready(() => {
 
 
     $("#submitPost").click(() => {
-        
-        let data={"school":$("#school").val(),"subject":$("#subject").val(),"course":$("#course").val(),"location":$("#location").val(),"time":$("#dateTime").val()};
-        console.log(123);
+        // console.log($("#school").val());
+        // console.log($("#subject").val());
+        // console.log($("#course").val());
+        // console.log($("#location").val());
+        // console.log($("#dateTime").val());
+        // console.log($("#Rate").val());
+
+
+
+
+        if($("#school").val()==""||$("#subject").val()==""||$("#course").val()==""||$("#location").val()==""||$("#dateTime").val()==""||$("#Rate").val()==""){
+            alert("please fill out form");
+            return;
+        }
+        let data={"school":$("#school").val(),"subject":$("#subject").val(),"courseNumber":$("#course").val(),"location":$("#location").val(),"time":$("#dateTime").val(),"Rate":$("#Rate").val()};
+       
         /** Server request that saves user info to database */
         $.ajax({
           type: "post",

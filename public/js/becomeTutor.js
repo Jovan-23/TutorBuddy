@@ -108,8 +108,12 @@ $(document).ready(() => {
 
 
     $("#submitApp").click(() => {
-        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "courseNumber": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending" };
-        console.log(123);
+        if($("#education").val()==""||$("#school").val()==""||$("#subject").val()==""||$("#course").val()==""||$("#GPA").val()==""||$("#Rate").val()==""){
+            alert("please fill out form");
+            return;
+        }
+        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "courseNumber": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending","Rate":$("#Rate").val() };
+       
         /** Server request that saves user info to database */
         $.ajax({
             type: "post",
