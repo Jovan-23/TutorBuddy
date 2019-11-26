@@ -1,4 +1,11 @@
+/* ----------------------------------------
+IMPORTED FONTS
+ --------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* ----------------------------------------
+BODY
+ --------------------------------------- */
 body {
 	font-family: "Raleway", sans-serif;
 	background-color: #f3ca3352;
@@ -50,7 +57,6 @@ nav a#openup {
 	float: right;
 }
 
-
 img {
 	width: 100%;
 }
@@ -79,12 +85,14 @@ CHANGES HOVER COLOURS OF THE NAVIGATION BAR
 /* ----------------------------------------
 REMOVE NAV BLUE BOX AROUND ICON (BUTTON) CLICK
  --------------------------------------- */
- .iconBorderClickRemoval {
+.iconBorderClickRemoval {
 	 outline: 0;
 	 box-shadow: none !important;
- }
+}
 
-
+/* ----------------------------------------
+SHOWCASE
+--------------------------------------- */
 #showcase {
 	background-repeat: no-repeat;
 	margin: 0;
