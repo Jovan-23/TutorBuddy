@@ -58,7 +58,10 @@ $(document).ready(() => {
     $("#submitPost").click(() => {
         
 
-
+        var dateTime=$("#dateTime").val();
+        console.log(dateTime);
+        let date=new Date(dateTime);
+        console.log(date);
 
 
         if($("#school").val()==""||$("#subject").val()==""||$("#course").val()==""||$("#location").val()==""||$("#dateTime").val()==""){

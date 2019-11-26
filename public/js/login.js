@@ -1,6 +1,10 @@
 // user login username, password
 $(document).ready(() => {
+  
     $("#submitIN").click(() => {
+
+     
+
         /** Server request that saves user info to database */
         $.ajax({
           type: "post",
@@ -14,7 +18,9 @@ $(document).ready(() => {
             console.log(data);
             if (data.login == "ok") {
                 window.location.href = "/userProfile";
-            } 
+            } else{
+              console.log(data.login);
+            }
         }
         });
       });

@@ -1,6 +1,7 @@
 const DB = require('../modules/db.js');
 
 exports.doRegister = (req, res) => {
+   
     let username = req.body.username;
     let email = req.body.email;
     let password = req.body.password;
@@ -31,6 +32,7 @@ exports.doRegister = (req, res) => {
 }
 
 exports.doLogin = (req, res) => {
+   
     let email = req.body.email;
     let password = req.body.password;
 
