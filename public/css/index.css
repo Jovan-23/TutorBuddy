@@ -503,8 +503,10 @@ section#entertainment {
 }
 
 #showcase h1 {
-	float: left;
-	font-size: 9rem;
+	transform:rotate(-3deg);
+	/* float: left; */
+	margin-left: 76px;
+	/* font-size: 9rem; */
 	margin-bottom: 0;
 }
 
