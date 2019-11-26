@@ -76,13 +76,11 @@ router.post('/doPost', (req, res) => {
        
       
         if (data.length ==1&&data[0].status=="accepted") {
-           console.log("accepted");
+          
            reqData.Rate=data[0].Rate;
            
             DB.insert('PostedSession', reqData, (err, data) => {
-                console.log("post");
-                console.log(data);
-                console.log("======================")
+              
                 if (!err) {
                     res.json({ "post": "ok" })
                 } else {
@@ -105,7 +103,7 @@ router.get('/becomeTutor', (req, res) => {
 
 
 router.post('/tutorApp', (req, res) => {
-    console.log(req.body);
+   
     let dataInfo = req.body;
     dataInfo.email = req.session.userinfo.email;
     dataInfo.tutorName = req.session.userinfo.username;
