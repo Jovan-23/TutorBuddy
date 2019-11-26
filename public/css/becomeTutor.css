@@ -24,6 +24,8 @@ a {
 }
 
 
+
+
 /* Showcase */
 
 #showcase {
@@ -112,7 +114,7 @@ nav a#openup {
 		position: relative;
 	}
 	nav a {
-		padding: 10px 26px;
+		padding: 0px 26px;
 		text-align: left;
 		width: 100%;
 		text-indent: 25px;
@@ -228,7 +230,7 @@ button {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 100%;
+	/* width: 100%; */
 	opacity: 0.9;
 }
 
@@ -238,8 +240,9 @@ button:hover {
 
 #logout {
 	background-color: transparent;
-	float: right;
-	width: 80%;
+	/* float: right; */
+	/* width: 80%; */
+	width: 32%;
 }
 
 #post {
@@ -324,6 +327,7 @@ h1 {
 		margin-top: 14%;
 		margin-left: 1%;
 	}
+	
 }
 
 @media screen and (max-width: 1024px) {
@@ -332,9 +336,9 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		padding: 1px 57px;
+		padding: 1px 32px;
 		float: left;
-		width: 20%;
+		/* width: 20%; */
 	}
 }
 
@@ -363,13 +367,13 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		padding: 1px 200px;
+		padding: 0px 443px;
 		float: left;
-		width: 20%;
+		/* width: 20%; */
 	}
 }
 
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
 	nav a {
 		letter-spacing: 2.0px;
 		display: inline-block;
@@ -386,5 +390,14 @@ h1 {
 		background-color: #333;
 		width: 100%;
 		position: relative;
+	}
+	#logout,
+	#post,
+	#profile,
+	#bt,
+	#ft {
+		padding: 1px 71px;
+		float: left;
+		/* width: 20%; */
 	}
 }
