@@ -1,4 +1,7 @@
 
+
+
+
 $(document).ready(() => {
   $.ajax({
     type: "get",
@@ -58,17 +61,20 @@ $(document).ready(() => {
     $("#submitPost").click(() => {
         
 
-        var dateTime=$("#dateTime").val();
-        console.log(dateTime);
-        let date=new Date(dateTime);
-        console.log(date);
-
+   
 
         if($("#school").val()==""||$("#subject").val()==""||$("#course").val()==""||$("#location").val()==""||$("#dateTime").val()==""){
             alert("please fill out form");
             return;
         }
-        let data={"school":$("#school").val(),"subject":$("#subject").val(),"courseNumber":$("#course").val(),"location":$("#location").val(),"time":$("#dateTime").val()};
+
+        var dateTime=$("#dateTime").val();
+        let date=new Date(dateTime);
+        var day = (date.getDate() <= 9 ? "0" + date.getDate() : date.getDate());
+        var month = (date.getMonth() + 1 <= 9 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1));
+        var dateString = date.getFullYear() +"-"+ month+"-"+day;
+        var time= date.getHours() + ":" + date.getMinutes();
+        let data={"school":$("#school").val(),"subject":$("#subject").val(),"courseNumber":$("#course").val(),"location":$("#location").val(),"date":dateString,"time":time};
        
         /** Server request that saves user info to database */
         $.ajax({
@@ -77,10 +83,12 @@ $(document).ready(() => {
           dataType: "json",
           data: data,
           success: function (data) {
-            console.log(data);
+           
             if (data.post == "ok") {
                 window.location.href = "/userProfile";
-            } 
+            } else{
+
+            }
         }
          
         });

@@ -65,8 +65,7 @@ router.post('/doPost', (req, res) => {
     let subject= req.body.subject;
     let courseNumber=req.body.courseNumber;
     let school=req.body.school;
-    // var date = new Date(reqData.time) ;
-    // console.log(date);
+   
 
     
 
