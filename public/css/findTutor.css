@@ -1,4 +1,11 @@
+/* ----------------------------------------
+IMPORTED FONTS
+ --------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* ----------------------------------------
+BODY
+ --------------------------------------- */
 body {
 	font-family: "Raleway", sans-serif;
 	background-color: #f3ca3352;
@@ -6,51 +13,9 @@ body {
 	line-height: 1.9;
 }
 
-.topnav-left {
-	float: left;
-}
-
-.topnav-right {
-	float: right;
-}
-
-img {
-	width: 100%;
-}
-
-a {
-	text-decoration: none;
-	color: #ccc;
-}
-
-
-/* Showcase */
-
-#showcase {
-	background-repeat: no-repeat;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	overflow-y: hidden;
-	background-size: 100% 100%;
-}
-
-#showcase .container {
-	margin-top: 25vh;
-}
-
-#showcase h1 {
-	font-size: 4rem;
-	margin-bottom: 0;
-}
-
-#showcase h2 {
-	font-size: 2rem;
-}
-
-
-/* Navigation */
-
+/* ----------------------------------------
+NAVIGATION BAR
+ --------------------------------------- */
 nav {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	height: auto;
@@ -157,8 +122,71 @@ nav a#openup {
 	zoom: 1;
 }
 
+.topnav-left {
+	float: left;
+}
 
+.topnav-right {
+	float: right;
+}
 
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #ccc;
+}
+
+/* ----------------------------------------
+REMOVE NAV BLUE BOX AROUND ICON (BUTTON) CLICK
+ --------------------------------------- */
+ .iconBorderClickRemoval {
+	outline: 0;
+	box-shadow: none !important;
+}
+
+/* ----------------------------------------
+CHANGES HOVER COLOURS OF THE NAVIGATION BAR
+ --------------------------------------- */
+
+/* Changes the colour on hover for all items on the left side
+   of the navigation bar */
+   .fas:hover {
+	color: #4183c4;
+}
+
+/* Changes the colour on hover for all items on the right side
+   of the navigation bar */
+.far:hover {
+	color: #4183c4;
+}
+
+/* ----------------------------------------
+SHOWCASE
+ --------------------------------------- */
+#showcase {
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow-y: hidden;
+	background-size: 100% 100%;
+}
+
+#showcase .container {
+	margin-top: 25vh;
+}
+
+#showcase h1 {
+	font-size: 4rem;
+	margin-bottom: 0;
+}
+
+#showcase h2 {
+	font-size: 2rem;
+}
 
 @media screen and (max-width: 1366px) {
 	.cards {
