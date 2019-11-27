@@ -2,7 +2,7 @@
   "name": "TutorBuddy",
   "version": "1.0.0",
   "description": "Tutorbuddy",
-  "main": "index.js",
+  "main": "app.js",
   "directories": {
     "test": "test"
   },
