@@ -28,6 +28,8 @@ exports.postBookedSessions = (req, res) => {
     let course = req.body.course;
     let location = req.body.location;
     let time = req.body.time;
+    let date = req.body.date;
+    let rate = req.body.rate;
     console.log(tutorEmail);
     DB.insert('BookedSession', 
     {"tutorEmail" : tutorEmail,
@@ -36,7 +38,9 @@ exports.postBookedSessions = (req, res) => {
      "studentName" : studentName,
      "course" : course,
      "location" : location,
-     "time" : time
+     "time" : time,
+     "date" : date,
+     "rate" : rate
     }, (err,data) =>{
         if(err) throw err;
         else {

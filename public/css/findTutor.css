@@ -225,6 +225,10 @@ body {
 	background: #f1f1f1;
 }
 
+/* card view text */
+.card-text{
+	line-height: 0.5em !important;
+}
 
 hr {
 	border: 1px solid #f1f1f1;
