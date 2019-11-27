@@ -34,8 +34,7 @@ nav {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	height: auto;
 	width: 100%;
-	background-color: #e0e0e0f5!important;
-	/* background-color:transparent !important; */
+	/*background-color: #e0e0e0f5!important; */
 	color: #eee;
 	position: fixed;
 	z-index: 1000;
@@ -50,6 +49,14 @@ nav ul {
 nav li {
 	display: inline;
 	float: left;
+}
+
+.nav-colored {
+	background: white;
+}
+
+.nav-transparent {
+	background: transparent;
 }
 
 nav a {
@@ -139,8 +146,32 @@ NAVIGATION BAR: LOGIN BUTTON
     box-shadow: none!important;
 }
 
+/* Reduce button width, height font-size and spacing */
+@media screen and (max-width: 1100px) {
+	#loginButton {
+		width: 135px;
+		height: 41.5px;
+		font-size: 85%;
+	}	
+} 
+
+@media screen and (max-width: 800px) {
+	#loginButton {
+		width: 120px;
+		height: 40px;
+		font-size: 78.5%;
+		margin-left: 80px;
+	}	
+} 
+
+@media screen and (max-width: 680px) {
+	#loginButton {
+		margin-left: 0px;
+	}	
+} 
+
 /* ----------------------------------------
-NAVIGATION BAR: LOGIN BUTTON
+NAVIGATION BAR: SIGN UP BUTTON
  --------------------------------------- */
  #SignUpButton {
 	width: 150px;
@@ -191,8 +222,25 @@ NAVIGATION BAR: LOGIN BUTTON
     box-shadow: none!important;
 }
 
+/* Reduce button width, height font-size and spacing */
+@media screen and (max-width: 1100px) {
+	#SignUpButton {
+		width: 135px;
+		height: 41.5px;
+		font-size: 85%;
+	}	
+} 
+
+@media screen and (max-width: 800px) {
+	#SignUpButton {
+		width: 120px;
+		height: 40px;
+		font-size: 78.5%;
+	}	
+} 
+
 /* ----------------------------------------
-SHOWCASE 1
+SHOWCASE MAIN
  --------------------------------------- */
 #showcase {
 	background-repeat: no-repeat;
@@ -252,6 +300,51 @@ SHOWCASE 1
 	padding-left: 40px;
 	padding-bottom: 20px;
 }
+
+.showcase1680 {
+	display: none;
+}
+
+@media screen and (max-width: 680px) {
+	.showcase1 {
+		display: none;
+	}
+	
+	.showcase1680 {
+		display: block;
+		background: white;
+	}
+
+	 .mainSubHeading1680 {
+		margin-top: 8px;
+		padding-top: 40px;
+		font-size: 43px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+	}
+
+	.s1680Images {
+		width: 360px;
+		height: 280px;
+		float: right;
+		clear: right;
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	.p1 {
+		font-size: 98% !important;
+		margin: 30px;
+		padding-right:10px;
+	}
+
+	#wrap1680 {
+		margin-top: 3em;
+		padding-bottom: 40px;
+	}
+}
+
 
 /* ----------------------------------------
 SHOWCASE 2
@@ -395,6 +488,52 @@ SHOWCASE 2
 	text-align: center;
 }
 
+/* @media screen and (max-width: 1500px) {
+	.card {
+		width: 270px;
+		height: 270px;
+		margin-right: 2.5em;
+		margin-left: 2.5em;
+	}
+} 
+
+@media screen and (max-width: 1300px) {
+	.card {
+		width: 240px;
+		height: 240px;
+		margin-right: 2.3em;
+		margin-left: 2.3em;
+	}
+} 
+
+@media screen and (max-width: 1150px) {
+	.card {
+		width: 210px;
+		height: 210px;
+		margin-right: 2.3em;
+		margin-left: 2.3em;
+	}
+} 
+
+@media screen and (max-width: 800px) {
+	.card {
+		width: 180px;
+		height: 180px;
+		margin-right: 1.9em;
+		margin-left: 1.9em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.card {
+		width: 100px;
+		height: 100px;
+		margin-right: 1.4em;
+		margin-left: 1.4em;
+	}
+} */
+
+
 /* ----------------------------------------
 SHOWCASE 3
  --------------------------------------- */
@@ -485,6 +624,37 @@ SHOWCASE 4
 	background: black;
 }
 
+/* Media Query for showcase 6 at 680px */
+@media screen and (max-width: 680px) {
+	.showcase4 {
+		margin-top: 8px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.mainSubHeading4 {
+		font-size: 43px;
+	}
+
+	.s4Text {
+		width: 83%;
+	}
+
+	.p4 {
+		margin-top: 1.2em;
+		font-size: 98% !important;
+	}
+
+	
+	.buttonJoin {
+		margin-top: 1.2em;
+		width: 200px;
+    	height: 64px;
+		line-height: 64px;
+		font-size: 95%;
+	}
+}
+
 /* ----------------------------------------
 SHOWCASE 5
  --------------------------------------- */
@@ -499,6 +669,7 @@ SHOWCASE 5
 	font-size: 53px;
 	font-weight: 100;
 	font-family: Circular Std, sans-serif;
+	text-align: center;
 }
 
 #changing_image {
@@ -539,6 +710,55 @@ SHOWCASE 5
 	color: white;
 }
 
+.c5680 {
+	display: none;
+}
+
+/* Media Query for showcase 5 at 680px */
+@media screen and (max-width: 680px) {
+	.c5 {
+		display: none;
+	}
+
+	.c5680 {
+		display: block;
+	}
+
+	.showcase5 {
+		background-color: white;
+		margin-top: 8px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	 }
+
+	.mainSubHeading5680 {
+		font-size: 43px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+		display: block;
+	}
+
+	.s5680Contain {
+		margin-top: 3.4em;
+	}
+
+	.s5680Contain:first-of-type {
+		margin-top: 4em;
+	}
+
+	.s5680Contain span {
+		margin: 8px;
+		font-size: 1.4em !important;
+	}
+
+	.s5680Images {
+		width: 350px;
+		height: 260px;
+		vertical-align: middle;
+	}	
+}
+
 /* ----------------------------------------
 SHOWCASE 6
  --------------------------------------- */
@@ -549,19 +769,43 @@ SHOWCASE 6
 	padding-bottom: 80px;
  }
 
+ .mainSubHeading6 {
+	font-size: 53px;
+	font-weight: 100;
+	font-family: Circular Std, sans-serif;
+ }
+
  .s6Text {
 	 margin: 0 auto;
 	 width: 70%;
 	 text-align: center;
  }
 
+/* Media Query for showcase 6 at 680px */
+@media screen and (max-width: 680px) {
+	.showcase6 {
+		margin-top: 8px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	 }
 
+	 .mainSubHeading6 {
+		font-size: 43px;
+	}
 
+	.s6Text {
+		width: 83%;
+	}
 
+	.p6 {
+		margin-top: 1.2em;
+		font-size: 98% !important;
+	}
+}
 
-
-
-
+/*-----------------------------------------
+ADDITIONAL (OTHERS)
+ --------------------------------------- */
 #mus2 {
 	background-color: white;
 }
@@ -588,27 +832,6 @@ a {
 	/* float: left; */
 }
 
-
-/* Section */
-
-.section {
-	padding: 2rem 0;
-}
-
-.section-head {
-	font-size: 2.5rem;
-	margin: 0;  
-}
-
-.section h3 {
-	font-size: 2rem;
-}
-
-section#entertainment {
-	padding: 10rem 0;
-	background-size: 100% 100%;
-}
-
 .cards {
 	display: grid;
 	grid-gap: 20px;
@@ -616,41 +839,9 @@ section#entertainment {
 	text-align: left;
 }
 
-
-
-/* Showcase */
-
-#showcase {
-	background-repeat: no-repeat;
-	margin: 0;
-	padding: 0;
-	
-	background-image: url('../img/homepage21.jpg');
-	height: 100vh;
-	position: relative;
-	overflow-y: hidden;
-	background-size: 100% 100%;
-}
-
-#showcase .container {
-	margin-top: 25vh;
-}
-
-#showcase h1 {
-	transform:rotate(-3deg);
-	/* float: left; */
-	margin-left: 76px;
-	/* font-size: 9rem; */
-	margin-bottom: 0;
-}
-
-#showcase h2 {
-	font-size: 2rem;
-}
-
-
-/* Footer */
-
+ /* ----------------------------------------
+FOOTER
+ --------------------------------------- */
 footer .footer-cols {
 	display: grid;
 	grid-gap: 20px;
@@ -676,28 +867,16 @@ footer .footer-bottom {
 	padding: 1rem;
 }
 
-
-/* Utility Classes */
-
-.container {
-	max-width: 1180px;
-	text-align: center;
-	margin: 0 auto;
-	padding: 0 3rem;
-}
-
+/* ----------------------------------------
+UTILITY FOR ALL P TEXT
+ --------------------------------------- */
 .lead {
 	font-size: 1.3rem;
 }
 
-.text-center {
-	text-align: center;
-	font-weight: bold;
-}
-
-
-/* Buttons */
-
+/* ----------------------------------------
+BUTTON
+ --------------------------------------- */
 .btn {
 	padding: 1rem;
 	color: #fff;
@@ -720,9 +899,9 @@ footer .footer-bottom {
 	background: var(--secondary-color-hover);
 }
 
-
-/* Text colors */
-
+/* ----------------------------------------
+TEXT COLOURS
+ --------------------------------------- */
 .text-primary {
 	color: var(--primary-color);
 }
@@ -750,7 +929,7 @@ footer .footer-bottom {
 
 
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 680px) {
 	.hide-on-small {
 		display: none;
 	}
@@ -833,3 +1012,5 @@ footer .footer-bottom {
 		display: none;
 	}
 }
+
+/* IPHONE*/
