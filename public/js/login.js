@@ -17,7 +17,12 @@ $(document).ready(() => {
           success: function (data) {
             console.log(data);
             if (data.login == "ok") {
+              if($("#email").val() == "tutorbuddy2019@gmail.com") {
+                window.location.href = "/indexAdminView";
+              } else {
                 window.location.href = "/userProfile";
+              }
+
             } else{
               console.log(data.login);
             }
