@@ -4,24 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        
 
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/becomeTutor.css">
+
     <!-- Js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="/js/jquery.js"></script>
-
-    <script src="/js/becomeTutor.js"></script> 
+    <script src="/js/becomeTutor.js"></script>
     <script src="/js/index.js"></script>
+
+    <!-- Title -->
     <title>Tutor Buddy</title>
 </head>
 
@@ -37,33 +34,30 @@
                     </li>
                     <div class="topnav-left">
                         <li>
-                            <a onclick="return false;" href='#' 
-                            style='font-size:17px'>
-                                <button id="bt" class="iconBorderClickRemoval" 
-                                style='font-size:20px'>
+                            <a onclick="return false;" href='#' style='font-size:17px'>
+                                <button id="bt" class="iconBorderClickRemoval" style='font-size:20px'>
                                     <i class='fas fa-chalkboard-teacher'> 
                                         <u class="navText">Become Tutor</u>
                                     </i>
                                 </button>
-                            
+
                             </a>
                         </li>
 
                         <li>
                             <a href='findTutor' style='font-size:17px'>
-                            <button id="ft" class="iconBorderClickRemoval" style='font-size:20px'>
-                                <i class='fas fa-search'> Find Tutor</i>
-                            </button>
+                                <button id="ft" class="iconBorderClickRemoval" style='font-size:20px'>
+                                    <i class='fas fa-search'> Find Tutor</i>
+                                </button>
                             </a>
-                        </li>           
+                        </li>
 
                     </div>
 
-
+                    <!-- Buttons at top-right navabar -->
                     <div class="topnav-right">
 
                         <li>
-
 
                             <a href='post' class="">
                                 <button type="button" id="post" class="iconBorderClickRemoval" style='font-size:20px' data-toggle="tooltip" data-placement="bottom" title="Post Schedule">
@@ -81,7 +75,7 @@
                             </a>
                         </li>
 
-                          <li>
+                        <li>
                             <a href='/logout' class="">
                                 <button id="logout" class="iconBorderClickRemoval" style='font-size:20px' data-toggle="tooltip" data-placement="bottom" title="Log Out">
                                     <i class='fas fa-sign-out-alt'></i>
@@ -92,10 +86,6 @@
                         </li>
 
                     </div>
-
-
-
-
 
                 </ul>
                 <a href='#' id='openup'>Tutor Buddy</a>
@@ -111,7 +101,6 @@
         <h1><b>Become Tutor</b></h1>
         <!-- <p>Please select School, Subject, Education & GPA.</p> -->
         <hr>
-
 
         <!-- school dropdown -->
         <label for="school"><b>School</b></label>
@@ -152,25 +141,27 @@
         <!-- gpa Input-->
         <div>
             <label for="GPA"><b>GPA</b></label>
-            <input id="GPA" type="number" step=0.1 placeholder="Select GPA" name="GPA" autocomplete="off" min="1"
-                max="4" required>
+            <input id="GPA" type="number" step=0.1 placeholder="Select GPA" name="GPA" autocomplete="off" min="1" max="4" required>
 
         </div>
+
+        <!-- Rate Input-->
         <div>
             <label for="Rate($/hour)"><b>Rate ($/hour)</b></label>
-            <input id="Rate" type="currency" step=0.1 placeholder="Enter Rate" name="Rate" autocomplete="off" min="1"
-                max="4" required>
+            <input id="Rate" type="currency" step=0.1 placeholder="Enter Rate" name="Rate" autocomplete="off" min="1" max="4" required>
 
         </div>
 
+        <!-- Submit button-->
         <div class="clearfix">
 
             <button name="submit" id="submitApp" value="submit " class="btbtn"><b>Apply</b></button>
         </div>
         <br>
+
+        <!-- Find tutor button at bottom of form-->
         <div class="extra">
-            <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor'
-                    style="color:dodgerblue"><b>Find Tutor</b></a></p>
+            <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor' style="color:dodgerblue"><b>Find Tutor</b></a></p>
         </div>
         </form>
     </div>
