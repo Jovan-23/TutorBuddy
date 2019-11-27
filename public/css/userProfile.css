@@ -53,7 +53,7 @@ nav a#openup {
 	.hide-on-small {
 		display: none;
 	}
-	#showcase {}
+
 	#showcase .container {
 		margin-top: 15vh;
 	}
@@ -222,7 +222,7 @@ button {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	/* width: 100%; */
+	
 	opacity: 0.9;
 }
 
@@ -232,7 +232,7 @@ button:hover {
 
 #logout {
 	background-color: transparent;
-	/* float: right; */
+	
 	width: 32%;
 }
 
@@ -273,40 +273,79 @@ button:hover {
 	#profile,
 	#bt,
 	#ft {
-		padding: 1px 32px;
+	
 		float: left;
-		/* width: 20%; */
+		
 	}
 }
 
-@media screen and (min-device-width: 760px) and (max-device-width: 1025px) {
-	/* STYLES HERE */
-	.container {
-		margin: 12%;
+@media screen and (max-width: 450px) {
+
+	.topnav-left {
+		float: left;
+		width: 100%;
+	}
+	
+	.topnav-right {
+		float: right;
+		width: 111%;;
+	}
+
+	
+}
+
+@media screen and (min-device-width: 450px) and (max-device-width: 760px) {
+	
+
+	.topnav-left {
+		float: left;
+		width: 100%;
+	}
+	
+	.topnav-right {
+		float: right;
+		width: 114%;
 	}
 }
+
+@media screen and (min-device-width: 760px) and (max-device-width: 1024px) {
+	/* STYLES HERE */
+
+
+	.topnav-left {
+		float: left;
+		width: 100%;
+	}
+	
+	.topnav-right {
+		float: right;
+		width: 115%;;
+	}
+}
+
+
+
 
 @media screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
 	/* STYLES HERE */
-	.container {
-		margin: 20%;
+
+	.topnav-left {
+		float: left;
+		width: 100%;
 	}
+	
 	.topnav-right {
-		letter-spacing: 2.0px;
-		display: inline-block;
-		text-align: center;
-		text-decoration: none;
-		color: #333;
-		text-decoration: none;
+		float: right;
+		width: 116%;;
 	}
 	#logout,
 	#post,
 	#profile,
 	#bt,
 	#ft {
-		padding: 1px 443px;
+	
 		float: left;
-		/* width: 20%; */
+		
 	}
 }
 
@@ -317,28 +356,33 @@ button:hover {
 		display: inline-block;
 		text-align: center;
 		text-decoration: none;
-		padding: 10px 290px;
+		
 		color: #333;
 		text-decoration: none;
 	}
 	nav a#openup {
+		text-align: left;
 		padding: 10px 0px;
 		display: block;
 		background-color: #333;
 		width: 100%;
 		position: relative;
 	}
+
 	#logout,
 	#post,
 	#profile,
 	#bt,
 	#ft {
-		padding: 1px 71px;
+		
 		float: left;
-		/* width: 20%; */
+		
 	}
-}
+	
 
+
+	
+}
 
 /* css for the whole user session div */
 

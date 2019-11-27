@@ -119,7 +119,7 @@ SHOWCASE
 	.hide-on-small {
 		display: none;
 	}
-	#showcase {}
+
 	#showcase .container {
 		margin-top: 15vh;
 	}
@@ -249,7 +249,7 @@ input[type=password]:focus {
 
 hr {
 	border: 1px solid #f1f1f1;
-	/* margin-bottom: 25px; */
+	
 }
 
 
@@ -260,7 +260,7 @@ button {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	/* width: 100%; */
+	
 	opacity: 0.9;
 }
 
@@ -270,7 +270,7 @@ button:hover {
 
 #logout {
 	background-color: transparent;
-	/* float: right; */
+	
 
 	width: 32%;
 }
@@ -298,18 +298,13 @@ button:hover {
 }
 
 
-/* Extra styles for the cancel button */
-
-.cancelbtn {
-	padding: 14px 20px;
-	background-color: #f44336;
-}
 
 
-/* Float cancel and signup buttons and add an equal width */
 
-.cancelbtn,
-.signupbtn {
+/* Float bt apply button and add an equal width */
+
+
+.btbtn {
 	float: left;
 	width: 50%;
 	padding: 13px 20px;
@@ -328,7 +323,7 @@ h1 {
 	min-height: 65%;
 	padding: 1.25%;
 	border: 4px solid #f1f1f1;
-	/* margin: 1%; */
+	
 	margin-top: 7%;
 	margin-left: 30%;
 	background-color: white;
@@ -344,11 +339,11 @@ h1 {
 }
 
 
-/* Change styles for cancel button and signup button on extra small screens */
+/* Change styles for bt button on extra small screens */
 
 @media screen and (max-width: 1366px) {
-	.cancelbtn,
-	.signupbtn {
+	
+	.btbtn {
 		width: 100%;
 	}
 }
@@ -367,10 +362,7 @@ h1 {
 		float: right;
 		width: 111%;;
 	}
-	/* select,option{
-		width: 100%;
-	} */
-	
+
 }
 
 @media screen and (min-device-width: 450px) and (max-device-width: 760px) {
@@ -392,9 +384,7 @@ h1 {
 
 @media screen and (min-device-width: 760px) and (max-device-width: 1024px) {
 	/* STYLES HERE */
-	/* .container {
-		margin: 12%;
-	} */
+	
 
 	.container {
 		margin: 15% 1% 1% 1%;
@@ -419,9 +409,9 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		/* padding: 1px 32px; */
+	
 		float: left;
-		/* width: 20%; */
+		
 	}
 }
 
@@ -449,9 +439,9 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		/* padding: 1px 443px;  */
+	
 		float: left;
-		/* width: 20%; */
+		
 	}
 }
 
@@ -462,7 +452,7 @@ h1 {
 		display: inline-block;
 		text-align: center;
 		text-decoration: none;
-		/* padding: 10px 290px; */
+		
 		color: #333;
 		text-decoration: none;
 	}
@@ -480,9 +470,9 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		/* padding: 1px 55px; */
+	
 		float: left;
-		/* width: 20%; */
+	
 	}
 	
 

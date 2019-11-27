@@ -239,7 +239,7 @@ button {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	/* width: 100%; */
+	
 	opacity: 0.9;
 }
 
@@ -249,7 +249,7 @@ button:hover {
 
 #logout {
 	background-color: transparent;
-	/* float: right; */
+
 	width: 32%;
 }
 
@@ -276,15 +276,10 @@ button:hover {
 }
 
 
-/* Extra styles for the cancel button */
-
-.cancelbtn {
-	padding: 14px 20px;
-	background-color: #f44336;
-}
 
 
-/* Float cancel and signup buttons and add an equal width */
+
+/* Float ft buttons and add an equal width */
 
 
 .ftbtn {
@@ -322,11 +317,11 @@ h1 {
 }
 
 
-/* Change styles for cancel button and signup button on extra small screens */
+/* Change styles for ft button on extra small screens */
 
 @media screen and (max-width: 1366px) {
-	.cancelbtn,
-	.signupbtn {
+	
+	.ftbtn {
 		width: 100%;
 	}
 }
@@ -345,9 +340,7 @@ h1 {
 		float: right;
 		width: 111%;;
 	}
-	/* select,option{
-		width: 100%;
-	} */
+
 	
 }
 
@@ -370,9 +363,7 @@ h1 {
 
 @media screen and (min-device-width: 760px) and (max-device-width: 1024px) {
 	/* STYLES HERE */
-	/* .container {
-		margin: 12%;
-	} */
+
 
 	.container {
 		margin: 1%;
@@ -397,9 +388,9 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		/* padding: 1px 32px; */
+		
 		float: left;
-		/* width: 20%; */
+		
 	}
 }
 
@@ -427,9 +418,9 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		/* padding: 1px 443px;  */
+		
 		float: left;
-		/* width: 20%; */
+		
 	}
 }
 
@@ -440,7 +431,7 @@ h1 {
 		display: inline-block;
 		text-align: center;
 		text-decoration: none;
-		/* padding: 10px 290px; */
+		
 		color: #333;
 		text-decoration: none;
 	}
@@ -458,9 +449,9 @@ h1 {
 	#profile,
 	#bt,
 	#ft {
-		/* padding: 1px 55px; */
+	
 		float: left;
-		/* width: 20%; */
+		
 	}
 	
 
