@@ -92,7 +92,7 @@ $(document).ready(() => {
                 // adding course number
                 var courseNumber = document.createElement('p');
                 itemDiv.appendChild(courseNumber);
-                courseNumber.innerHTML = "<b>Course Number: </b>" + value.courseNumber;
+                courseNumber.innerHTML = "<b>Course Number: </b>" + value.course;
                 courseNumber.style.padding = ".75rem 1.25rem";
                 courseNumber.style.marginBottom = "0";
 

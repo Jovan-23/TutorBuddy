@@ -63,7 +63,7 @@ router.post('/doPost', (req, res) => {
      reqData.tutorName = req.session.userinfo.username;
     let email = req.session.userinfo.email;
     let subject= req.body.subject;
-    let courseNumber=req.body.courseNumber;
+    let courseNumber=req.body.course;
     let school=req.body.school;
    
 
@@ -119,8 +119,8 @@ router.post('/tutorApp', (req, res) => {
                 html: '<p>You have received a new tutor application!</p> ' +
                         '<h3>Tutor Application Information</h3> <ul> ' + '<li>Tutor Name: '  + req.session.userinfo.username +'</li>' + 
                         '<li>Tutor Email: '  + req.session.userinfo.email +'</li>' + '<li>School: '  + dataInfo.school +' </li> ' + 
-                        ' <li>Subject: ' + dataInfo.subject + '</li> <li>Course: ' + dataInfo.courseNumber + '</li> '+
-                        ' <li>Education: ' + dataInfo.education + '</li> <li>GPA: ' + dataInfo.GPA + '</li></ul> '  // html body
+                        ' <li>Subject: ' + dataInfo.subject + '</li> <li>Course: ' + dataInfo.course + '</li> '+
+                        ' <li>Education: ' + dataInfo.education + '</li> <li>GPA: ' + dataInfo.GPA + '</li> <li>Rate: ' + dataInfo.Rate + '</li></ul> '  // html body
             };
             // send the email
             transporter.sendMail(mailOption, function(err, data) {
