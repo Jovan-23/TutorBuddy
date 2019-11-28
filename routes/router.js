@@ -63,7 +63,7 @@ router.post('/doPost', (req, res) => {
      reqData.tutorName = req.session.userinfo.username;
     let email = req.session.userinfo.email;
     let subject= req.body.subject;
-    let courseNumber=req.body.course;
+    let course=req.body.course;
     let school=req.body.school;
    
 
@@ -71,13 +71,13 @@ router.post('/doPost', (req, res) => {
     
 
 
-    DB.find('TutorApplication', { email,school,subject,courseNumber}, (err, data) => {
+    DB.find('TutorApplication', { email,school,subject,course}, (err, data) => {
         if (err) throw err;
        
       
         if (data.length ==1&&data[0].status=="accepted") {
-          
-           reqData.Rate=data[0].Rate;
+            console.log("accepted");
+            reqData.Rate=data[0].Rate;
            
             DB.insert('PostedSession', reqData, (err, data) => {
               
