@@ -40,6 +40,11 @@ nav {
 	z-index: 1000;
 }
 
+/* Changes curos to regular contet cursor */
+#navTitle:hover {
+	cursor: context-menu !important;
+}
+
 nav ul {
 	padding: 10px;
 	margin: 0;
@@ -246,7 +251,7 @@ SHOWCASE MAIN
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	background-image: url('../img/homepage22.jpg');
+	background-image: url('../img/homepage21.jpg');
 	height: 100vh;
 	position: relative;
 	overflow-y: hidden;
