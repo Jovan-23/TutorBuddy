@@ -207,28 +207,7 @@ $(document).ready(() => {
   });
 })
 
-
 /**
- * Have the back-end (database for bothe current tutors and pending tutors.
- * Retrieve data from mongoDB containing infomation of users who requested
- * to become a tutor and those who are already accepted
- * 
- * Pending Tutors
- * -------------------------------------------------------------------------
- * An ajax call to grab all the users requesting to become a tutor.
- * Display the pending tutor information.
- * Button that accepts pending tutor.
- * Button that rejects pending tutor.
- * 
- * Current Tutors.
- * -------------------------------------------------------------------------
- * An ajax call to grab the current tutors in the database.
- * Display the current tutors in the system and all their information.
- * Button the remove accepted tutors.
- * 
- */
-
- /**
   * Pending Tutors
   * An ajax call to grab all the information for current tutors
   */
