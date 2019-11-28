@@ -10,8 +10,8 @@ $(document).ready(() => {
             for (let index = 0; index < data.data.length; index++) {
                 const element1 = data.data[index];
                 $("#subject").append('<option value=' + element1.subject + '>' + element1.subject + '</option>');
-                for (let index = 0; index < element1.courseNumber.length; index++) {
-                    const element = element1.courseNumber[index];
+                for (let index = 0; index < element1.course.length; index++) {
+                    const element = element1.course[index];
                 }
 
             }
@@ -20,8 +20,8 @@ $(document).ready(() => {
                 for (let index = 0; index < data.data.length; index++) {
                     const element1 = data.data[index];
                     if ($("#subject").val() == element1.subject) {
-                        for (let index = 0; index < element1.courseNumber.length; index++) {
-                            const element = element1.courseNumber[index];
+                        for (let index = 0; index < element1.course.length; index++) {
+                            const element = element1.course[index];
                             $("#course").append('<option value="' + element + '">' + element + '</option>');
 
                         }
@@ -60,7 +60,7 @@ $(document).ready(() => {
                 let myDate = postedSeesionArray.data[i].date;
                 let myTutorEmail = postedSeesionArray.data[i].tutorEmail;
                 let myTutorName = postedSeesionArray.data[i].tutorName;
-                let myRate = postedSeesionArray.data[i].rate;
+                let myRate = postedSeesionArray.data[i].Rate;
 
                 $("#result").append(
                     '<div class = "cardContainer" style = "box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; border : 2px solid transparent;   ">' +
@@ -86,7 +86,7 @@ $(document).ready(() => {
                     let myDate2 = postedSeesionArray.data[index].date;
                     let myTutorEmail2 = postedSeesionArray.data[index].tutorEmail;
                     let myTutorName2 = postedSeesionArray.data[index].tutorName;
-                    let myRate2 = postedSeesionArray.data[index].rate;
+                    let myRate2 = postedSeesionArray.data[index].Rate;
 
                     $.ajax({
                         type: "post",
@@ -98,7 +98,7 @@ $(document).ready(() => {
                             "location": myLocation2,
                             "date": myDate2,
                             "time": myTime2,
-                            "rate": myRate2
+                            "Rate": myRate2
                         },
                         dataType: "json",
                         success: console.log(("Posted"))

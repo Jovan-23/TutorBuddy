@@ -77,7 +77,7 @@ nav a#openup {
 		position: relative;
 	}
 	nav a {
-		padding: 0px 26px;
+		padding: 0px 5px;
 		text-align: left;
 		width: 100%;
 		text-indent: 25px;
@@ -233,19 +233,19 @@ button:hover {
 #logout {
 	background-color: transparent;
 	
-	width: 32%;
+	width: 35%;
 }
 
 #post {
 	background-color: transparent;
 	float: right;
-	width: 31%;
+	width: 35%;
 }
 
 #profile {
 	background-color: transparent;
 	float: right;
-	width: 31%;
+	width: 35%;
 }
 
 #bt {

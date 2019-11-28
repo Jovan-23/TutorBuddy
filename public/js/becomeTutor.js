@@ -66,8 +66,8 @@ $(document).ready(() => {
                 const element1 = data.data[index];
                 $("#subject").append('<option value="' + element1.subject + '">' + element1.subject + '</option>');
                 if(index==0){
-                    for (let index = 0; index < element1.courseNumber.length; index++) {
-                        const element = element1.courseNumber[index];
+                    for (let index = 0; index < element1.course.length; index++) {
+                        const element = element1.course[index];
                         $("#course").append('<option value="' + element + '">' + element + '</option>');
     
                     }
@@ -85,8 +85,8 @@ $(document).ready(() => {
                     const element1 = data.data[index];
                     if ($("#subject").val() == element1.subject) {
                         $("#course").html('');
-                        for (let index = 0; index < element1.courseNumber.length; index++) {
-                            const element = element1.courseNumber[index];
+                        for (let index = 0; index < element1.course.length; index++) {
+                            const element = element1.course[index];
                             $("#course").append('<option value="' + element + '">' + element + '</option>');
 
                         }
@@ -116,7 +116,7 @@ $(document).ready(() => {
             alert("please fill out form");
             return;
         }
-        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "courseNumber": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending","Rate":$("#Rate").val() };
+        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending","Rate":$("#Rate").val() };
        
         /** Server request that saves user info to database */
         $.ajax({
