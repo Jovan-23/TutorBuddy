@@ -31,7 +31,7 @@ exports.updateAdminSession = (req, res) => {
             html: '<p>Hi ' + req.body.name + ',</p> ' +
                     '<p>Congratulations! Here are the informaton of the approved course: </p> ' + 
                     '<ul> <li>School: '  + req.body.school +' </li> ' + 
-                        ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.courseNumber + '</li></ul>'
+                        ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.course + '</li></ul>'
                     + '<p> Go ahead and post your first tutoring session with TutorBody! </p>' +
                     '<p>Thank you,<br/>TutorBuddy</p>'
             };
@@ -61,7 +61,7 @@ exports.deleteTutor = (req, res) => {
             html: '<p>Hi ' + req.body.name + ',</p> ' +
                     '<p>Sorry to let you know that your application for: </p> ' + 
                     '<ul> <li>School: '  + req.body.school +' </li> ' + 
-                        ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.courseNumber + '</li></ul>'
+                        ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.course + '</li></ul>'
                     + '<p> is rejected. <br/>Please apply again when you meet our requirements! </p>' +
                     '<p>Thank you,<br/>TutorBuddy</p>'
             };

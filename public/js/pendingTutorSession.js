@@ -92,7 +92,7 @@ $(document).ready(() => {
                     // adding course number
                     var courseNumber = document.createElement('p');
                     itemDiv.appendChild(courseNumber);
-                    courseNumber.innerHTML = "<b>Course Number: </b>" + value.courseNumber;
+                    courseNumber.innerHTML = "<b>Course Number: </b>" + value.course;
                     courseNumber.style.padding = ".75rem 1.25rem";
                     courseNumber.style.marginBottom = "0";
 
@@ -143,7 +143,7 @@ $(document).ready(() => {
                                 "email" : value.email,
                                 "school": value.school,
                                 "subject": value.subject,
-                                "courseNumber": value.courseNumber},
+                                "course": value.course},
                             dataType: "json",
                             success: function (data) {
                               if(data.update=="ok"){
@@ -186,7 +186,7 @@ $(document).ready(() => {
                                 "email" : value.email,
                                 "school": value.school,
                                 "subject": value.subject,
-                                "courseNumber": value.courseNumber},
+                                "course": value.course},
                             dataType: "json",
                             success: function (data) {
                               if(data.delete=="ok"){

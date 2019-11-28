@@ -116,7 +116,7 @@ $(document).ready(() => {
             alert("please fill out form");
             return;
         }
-        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "courseNumber": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending","Rate":$("#Rate").val() };
+        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending","Rate":$("#Rate").val() };
        
         /** Server request that saves user info to database */
         $.ajax({
