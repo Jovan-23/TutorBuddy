@@ -30,17 +30,22 @@ $(document).ready(() => {
       success: function (data) {
           console.log(data);
         
-        // container that will display all the json objects
+        /**
+         * A container (div) in the "admin.ejs" file
+         * This container will contain both current and pending tutors.
+         * The current tutots will be one side and the pending tutors will be on the other side
+         */
         var wholeSession = document.getElementById("allCardContainerCurrent");
         $(data.data).each(function(index, value) {
+            // all current tutors must have status of accpeted to be considered "current"
             if (value.status == "accepted") {
                 console.log(value);
-                // adding email
 
                 /**
-                 * Creating a div to store all the content.
-                 * This content includes name, email, rate, etc.
-                 */
+                  * A conatiner (div) in the "admin.ejs" file.
+                  * This container will contain all of the current tutors.
+                  * This includes personal infromation such as name, email, gpa, rate, etc.
+                  */
                 var itemDiv = document.createElement('div');
                 wholeSession.appendChild(itemDiv);
                 itemDiv.style.position = "relative";
@@ -62,7 +67,6 @@ $(document).ready(() => {
                 itemDiv.style.width = "100%";
                 itemDiv.style.paddingBottom = "15px";
 
-                //<h5 class="card-header"><b>TutorName</b></h5>
                 // adding tutor name 
                 var tutorName = document.createElement('h5');
                 itemDiv.appendChild(tutorName);
@@ -72,35 +76,40 @@ $(document).ready(() => {
                 tutorName.style.backgroundColor = "rgba(0,0,0,.03)";
                 tutorName.style.borderBottom = "1px solid rgba(0,0,0,.125)";
                 
-                //<div class="card-body"></div>
+                /**
+                  * A conatiner (div) created in this file.
+                  * Store the information of applicants excluding the tutor name.
+                  * Implemented mainly for styling.
+                  */
                 var cardBody = document.createElement('div');
                 itemDiv.appendChild(cardBody);
                 cardBody.style.webkitBoxFlex = "1";
                 cardBody.style.flex = "1 1 auto";
                 cardBody.padding = "1.25rem";
 
-                // <div class="leftSide"> 
+                /**
+                 * A conatiner (div) created in this file.
+                 * Store all the information of the applicants on the left side
+                 * Mainly for styling.
+                 */
                 var leftSide = document.createElement('div');
                 cardBody.appendChild(leftSide);
                 leftSide.style.cssFloat = "left";
 
-                //     <h5 class="card-title">School</h5>
+                // school information for the applicant
                 var school = document.createElement('h5');
                 leftSide.appendChild(school);
                 school.innerHTML = "<b>School: </b>" + value.school;
                 school.style.padding = ".95rem 1.25rem";
                 school.style.marginBottom = "2";
 
-
-                //  <p>email </p>
                 // adding email
                 var emailInfo = document.createElement('p');
                 itemDiv.appendChild(emailInfo);
                 emailInfo.innerHTML = "<b>Email: </b>" + value.email;
                 emailInfo.style.padding = "0rem 1.25rem";
                 emailInfo.style.marginBottom = "0";
-            
-                //     <p>Education: </p>
+
                 // adding education
                 var education = document.createElement('p');
                 itemDiv.appendChild(education);
@@ -108,7 +117,6 @@ $(document).ready(() => {
                 education.style.padding = ".75rem 1.25rem";
                 education.style.marginBottom = "0";
                 
-                //     <p>Subject: </p>
                  // adding subject
                  var subject = document.createElement('p');
                  itemDiv.appendChild(subject);
@@ -116,15 +124,13 @@ $(document).ready(() => {
                  subject.style.padding = ".0rem 1.25rem";
                  subject.style.marginBottom = "0";
 
-                //     <p class="card-text">Course Number: </p>
                 // adding course number
                 var courseNumber = document.createElement('p');
                 itemDiv.appendChild(courseNumber);
-                courseNumber.innerHTML = "<b>Course Number: </b>" + value.courseNumber;
+                courseNumber.innerHTML = "<b>Course Number: </b>" + value.course;
                 courseNumber.style.padding = ".75rem 1.25rem";
                 courseNumber.style.marginBottom = "0";
 
-                //     <p class="card-text">GPA: </p>
                 // adding gpa
                 var gpa = document.createElement('p');
                 itemDiv.appendChild(gpa);
@@ -132,7 +138,18 @@ $(document).ready(() => {
                 gpa.style.padding = "0rem 1.25rem";
                 gpa.style.marginBottom = "0";
 
-                // <div class="rightSide"> 
+                // adding rate
+                var courseNumber = document.createElement('p');
+                itemDiv.appendChild(courseNumber);
+                courseNumber.innerHTML = "<b>Rate: $</b>" + value.Rate;
+                courseNumber.style.padding = ".75rem 1.25rem";
+                courseNumber.style.marginBottom = "0";
+
+                /**
+                 * A conatiner (div) created in this file.
+                 * Store all the buttons on the right side 
+                 * Mainly for styling.
+                 */ 
                 var rightSide = document.createElement('div');
                 cardBody.appendChild(rightSide);
                 rightSide.style.position = "absolute";
@@ -189,118 +206,6 @@ $(document).ready(() => {
 
   });
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
@@ -421,7 +326,7 @@ $(document).ready(() => {
                   // adding course number
                   var courseNumber = document.createElement('p');
                   itemDiv.appendChild(courseNumber);
-                  courseNumber.innerHTML = "<b>Course Number: </b>" + value.courseNumber;
+                  courseNumber.innerHTML = "<b>Course Number: </b>" + value.course;
                   courseNumber.style.padding = ".75rem 1.25rem";
                   courseNumber.style.marginBottom = "0";
 
@@ -432,6 +337,13 @@ $(document).ready(() => {
                   gpa.innerHTML = "<b>GPA </b>" + value.GPA;
                   gpa.style.padding = "0rem 1.25rem";
                   gpa.style.marginBottom = "0";
+
+                  // adding rate
+                  var courseNumber = document.createElement('p');
+                  itemDiv.appendChild(courseNumber);
+                  courseNumber.innerHTML = "<b>Rate: $</b>" + value.Rate;
+                  courseNumber.style.padding = ".75rem 1.25rem";
+                  courseNumber.style.marginBottom = "0";
 
                   // <div class="rightSide"> 
                   var rightSide = document.createElement('div');
