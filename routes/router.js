@@ -173,5 +173,22 @@ router.get('/getCourseInfo', (req, res) => {
     })
 })
 
+router.get('/getApprCourseInfo', (req, res) => {
+
+    let reqData={"email":req.session.userinfo.email,"status":"accepted"};
+    DB.find('TutorApplication',reqData , (err, data) => {
+        if (err) throw err;
+       
+        console.log(data);
+        if (data.length <= 0) {
+          
+            res.json({"data":"none"});
+        } else {
+           res.json({"data":data})
+        }
+     
+    })
+})
+
 
 module.exports = router;

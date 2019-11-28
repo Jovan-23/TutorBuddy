@@ -5,9 +5,19 @@
 $(document).ready(() => {
   $.ajax({
     type: "get",
-    url: "/getCourseInfo",
+    url: "/getApprCourseInfo",
     dataType: "json",
-    success: function (data) {
+    success: function (data1) {
+      console.log(data1);
+      let jsonstr={"subject":"",}
+        let data2={"subject":data1.data[0].subject,"course":[data1.data[0].course]};
+      
+        let data={"data":[data2]};
+
+
+
+         console.log(data);
+      
         $("#subject").html('');
         $("#course").html('');
        
