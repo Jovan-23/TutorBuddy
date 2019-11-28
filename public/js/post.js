@@ -75,7 +75,6 @@ $(document).ready(() => {
         var dateString = date.getFullYear() +"-"+ month+"-"+day;
         var time= date.getHours() + ":" + date.getMinutes();
         let data={"school":$("#school").val(),"subject":$("#subject").val(),"course":$("#course").val(),"location":$("#location").val(),"date":dateString,"time":time};
-       
         /** Server request that saves user info to database */
         $.ajax({
           type: "post",
