@@ -53,6 +53,9 @@ nav a#openup {
 	.hide-on-small {
 		display: none;
 	}
+	#showcase {
+		height: 10%;
+	}
 
 	#showcase .container {
 		margin-top: 15vh;
@@ -351,7 +354,7 @@ h1 {
 
 @media screen and (max-width: 450px) {
 	.container {
-		margin: 15% 1% 1% 1%;
+		margin: 1%;
 		max-width:100%;
 	}
 	.topnav-left {
@@ -370,7 +373,7 @@ h1 {
 
 @media screen and (min-device-width: 450px) and (max-device-width: 760px) {
 	.container {
-		margin: 15% 1% 1% 1%;
+		margin: 1%;
 		max-width:100%;
 	}
 
@@ -390,7 +393,7 @@ h1 {
 	
 
 	.container {
-		margin: 15% 1% 1% 1%;
+		margin:1%;
 		max-width:100%;
 		min-height: 55%;
 	}
@@ -423,7 +426,7 @@ h1 {
 @media screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
 	/* STYLES HERE */
 	.container {
-		margin: 15% 1% 1% 1%;
+		margin: 1%;
 		max-width:100%;
 		min-height: 50%;
 	}
