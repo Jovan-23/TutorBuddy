@@ -313,6 +313,7 @@ SHOWCASE 1
 	.showcase1680 {
 		display: block;
 		background: white;
+		display: none;
 	}
 
 	 .mainSubHeading1680 {
@@ -328,8 +329,6 @@ SHOWCASE 1
 		width: 360px;
 		height: 280px;
 		float: right;
-		clear: right;
-		margin-right: 20px;
 		margin-left: 20px;
 	}
 
@@ -946,6 +945,7 @@ TEXT COLOURS
 	nav {
 		height: auto;
 		border-bottom: 0;
+		background-color: white;
 	}
 	nav ul {
 		display: none;

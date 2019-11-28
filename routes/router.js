@@ -144,8 +144,8 @@ router.get('/userProfile', (req, res) => {
 })
 
 // administrator view index page
-router.get('/indexAdminView', (req, res) => {
-    res.render('indexAdminView');
+router.get('/admin', (req, res) => {
+    res.render('admin');
 })
 
 // administrator view pending tutors page
