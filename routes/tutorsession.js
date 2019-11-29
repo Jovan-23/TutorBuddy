@@ -43,7 +43,6 @@ exports.postBookedSessions = (req, res) => {
      "location" : location,
      "time" : time,
      "date" : date,
-     "rate" : rate
     }, (err,data) =>{
         if(err) throw err;
         else {
