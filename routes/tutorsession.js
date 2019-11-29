@@ -1,8 +1,9 @@
 const DB = require('../modules/db.js');
 const credentials = require('./credentials.js');
 
+
+//Access to BookedSession table. Grab all data.
 exports.getTutorSessions = (req, res) => {
-   
     DB.find('BookedSession', {}, (err, data) => {
         if (err) throw err;
         res.json({"data": data, 
@@ -12,8 +13,8 @@ exports.getTutorSessions = (req, res) => {
 
 }
 
+//Access to PostedSession table. Grab all data.
 exports.getPostedSessions = (req, res) => {
-
     DB.find('PostedSession',{}, (err,data) =>{
         if(err) throw err;
         res.json({"data": data,
@@ -22,6 +23,7 @@ exports.getPostedSessions = (req, res) => {
     });
 }
 
+//Insert a booked session from findTutor.
 exports.postBookedSessions = (req, res) => {
     let tutorEmail = req.body.tutorEmail;
     let tutorName = req.body.tutorName;
@@ -50,8 +52,8 @@ exports.postBookedSessions = (req, res) => {
     })
 }
 
+//Remove PostedSession once booked.
 exports.deletePostedSessions = (req, res) =>{
-    console.log(req.body._id);
     DB.deleteOne('PostedSession', {"_id" : new DB.ObjectID(req.body._id)},(err,data) =>{
         if (err) throw err;
     });
