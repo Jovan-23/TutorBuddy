@@ -46,26 +46,8 @@ $(document).ready(() => {
                   * This container will contain all of the current tutors.
                   * This includes personal infromation such as name, email, gpa, rate, etc.
                   */
-                var itemDiv = document.createElement('div');
-                wholeSession.appendChild(itemDiv);
-                itemDiv.style.position = "relative";
-                itemDiv.style.display = "-webkit-box";
-                itemDiv.style.display= "-ms-flexbox";
-                itemDiv.style.display= "flex";
-                itemDiv.style.webkitBoxOrient = "vertical"
-                itemDiv.style.webkitBoxDirection = "normal";
-                itemDiv.style.flexDirection = "column";
-                itemDiv.style.minWidth = "0";
-                itemDiv.style.wordWrap = "break-word";
-                itemDiv.style.backgroundColor = "#fff";
-                itemDiv.style.backgroundClip = "border-box";
-                itemDiv.style.border = "1px solid rgba(0,0,0,.125)";
-                itemDiv.style.borderRadius = ".25rem";
-                itemDiv.style.marginTop = "50px";
-                itemDiv.style.boxShadow = "0 0 30px #cccccc";
-                itemDiv.style.overflow = "hidden";
-                itemDiv.style.width = "100%";
-                itemDiv.style.paddingBottom = "15px";
+                var itemDiv = document.getElementById("storeTutorInfo");
+                wholeSession.appendChild(itemDiv)
 
                 // adding tutor name 
                 var tutorName = document.createElement('h5');
@@ -100,49 +82,49 @@ $(document).ready(() => {
                 var school = document.createElement('h5');
                 leftSide.appendChild(school);
                 school.innerHTML = "<b>School: </b>" + value.school;
-                school.style.padding = ".95rem 1.25rem";
+                school.style.paddingLeft = "1.25rem";
                 school.style.marginBottom = "2";
 
                 // adding email
                 var emailInfo = document.createElement('p');
                 itemDiv.appendChild(emailInfo);
                 emailInfo.innerHTML = "<b>Email: </b>" + value.email;
-                emailInfo.style.padding = "0rem 1.25rem";
+                emailInfo.style.paddingLeft = "1.25rem";
                 emailInfo.style.marginBottom = "0";
 
                 // adding education
                 var education = document.createElement('p');
                 itemDiv.appendChild(education);
                 education.innerHTML = "<b>Education: </b>" + value.education;
-                education.style.padding = ".75rem 1.25rem";
+                education.style.paddingLeft = "1.25rem";
                 education.style.marginBottom = "0";
                 
                  // adding subject
                  var subject = document.createElement('p');
                  itemDiv.appendChild(subject);
                  subject.innerHTML = "<b>Subject: </b>" + value.subject;
-                 subject.style.padding = ".0rem 1.25rem";
+                 subject.style.paddingLeft = "1.25rem";
                  subject.style.marginBottom = "0";
 
                 // adding course number
                 var courseNumber = document.createElement('p');
                 itemDiv.appendChild(courseNumber);
                 courseNumber.innerHTML = "<b>Course Number: </b>" + value.course;
-                courseNumber.style.padding = ".75rem 1.25rem";
+                courseNumber.style.paddingLeft = "1.25rem";
                 courseNumber.style.marginBottom = "0";
 
                 // adding gpa
                 var gpa = document.createElement('p');
                 itemDiv.appendChild(gpa);
                 gpa.innerHTML = "<b>GPA </b>" + value.GPA;
-                gpa.style.padding = "0rem 1.25rem";
+                gpa.style.paddingLeft = "1.25rem";
                 gpa.style.marginBottom = "0";
 
                 // adding rate
                 var courseNumber = document.createElement('p');
                 itemDiv.appendChild(courseNumber);
                 courseNumber.innerHTML = "<b>Rate: $</b>" + value.Rate;
-                courseNumber.style.padding = ".75rem 1.25rem";
+                courseNumber.style.paddingLeft = "1.25rem";
                 courseNumber.style.marginBottom = "0";
 
                 /**
@@ -241,11 +223,9 @@ $(document).ready(() => {
                   itemDiv.style.backgroundClip = "border-box";
                   itemDiv.style.border = "1px solid rgba(0,0,0,.125)";
                   itemDiv.style.borderRadius = ".25rem";
-                  itemDiv.style.marginTop = "50px";
                   itemDiv.style.boxShadow = "0 0 30px #cccccc";
                   itemDiv.style.overflow = "hidden";
                   itemDiv.style.width = "100%";
-                  itemDiv.style.paddingBottom = "15px";
 
                   //<h5 class="card-header"><b>TutorName</b></h5>
                   // adding tutor name 
@@ -273,16 +253,15 @@ $(document).ready(() => {
                   var school = document.createElement('h5');
                   leftSide.appendChild(school);
                   school.innerHTML = "<b>School: </b>" + value.school;
-                  school.style.padding = ".95rem 1.25rem";
+                  school.style.paddingLeft = "1.25rem";
                   school.style.marginBottom = "2";
-
 
                   //  <p>email </p>
                   // adding email
                   var emailInfo = document.createElement('p');
                   itemDiv.appendChild(emailInfo);
                   emailInfo.innerHTML = "<b>Email: </b>" + value.email;
-                  emailInfo.style.padding = "0rem 1.25rem";
+                  emailInfo.style.paddingLeft = "1.25rem";
                   emailInfo.style.marginBottom = "0";
               
                   //     <p>Education: </p>
@@ -290,7 +269,7 @@ $(document).ready(() => {
                   var education = document.createElement('p');
                   itemDiv.appendChild(education);
                   education.innerHTML = "<b>Education: </b>" + value.education;
-                  education.style.padding = ".75rem 1.25rem";
+                  education.style.paddingLeft = "1.25rem";
                   education.style.marginBottom = "0";
                   
                   //     <p>Subject: </p>
@@ -298,7 +277,7 @@ $(document).ready(() => {
                    var subject = document.createElement('p');
                    itemDiv.appendChild(subject);
                    subject.innerHTML = "<b>Subject: </b>" + value.subject;
-                   subject.style.padding = ".0rem 1.25rem";
+                   subject.style.paddingLeft = "1.25rem";
                    subject.style.marginBottom = "0";
 
                   //     <p class="card-text">Course Number: </p>
@@ -306,7 +285,7 @@ $(document).ready(() => {
                   var courseNumber = document.createElement('p');
                   itemDiv.appendChild(courseNumber);
                   courseNumber.innerHTML = "<b>Course Number: </b>" + value.course;
-                  courseNumber.style.padding = ".75rem 1.25rem";
+                  courseNumber.style.paddingLeft = "1.25rem";
                   courseNumber.style.marginBottom = "0";
 
                   //     <p class="card-text">GPA: </p>
@@ -314,14 +293,14 @@ $(document).ready(() => {
                   var gpa = document.createElement('p');
                   itemDiv.appendChild(gpa);
                   gpa.innerHTML = "<b>GPA </b>" + value.GPA;
-                  gpa.style.padding = "0rem 1.25rem";
+                  gpa.style.paddingLeft = "1.25rem";
                   gpa.style.marginBottom = "0";
 
                   // adding rate
                   var courseNumber = document.createElement('p');
                   itemDiv.appendChild(courseNumber);
                   courseNumber.innerHTML = "<b>Rate: $</b>" + value.Rate;
-                  courseNumber.style.padding = ".75rem 1.25rem";
+                  courseNumber.style.paddingLeft = "1.25rem";
                   courseNumber.style.marginBottom = "0";
 
                   // <div class="rightSide"> 

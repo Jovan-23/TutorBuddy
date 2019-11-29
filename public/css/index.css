@@ -28,6 +28,16 @@ body {
 }
 
 /* ----------------------------------------
+HTML, BODY (SET SO MEDIA QUERIES DO NOT GO OUT OF BOUNDS)
+--------------------------------------- */
+@media screen and (max-width: 680px) {
+	html, body {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+/* ----------------------------------------
 NAVIGATION BAR
  --------------------------------------- */
 nav {
@@ -40,7 +50,7 @@ nav {
 	z-index: 1000;
 }
 
-/* Changes curos to regular contet cursor */
+/* Changes cursor hover to regular cursor */
 #navTitle:hover {
 	cursor: context-menu !important;
 }
@@ -272,6 +282,24 @@ SHOWCASE MAIN
 	font-size: 2rem;
 }
 
+@media screen and (max-width: 900px) {
+	#showcase {
+		height: 80vh;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#showcase {
+		height: 75.5vh;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	#showcase {
+		height: 70vh;
+	}
+}
+
 /* ----------------------------------------
 SHOWCASE 1
  --------------------------------------- */
@@ -310,6 +338,50 @@ SHOWCASE 1
 	display: none;
 }
 
+@media screen and (max-width: 900px) {
+	.showcase1 {
+		display: none;
+	}
+	
+	.showcase1680 {
+		display: block;
+		background: white;
+	}
+
+	body {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	 .mainSubHeading1680 {
+		margin-top: 8px;
+		padding-top: 40px;
+		font-size: 47px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+	}
+
+	.s1680Images {
+		width: 390px;
+		height: 295px;
+		float: right;
+		margin-left: 20px;
+	}
+
+	.p1 {
+		font-size: 109% !important;
+		margin: 30px;
+		padding-right:10px;
+	}
+
+	#wrap1680 {
+		margin-top: 1.2em;
+		padding-bottom: 40px;
+	}
+}
+
+
 @media screen and (max-width: 680px) {
 	.showcase1 {
 		display: none;
@@ -318,7 +390,11 @@ SHOWCASE 1
 	.showcase1680 {
 		display: block;
 		background: white;
-		display: none;
+	}
+
+	body {
+		overflow-x: hidden;
+		width: 100%;
 	}
 
 	 .mainSubHeading1680 {
@@ -484,7 +560,6 @@ SHOWCASE 2
 	background: black;
 }
 
-
 .s2Information {
 	padding-top: 5em;
 	margin: 0 auto;
@@ -492,51 +567,124 @@ SHOWCASE 2
 	text-align: center;
 }
 
-/* @media screen and (max-width: 1500px) {
-	.card {
-		width: 270px;
-		height: 270px;
-		margin-right: 2.5em;
-		margin-left: 2.5em;
+@media screen and (max-width: 900px) {
+	.mainSubHeading2 {
+		margin-top: 8px;
+		padding-top: 70px;
+		font-size: 47px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
-} 
 
-@media screen and (max-width: 1300px) {
-	.card {
-		width: 240px;
-		height: 240px;
-		margin-right: 2.3em;
-		margin-left: 2.3em;
+	.s2Description {
+		margin-top: 1.6em;
 	}
-} 
-
-@media screen and (max-width: 1150px) {
+	
 	.card {
-		width: 210px;
-		height: 210px;
-		margin-right: 2.3em;
-		margin-left: 2.3em;
+		width: 220px;
+		height: 220px;
+		margin-right: 1.3em;
+		margin-left: 1.3em;
 	}
-} 
+	
+	.front h1 {
+		font-size: 65% !important;
+		padding-right: 3%;
+		padding-left: 3%;
+	}
+	
+	.back h1 {
+		font-size: 1.1rem;
+	}
+	
+	.s2Information {
+		padding-top: 3.5em;
+		width: 79%;
+	}
 
-@media screen and (max-width: 800px) {
-	.card {
-		width: 180px;
-		height: 180px;
-		margin-right: 1.9em;
-		margin-left: 1.9em;
+	.card3680 {
+		margin-top: 1.9em;
+	}
+
+	.s2Information {
+		padding-top: 2.5em;
+	}
+
+	.s2Information p {
+		font-size: 109% !important;
+	}
+
+	.flipButton {
+		margin-top: 1.4em;
+		width: 193px;
+		height: 43px;
+		line-height: 43px;
+		font-size: 89%;
 	}
 }
 
-@media screen and (max-width: 600px) {
-	.card {
-		width: 100px;
-		height: 100px;
-		margin-right: 1.4em;
-		margin-left: 1.4em;
-	}
-} */
 
+@media screen and (max-width: 680px) {
+	.mainSubHeading2 {
+		margin-top: 8px;
+		padding-top: 40px;
+		font-size: 43px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.s2Description {
+		margin-top: 3em;
+	}
+	
+	.card {
+		width: 220px;
+		height: 220px;
+		margin-right: 1.3em;
+		margin-left: 1.3em;
+	}
+	
+	.front h1 {
+		font-size: 55% !important;
+		padding-right: 3%;
+		padding-left: 3%;
+	}
+	
+	.back h1 {
+		font-size: 1rem;
+	}
+	
+	.s2Information {
+		padding-top: 3.5em;
+		width: 79%;
+	}
+
+	.card3680 {
+		margin-top: 1.9em;
+	}
+
+	.s2Information {
+		padding-top: 2.5em;
+	}
+
+	.s2Information p {
+		font-size: 98% !important;
+	}
+
+	.flipButton {
+		margin-top: 1.4em;
+		width: 180px;
+		height: 37px;
+		line-height: 37px;
+		font-size: 80%;
+	}
+}
 
 /* ----------------------------------------
 SHOWCASE 3
@@ -574,6 +722,90 @@ SHOWCASE 3
 
 .s3Icon {
 	width: 75px;
+}
+
+@media screen and (max-width: 900px) {
+	.showcase3 {
+		background: white;
+		margin-top: 0;
+	}
+
+	.mainSubHeading3 {
+		margin-top: 8px;
+		font-size: 47px;
+	}
+
+	.showcaseImage3 {
+		padding: 0 0%;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+		 url(../img/showcase3.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 770px;	
+		height: 770px;
+		min-height: 770px;
+		overflow: auto;
+	}
+	
+	.s3Text {
+		background-color: rgba(0, 0, 0, .6);
+		color: white;
+		margin-right: 20%;
+		margin-top: 3.6em;
+		overflow: hidden;
+		background: transparent;
+		padding-left: 40px;
+		padding-bottom: 0px;
+	}
+	
+	.s3Icon {
+		width: 75px;
+	}
+
+	.p3 {
+		font-size: 115% !important;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.showcase3 {
+		background: white;
+		margin-top: 0;
+	}
+
+	.mainSubHeading3 {
+		margin-top: 8px;
+		font-size: 43px;
+	}
+
+	.showcaseImage3 {
+		padding: 0 0%;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+		 url(../img/showcase3.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 750px;	
+		height: 750px;
+		min-height: 750px;
+		overflow: auto;
+	}
+	
+	.s3Text {
+		background-color: rgba(0, 0, 0, .6);
+		color: white;
+		margin-right: 10%;
+		margin-top: 3em;
+		overflow: hidden;
+		background: transparent;
+		padding-left: 40px;
+		padding-bottom: 0px;
+	}
+	
+	.s3Icon {
+		width: 75px;
+	}
+
+	.p3 {
+		font-size: 110% !important;
+	}
 }
 
 /* ----------------------------------------
@@ -629,10 +861,43 @@ SHOWCASE 4
 }
 
 /* Media Query for showcase 6 at 680px */
+@media screen and (max-width: 900px) {
+	.showcase4 {
+		margin-top: 0px;
+		padding-top: 48px;
+		padding-bottom: 40px;
+	}
+
+	.mainSubHeading4 {
+		font-size: 47px;
+		width: 100% !important;
+	}
+
+	.s4Text {
+		width: 87%;
+	}
+
+	.p4 {
+		margin-top: 1.2em;
+		font-size: 109% !important;
+	}
+
+	
+	.buttonJoin {
+		margin-top: 1.2em;
+		width: 220px;
+    	height: 69px;
+		line-height: 69px;
+		font-size: 98%;
+	}
+}
+
+
+/* Media Query for showcase 6 at 680px */
 @media screen and (max-width: 680px) {
 	.showcase4 {
-		margin-top: 8px;
-		padding-top: 40px;
+		margin-top: 0px;
+		padding-top: 48px;
 		padding-bottom: 40px;
 	}
 
@@ -676,6 +941,10 @@ SHOWCASE 5
 	text-align: center;
 }
 
+.showcase5Image {
+	height: 550px;
+}
+
 #changing_image {
 	margin-top: 2em;
 }
@@ -717,6 +986,68 @@ SHOWCASE 5
 .c5680 {
 	display: none;
 }
+
+/* Media Query for showcase 5 at 680px */
+@media screen and (max-width: 900px) {
+	.showcase5 {
+		background-color: white;
+		margin-top: 20px;
+		padding-top: 40px;
+	 }
+	
+	 .mainSubHeading5 {
+		font-size: 47px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+	}
+	
+	.showcase5Image {
+		height: 400px;
+	}
+	
+	#changing_image {
+		margin-top: 2em;
+	}
+	
+	.buttonOption {
+		margin-top: 2em;
+		margin-left: 15px;
+		margin-right: 15px;
+		width: 120px;
+		height: 60px;
+		padding: 0;
+		display: inline-block;
+		line-height: 60px;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		text-transform: uppercase;
+		border: 1px solid black;
+		color: black;
+
+		font-size: 80%;
+	}
+	
+	.buttonOption1 {
+		color: white !important;
+		background: black !important;
+	}
+	
+	.buttonOption:focus {
+		background: black;
+		color: white;
+		text-decoration: none;
+	}
+	
+	.buttonOption:hover {
+		text-decoration: none;
+		background: black;
+		color: white;
+	}
+	
+}
+
 
 /* Media Query for showcase 5 at 680px */
 @media screen and (max-width: 680px) {
