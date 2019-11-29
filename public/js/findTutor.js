@@ -1,14 +1,18 @@
-
+// When page loads
 $(document).ready(() => {
     var postedSeesionArray = "";
     var userInput = "";
     var loggedinEmail = "";
     var postID = "";
+
+    //Read course info from the database.
     $.ajax({
         type: "get",
         url: "/getCourseInfo",
         dataType: "json",
         success: function (data) {
+
+            //Populate drop down list for subjects and courses.
             for (let index = 0; index < data.data.length; index++) {
                 const element1 = data.data[index];
                 $("#subject").append('<option value=' + element1.subject + '>' + element1.subject + '</option>');
@@ -37,6 +41,7 @@ $(document).ready(() => {
         }
     });
 
+    //Get all posted sessions from data base.
     $.ajax({
         type: "get",
         url: "/getPostedSessions",
@@ -49,15 +54,25 @@ $(document).ready(() => {
 
 
 
+    //Action Listener for button "Find Tutor"
     $("#findTutor").click(() => {
         let userInput = { "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val() };
-        $("#inputForm").hide();
+        $("#inputForm").hide(); 
+
+        //Get current time 
         var d = new Date();
         var n = d.getTime();
+
+        //Populate card view for selecting a posted session
         for (var i = 0; i < postedSeesionArray.length; i++) {
             var dateAndTime = postedSeesionArray[i].date.concat(" " + postedSeesionArray[i].time);
             var poDate = new Date(dateAndTime);
             var poMillisec = poDate.getTime();
+
+            // 3 conditions checking:
+            //1)If the posted time is  past time
+            //2)If the tutor email is the same as logged in tutee email
+            //3)If the course is the selected course.
             if (userInput.course == postedSeesionArray[i].course && 
                 loggedinEmail !== postedSeesionArray[i].tutorEmail &&
                 n < poMillisec) {
@@ -74,6 +89,7 @@ $(document).ready(() => {
                 let myRate = postedSeesionArray[i].Rate;
                 postID = postedSeesionArray[i]._id;
 
+                //Populate card view html and css.
                 $("#result").append(
                     '<div class = "cardContainer" style = "box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; border : 2px solid transparent;   ">' +
                     '<div class = "card-body" style = "padding: 2px 16px;   ">' +
@@ -86,9 +102,10 @@ $(document).ready(() => {
                     '<p class = "card-text">Rate: $' + myRate + '</p>' +
                     '<button style = "width: 30%; text-align : center; background-color : #428bca;' +
                     'border-radius : 10px;' +
-                    'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id ="' + myButtonId + '">' + 'Select </button>' +
+                    'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id ="' + myButtonId + '">' + 'Book </button>' +
                     '</div></div>');
 
+                    //action listener for book button.
                 $("#" + myButtonId + "").click(() => {
                     let index = myButtonId.substr(6);
                     let mySubject2 = postedSeesionArray [index].subject;
@@ -102,6 +119,7 @@ $(document).ready(() => {
                     postID = postedSeesionArray[index]._id;
 
 
+                    //Add into bookedSession table in database.
                     $.ajax({
                         type: "post",
                         url: "/postBookedSessions",
@@ -117,6 +135,7 @@ $(document).ready(() => {
                         dataType: "json",
                     })
 
+                    //Remove selected posted session from database.
                     $.ajax({
                         type : "post",
                         url: "deletePostedSessions",
@@ -135,15 +154,19 @@ $(document).ready(() => {
 
                     $("#result").hide();
                     $('#inputForm').show();
-                    // alert("Booked successfully");
-                    // location.reload(true);
+                    alert("Booked successfully");
+                    location.reload(true);
                 })
             }
         }
+        
+        //If no available tutor sessions found.
         if (!$.trim($('#result').html()).length) {
             $('#result').html('<p>There is currently no available tutors for your selection.</p>');
 
         }
+        
+        //Back button and its action listener.
         $("#result").append('<button style = "width: 30%; text-align : center; background-color : #428bca;' +
             'border-radius : 10px; float : right; margin : 10px;' +
             'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id = "back"> Back </button>');
