@@ -35,6 +35,9 @@ router.get('/getSessions', tutorsession.getTutorSessions);
 router.get('/getPostedSessions', tutorsession.getPostedSessions);
 router.post('/postBookedSessions', tutorsession.postBookedSessions)
 
+//delete posted sessions
+router.post('/deletePostedSessions',tutorsession.deletePostedSessions);
+
 // get tutor applications
 router.get('/getAdminSession', adminSession.getAdminSession);
 

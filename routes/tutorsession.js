@@ -17,7 +17,7 @@ exports.getPostedSessions = (req, res) => {
     DB.find('PostedSession',{}, (err,data) =>{
         if(err) throw err;
         res.json({"data": data,
-                  "email" : req.session.userinfo.email
+                  "email" : req.session.userinfo.email,
                 });
     });
 }
@@ -32,7 +32,6 @@ exports.postBookedSessions = (req, res) => {
     let time = req.body.time;
     let date = req.body.date;
     let rate = req.body.rate;
-    console.log(tutorEmail);
     DB.insert('BookedSession', 
     {"tutorEmail" : tutorEmail,
      "tutorName" : tutorName,
@@ -49,4 +48,11 @@ exports.postBookedSessions = (req, res) => {
             res.json({"Post BookedSession" : "success"})
         }
     })
+}
+
+exports.deletePostedSessions = (req, res) =>{
+    console.log(req.body._id);
+    DB.deleteOne('PostedSession', {"_id" : new DB.ObjectID(req.body._id)},(err,data) =>{
+        if (err) throw err;
+    });
 }

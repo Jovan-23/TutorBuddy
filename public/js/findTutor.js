@@ -3,6 +3,7 @@ $(document).ready(() => {
     var postedSeesionArray = "";
     var userInput = "";
     var loggedinEmail = "";
+    var postID = "";
     $.ajax({
         type: "get",
         url: "/getCourseInfo",
@@ -40,10 +41,9 @@ $(document).ready(() => {
         type: "get",
         url: "/getPostedSessions",
         dataType: "json",
-        success: function (data) {
-            postedSeesionArray = data.data;
-            // console.log(data.email);
-            // let loggedinEmail = data.email;
+        success: function (data2) {
+            postedSeesionArray = data2.data;
+            loggedinEmail = data2.email;
         }
     });
 
@@ -59,7 +59,7 @@ $(document).ready(() => {
             var poDate = new Date(dateAndTime);
             var poMillisec = poDate.getTime();
             if (userInput.course == postedSeesionArray[i].course && 
-                loggedinEmail != postedSeesionArray[i].tutorEmail &&
+                loggedinEmail !== postedSeesionArray[i].tutorEmail &&
                 n < poMillisec) {
 
                 let myButtonId = "Button".concat(i.toString());
@@ -72,6 +72,7 @@ $(document).ready(() => {
                 let myTutorEmail = postedSeesionArray[i].tutorEmail;
                 let myTutorName = postedSeesionArray[i].tutorName;
                 let myRate = postedSeesionArray[i].Rate;
+                postID = postedSeesionArray[i]._id;
 
                 $("#result").append(
                     '<div class = "cardContainer" style = "box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; border : 2px solid transparent;   ">' +
@@ -98,6 +99,8 @@ $(document).ready(() => {
                     let myTutorEmail2 = postedSeesionArray [index].tutorEmail;
                     let myTutorName2 = postedSeesionArray [index].tutorName;
                     let myRate2 = postedSeesionArray [index].Rate;
+                    postID = postedSeesionArray[index]._id;
+
 
                     $.ajax({
                         type: "post",
@@ -114,10 +117,26 @@ $(document).ready(() => {
                         dataType: "json",
                     })
 
+                    $.ajax({
+                        type : "post",
+                        url: "deletePostedSessions",
+                        data:{
+                            "tutorEmail": myTutorEmail2,
+                            "tutorName": myTutorName2,
+                            "course": myCourse2,
+                            "location": myLocation2,
+                            "date": myDate2,
+                            "time": myTime2,
+                            "Rate": myRate2,
+                            "_id" : postID
+                        },
+                        dataType: "json"
+                    })
+
                     $("#result").hide();
                     $('#inputForm').show();
-                    alert("Booked successfully");
-                    location.reload(true);
+                    // alert("Booked successfully");
+                    // location.reload(true);
                 })
             }
         }
