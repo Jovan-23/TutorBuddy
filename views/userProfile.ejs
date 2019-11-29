@@ -4,85 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-   
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/userProfile.css">
 
+    <!-- Js -->
     <script src="/js/jquery.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/session.js"></script>
+
+    <!-- Title -->
     <title>Tutor Buddy</title>
 </head>
 
-    <body>
-        <!-- Showcase & Navigaton -->
-        <div id="showcase">
-            <header>
-                <nav class='cf'>
-                    <ul class='cf'>
-    
-                        <li class="hide-on-small">
-                            <a href='#' onclick="return false;" style="font-size:24px"><b>Tutor Buddy</b></a>
+<body>
+    <!-- Showcase & Navigaton -->
+    <div id="showcase">
+        <header>
+            <nav class='cf'>
+                <ul class='cf'>
+
+                    <li class="hide-on-small">
+                        <a href='#' onclick="return false;" style="font-size:24px"><b>Tutor Buddy</b></a>
+                    </li>
+                    <!-- Buttons at top-left navabar -->
+                    <div class="topnav-left">
+                        <li>
+                            <a href='becomeTutor' style='font-size:17px'>
+                                <button class="iconBorderClickRemoval" id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> Become Tutor</i></button>
+
+                            </a>
                         </li>
-                        <div class="topnav-left">
-                            <li>
-                                <a href='becomeTutor' style='font-size:17px'>
-                                    <button class="iconBorderClickRemoval" id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> Become Tutor</i></button>
-                                
-                                </a>
-                            </li>
-                            <li>
-                                <a href='findTutor' style='font-size:17px'>
+                        <li>
+                            <a href='findTutor' style='font-size:17px'>
                                 <button class="iconBorderClickRemoval" id="ft" style='font-size:20px'><i class='fas fa-search'> Find Tutor</i></button>
-                                
-                                </a>
-                            </li>
-                        </div>
-                        <div class="topnav-right">
-                            <li>
-                                <a href='post' class="">
-                                    <button class="iconBorderClickRemoval" id="post" style='font-size:20px'><i class='far fa-calendar-plus'></i></button>
-    
-                                </a>
-    
-                            </li>
-                            <li>
-                                <a href='#' onclick="return false;" class="ui item">
-                                    <button class="iconBorderClickRemoval" id="profile" ><i class='far fa-user' style="font-size:20px;" id="edit"></i></button>
-                                </a>
-    
-                            </li>
-                             <li>
-                                <a href='/logout' class="">
-                                    <button class="iconBorderClickRemoval" id="logout" style='font-size:20px'><i class='fas fa-power-off'></i></button>
-                                </a>
-                            </li>
-                        </div>
-                    </ul>
-                    <a href='#' id='openup'>Tutor Buddy</a>
-                </nav>
-            </header>
-        </div>
 
-        <div class="userSession">
-            <div id="userInfo">
-                <div id="userPicName">
-                    <img src="img/profileDefault.png" alt="Default Profile Photo" >
-                    <div id="name"> <%=userinfo.username%> </div>
-                </div>
-                <div id="upcoming">
-                    <div id="upcomingTitle">Upcoming Session</div>
-                    <hr/>
-                    <div id="sessions">
-
+                            </a>
+                        </li>
                     </div>
+
+                    <!-- Buttons at top-right navabar -->
+                    <div class="topnav-right">
+                        <li>
+                            <a href='post' class="">
+                                <button class="iconBorderClickRemoval" id="post" style='font-size:20px'><i class='far fa-calendar-plus'></i></button>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href='#' onclick="return false;" class="ui item">
+                                <button class="iconBorderClickRemoval" id="profile"><i class='far fa-user' style="font-size:20px;" id="edit"></i></button>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href='/logout' class="">
+                                <button class="iconBorderClickRemoval" id="logout" style='font-size:20px'><i class='fas fa-power-off'></i></button>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+                <a href='#' id='openup'>Tutor Buddy</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- User profile form -->
+    <div class="userSession">
+        <div id="userInfo">
+            <div id="userPicName">
+                <img src="img/profileDefault.png" alt="Default Profile Photo">
+                <div id="name">
+                    <%=userinfo.username%>
+                </div>
+            </div>
+            <div id="upcoming">
+                <div id="upcomingTitle">Upcoming Session</div>
+                <hr/>
+                <div id="sessions">
+
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
