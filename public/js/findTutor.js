@@ -2,6 +2,7 @@
 $(document).ready(() => {
     var postedSeesionArray = "";
     var userInput = "";
+    var loggedinEmail = "";
     $.ajax({
         type: "get",
         url: "/getCourseInfo",
@@ -40,27 +41,37 @@ $(document).ready(() => {
         url: "/getPostedSessions",
         dataType: "json",
         success: function (data) {
-            postedSeesionArray = data;
+            postedSeesionArray = data.data;
+            // console.log(data.email);
+            // let loggedinEmail = data.email;
         }
     });
 
+
+
     $("#findTutor").click(() => {
         let userInput = { "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val() };
-        console.log(userInput);
         $("#inputForm").hide();
-        for (var i = 0; i < postedSeesionArray.data.length; i++) {
-            if (userInput.course == postedSeesionArray.data[i].course) {
+        var d = new Date();
+        var n = d.getTime();
+        for (var i = 0; i < postedSeesionArray.length; i++) {
+            var dateAndTime = postedSeesionArray[i].date.concat(" " + postedSeesionArray[i].time);
+            var poDate = new Date(dateAndTime);
+            var poMillisec = poDate.getTime();
+            if (userInput.course == postedSeesionArray[i].course && 
+                loggedinEmail != postedSeesionArray[i].tutorEmail &&
+                n < poMillisec) {
 
                 let myButtonId = "Button".concat(i.toString());
-                let mySchool = postedSeesionArray.data[i].school;
-                let mySubject = postedSeesionArray.data[i].subject;
-                let myCourse = postedSeesionArray.data[i].course;
-                let myLocation = postedSeesionArray.data[i].location;
-                let myTime = postedSeesionArray.data[i].time;
-                let myDate = postedSeesionArray.data[i].date;
-                let myTutorEmail = postedSeesionArray.data[i].tutorEmail;
-                let myTutorName = postedSeesionArray.data[i].tutorName;
-                let myRate = postedSeesionArray.data[i].Rate;
+                let mySchool = postedSeesionArray[i].school;
+                let mySubject = postedSeesionArray[i].subject;
+                let myCourse = postedSeesionArray[i].course;
+                let myLocation = postedSeesionArray[i].location;
+                let myTime = postedSeesionArray[i].time;
+                let myDate = postedSeesionArray[i].date;
+                let myTutorEmail = postedSeesionArray[i].tutorEmail;
+                let myTutorName = postedSeesionArray[i].tutorName;
+                let myRate = postedSeesionArray[i].Rate;
 
                 $("#result").append(
                     '<div class = "cardContainer" style = "box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; border : 2px solid transparent;   ">' +
@@ -79,14 +90,14 @@ $(document).ready(() => {
 
                 $("#" + myButtonId + "").click(() => {
                     let index = myButtonId.substr(6);
-                    let mySubject2 = postedSeesionArray.data[index].subject;
-                    let myCourse2 = postedSeesionArray.data[index].course;
-                    let myLocation2 = postedSeesionArray.data[index].location;
-                    let myTime2 = postedSeesionArray.data[index].time;
-                    let myDate2 = postedSeesionArray.data[index].date;
-                    let myTutorEmail2 = postedSeesionArray.data[index].tutorEmail;
-                    let myTutorName2 = postedSeesionArray.data[index].tutorName;
-                    let myRate2 = postedSeesionArray.data[index].Rate;
+                    let mySubject2 = postedSeesionArray [index].subject;
+                    let myCourse2 = postedSeesionArray [index].course;
+                    let myLocation2 = postedSeesionArray [index].location;
+                    let myTime2 = postedSeesionArray [index].time;
+                    let myDate2 = postedSeesionArray [index].date;
+                    let myTutorEmail2 = postedSeesionArray [index].tutorEmail;
+                    let myTutorName2 = postedSeesionArray [index].tutorName;
+                    let myRate2 = postedSeesionArray [index].Rate;
 
                     $.ajax({
                         type: "post",
@@ -101,7 +112,6 @@ $(document).ready(() => {
                             "Rate": myRate2
                         },
                         dataType: "json",
-                        success: console.log(("Posted"))
                     })
 
                     $("#result").hide();
@@ -115,7 +125,6 @@ $(document).ready(() => {
             $('#result').html('<p>There is currently no available tutors for your selection.</p>');
 
         }
-        console.log("called");
         $("#result").append('<button style = "width: 30%; text-align : center; background-color : #428bca;' +
             'border-radius : 10px; float : right; margin : 10px;' +
             'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id = "back"> Back </button>');

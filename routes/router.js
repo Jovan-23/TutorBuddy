@@ -48,9 +48,6 @@ router.get('/findTutor', (req, res) => {
 })
 
 
-router.get('/findTutor', (req, res) => {
-    res.render('findTutor');
-})
 
 router.get('/post', (req, res) => {
     res.render('post');

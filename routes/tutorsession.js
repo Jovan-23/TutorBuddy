@@ -16,7 +16,9 @@ exports.getPostedSessions = (req, res) => {
 
     DB.find('PostedSession',{}, (err,data) =>{
         if(err) throw err;
-        res.json({"data": data});
+        res.json({"data": data,
+                  "email" : req.session.userinfo.email
+                });
     });
 }
 
