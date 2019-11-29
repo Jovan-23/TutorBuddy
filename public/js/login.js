@@ -18,7 +18,7 @@ $(document).ready(() => {
             console.log(data);
             if (data.login == "ok") {
               if($("#email").val() == "tutorbuddy2019@gmail.com") {
-                window.location.href = "/indexAdminView";
+                window.location.href = "/admin";
               } else {
                 window.location.href = "/userProfile";
               }
