@@ -1,104 +1,120 @@
+/* ----------------------------------------
+  BODY
+   --------------------------------------- */
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #f3ca3352;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3ca3352;
 }
 
 * {
-	box-sizing: border-box
+    box-sizing: border-box
 }
 
 
-/* Full-width input fields */
+/* ----------------------------------------
+  FULL WIDTH INPUT FIELDS
+  --------------------------------------- */
 
 input[type=text],
 input[type=password] {
-	width: 100%;
-	padding: 15px;
-	margin: 5px 0 22px 0;
-	display: inline-block;
-	border: none;
-	background: #f1f1f1;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
 }
 
 input[type=text]:focus,
 input[type=password]:focus {
-	background-color: #ddd;
-	outline: none;
+    background-color: #ddd;
+    outline: none;
 }
 
 hr {
-	border: 1px solid #f1f1f1;
-	margin-bottom: 25px;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
 }
 
 
-/* Set a style for all buttons */
+/* ----------------------------------------
+  STYLING FOR BUTTONS
+  --------------------------------------- */
 
 button {
-	background-color: #f1f1f1;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-	opacity: 0.9;
+    background-color: #f1f1f1;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
 }
 
 button:hover {
-	opacity: 1;
+    opacity: 1;
 }
 
 
-
-
-
-/* Float signup buttons and add an equal width */
-
+/* ----------------------------------------
+  SIGNUP BUTTON
+  --------------------------------------- */
 
 .signupbtn {
-	float: left;
-	width: 50%;
+    float: left;
+    width: 50%;
 }
 
 h1 {
-	margin: 0;
+    margin: 0;
 }
 
 
-/* Add padding to container elements */
+/* ----------------------------------------
+  SIGNUP  FORM CONTAINER
+  --------------------------------------- */
 
 .container {
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	max-width: 580px;
-	padding: 16px;
-	border: 4px solid #f1f1f1;
-	margin: auto;
-	margin-top: 40px;
-	background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    max-width: 580px;
+    padding: 16px;
+    border: 4px solid #f1f1f1;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white;
 }
 
 
-/* Clear floats */
+/* ----------------------------------------
+  CLEAR FLOATS
+  --------------------------------------- */
 
 .clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 
-/* Change styles for cancel button and signup button on extra small screens */
+/* ----------------------------------------
+  MEDIA QUERY FOR BUTTON FOR SMALLER SCREEN SIZES
+  --------------------------------------- */
 
 @media screen and (max-width: 300px) {
-
-	.signupbtn {
-		width: 100%;
-	}
+    .signupbtn {
+        width: 100%;
+    }
 }
 
+
+/* ----------------------------------------
+  MEDIA QUERY FOR FORM FOR SMALLER SCREEN SIZES
+  --------------------------------------- */
+
 @media screen and (max-width: 580px) {
-	.container {
-		width: 100%;
-		margin-top: 0;
-	}
+    .container {
+        width: 100%;
+        margin-top: 0;
+    }
 }
