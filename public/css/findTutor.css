@@ -5,8 +5,8 @@ IMPORTED FONTS
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 /* ----------------------------------------
-  BODY
-   --------------------------------------- */
+   BODY
+	--------------------------------------- */
 
 body {
     font-family: "Raleway", sans-serif;
@@ -21,8 +21,8 @@ body {
 
 
 /* ----------------------------------------
-  NAVIGATION BAR
-   --------------------------------------- */
+   NAVIGATION BAR
+	--------------------------------------- */
 
 nav {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -68,12 +68,12 @@ a {
 
 
 /* ----------------------------------------
-  CHANGES HOVER COLOURS OF THE NAVIGATION BAR
-   --------------------------------------- */
+   CHANGES HOVER COLOURS OF THE NAVIGATION BAR
+	--------------------------------------- */
 
 
 /* Changes the colour on hover for all items on the left side
-	 of the navigation bar */
+	  of the navigation bar */
 
 .fas:hover {
     color: #4183c4;
@@ -81,7 +81,7 @@ a {
 
 
 /* Changes the colour on hover for all items on the right side
-	 of the navigation bar */
+	  of the navigation bar */
 
 .far:hover {
     color: #4183c4;
@@ -89,8 +89,8 @@ a {
 
 
 /* ----------------------------------------
-  REMOVE NAV BLUE BOX AROUND ICON (BUTTON) CLICK
-   --------------------------------------- */
+   REMOVE NAV BLUE BOX AROUND ICON (BUTTON) CLICK
+	--------------------------------------- */
 
 .iconBorderClickRemoval {
     outline: 0;
@@ -99,8 +99,8 @@ a {
 
 
 /* ----------------------------------------
-  SHOWCASE
-  --------------------------------------- */
+   SHOWCASE
+   --------------------------------------- */
 
 #showcase {
     background-repeat: no-repeat;
@@ -126,8 +126,8 @@ a {
 
 
 /* ----------------------------------------
-  MEDIA QUERY FOR SHOWCASE & NABAR
-  --------------------------------------- */
+   MEDIA QUERY FOR SHOWCASE & NABAR
+   --------------------------------------- */
 
 @media screen and (max-width: 1366px) {
     .hide-on-small {
@@ -204,8 +204,8 @@ a {
 
 
 /* ----------------------------------------
-  MEDIA QUERY FOR SHOWCASE ELEMENTS
-  --------------------------------------- */
+   MEDIA QUERY FOR SHOWCASE ELEMENTS
+   --------------------------------------- */
 
 @media screen and (max-height: 1366px) {
     #showcase p.lead {
@@ -215,8 +215,8 @@ a {
 
 
 /* ----------------------------------------
-  FULL WIDTH INPUT FIELDS
-  --------------------------------------- */
+   FULL WIDTH INPUT FIELDS
+   --------------------------------------- */
 
 input[type=text],
 input[type=password] {
@@ -230,8 +230,8 @@ input[type=password] {
 
 
 /* ----------------------------------------
-  SPECIFIC INPUT FIELDS CSS
-  --------------------------------------- */
+   SPECIFIC INPUT FIELDS CSS
+   --------------------------------------- */
 
 #school,
 #course,
@@ -260,8 +260,8 @@ hr {
 
 
 /* ----------------------------------------
-  STYLING FOR BUTTONS
-  --------------------------------------- */
+   STYLING FOR BUTTONS
+   --------------------------------------- */
 
 button {
     background-color: #f1f1f1;
@@ -304,8 +304,8 @@ button:hover {
 
 
 /* ----------------------------------------
-  BECOME TUTOR APLLY BUTTON
-  --------------------------------------- */
+   FIND TUTOR APLLY BUTTON
+   --------------------------------------- */
 
 .ftbtn {
     float: left;
@@ -319,8 +319,8 @@ h1 {
 
 
 /* ----------------------------------------
-  BECOME TUTOR FORM CONTAINER
-  --------------------------------------- */
+   FIND TUTOR FORM CONTAINER
+   --------------------------------------- */
 
 .container {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -334,8 +334,8 @@ h1 {
 
 
 /* ----------------------------------------
-  CLEAR FLOATS
-  --------------------------------------- */
+   CLEAR FLOATS
+   --------------------------------------- */
 
 .clearfix::after {
     content: "";
@@ -345,8 +345,8 @@ h1 {
 
 
 /* ----------------------------------------
-  STYLING FOR BEACOME TUTOR APLLY BUTTON
-  --------------------------------------- */
+   STYLING FOR FIND TUTOR APLLY BUTTON
+   --------------------------------------- */
 
 @media screen and (max-width: 1366px) {
     .ftbtn {
@@ -356,8 +356,8 @@ h1 {
 
 
 /* ----------------------------------------
-  MEDIA QUERY FOR FORM AND NAVBAR FOR SMALLER SCREEN SIZES
-  --------------------------------------- */
+   MEDIA QUERY FOR FORM AND NAVBAR FOR SMALLER SCREEN SIZES
+   --------------------------------------- */
 
 @media screen and (max-width: 580px) {
     .container {
@@ -382,8 +382,8 @@ h1 {
 
 
 /* ----------------------------------------
-  MEDIA QUERY FOR FORM AND NAVBAR FOR MEDIUM SCREEN SIZES
-  --------------------------------------- */
+   MEDIA QUERY FOR FORM AND NAVBAR FOR MEDIUM SCREEN SIZES
+   --------------------------------------- */
 
 @media (max-width: 1366px) and (min-width:500px) {
     .container {
@@ -408,8 +408,8 @@ h1 {
 
 
 /* ----------------------------------------
-  MEDIA QUERY FOR FORM AND NAVBAR FOR FULL SCREEN SIZE
-  --------------------------------------- */
+   MEDIA QUERY FOR FORM AND NAVBAR FOR FULL SCREEN SIZE
+   --------------------------------------- */
 
 @media (max-width: 2000px) and (min-width:1367px) {
     .topnav-left {
