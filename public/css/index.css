@@ -557,7 +557,7 @@ SHOWCASE 1
 	.p1 {
 		display: none;
 	}
-	
+
 	.pMobile {
 		display: block;
 	}
@@ -1001,6 +1001,7 @@ SHOWCASE 2
 	}
 
 }
+
 /* ----------------------------------------
 SHOWCASE 3
  --------------------------------------- */
@@ -1193,7 +1194,7 @@ SHOWCASE 3
 	.showcaseImage3m {
 		display: block;
 		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url(../img/showcase3.jpg);
+			url(../img/showcase3.jpg);
 		color: white;
 		background-repeat: no-repeat;
 		background-size: 100% 600px;
@@ -1203,6 +1204,7 @@ SHOWCASE 3
 	}
 
 }
+
 /* ----------------------------------------
 SHOWCASE 4
  --------------------------------------- */
@@ -1337,7 +1339,7 @@ SHOWCASE 4
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	
+
 	.s4Text {
 		display: none;
 	}
@@ -1546,7 +1548,7 @@ SHOWCASE 5
 		display: block;
 		margin-bottom: 40px;
 	}
-	
+
 	.mainSubHeading3m {
 		margin-top: .8em;
 		margin-left: 20px;
@@ -1657,7 +1659,7 @@ SHOWCASE 6
 		text-align: center;
 		padding-right: 11px;
 		padding-left: 11px;
-	} 
+	}
 }
 
 /*-----------------------------------------
@@ -1881,5 +1883,3 @@ TEXT COLOURS
 		display: none;
 	}
 }
-
-
