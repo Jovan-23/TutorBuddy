@@ -376,6 +376,9 @@ SHOWCASE 1
 	display: none;
 }
 
+.pMobile {
+	display: none;
+}
 
 @media screen and (max-width: 1150px) {
 	.showcase1 {
@@ -541,6 +544,25 @@ SHOWCASE 1
 	}
 }
 
+@media screen and (max-width: 375px) {
+	html {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	.mainSubHeading1680 {
+		font-size: 37px;
+	}
+
+	.p1 {
+		display: none;
+	}
+	
+	.pMobile {
+		display: block;
+	}
+}
+
 
 /* ----------------------------------------
 SHOWCASE 2
@@ -681,6 +703,10 @@ SHOWCASE 2
 	margin: 0 auto;
 	width: 70%;
 	text-align: center;
+}
+
+.mobile2 {
+	display: none;
 }
 
 @media screen and (max-width: 1430px) {
@@ -893,6 +919,88 @@ SHOWCASE 2
 	}
 }
 
+@media screen and (max-width: 375px) {
+	.showcase2 {
+		display: none;
+	}
+
+	.mobile2 {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		background-color: var(--light-color);
+		padding-bottom: 60px;
+	}
+
+	.mainSubHeading2m {
+		margin-top: 8px;
+		padding-top: 40px;
+		font-size: 37px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	.p2m {
+		font-size: 98% !important;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.cardMobile {
+		margin-top: 3em;
+	}
+
+	.cardMobile h1 {
+		font-family: 'Kaushan Script', cursive;
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+}
+
+@media only screen and (max-width: 812px) and (orientation : landscape) {
+	.showcase2 {
+		display: none;
+	}
+
+	.mobile2 {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		background-color: var(--light-color);
+		padding-bottom: 60px;
+	}
+
+	.mainSubHeading2m {
+		margin-top: 8px;
+		padding-top: 40px;
+		font-size: 37px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	.p2m {
+		font-size: 98% !important;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.cardMobile {
+		margin-top: 3em;
+	}
+
+	.cardMobile h1 {
+		font-family: 'Kaushan Script', cursive;
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+
+}
 /* ----------------------------------------
 SHOWCASE 3
  --------------------------------------- */
@@ -900,6 +1008,8 @@ SHOWCASE 3
 	margin-top: 20px;
 	background: white;
 }
+
+
 
 .showcaseImage3 {
 	padding: 0 5%;
@@ -910,6 +1020,10 @@ SHOWCASE 3
 	height: 900px;
 	min-height: 900px;
 	overflow: auto;
+}
+
+.showcaseImage3m {
+	display: none;
 }
 
 .mainSubHeading3 {
@@ -930,6 +1044,8 @@ SHOWCASE 3
 .s3Icon {
 	width: 75px;
 }
+
+
 
 @media screen and (max-width: 1350px) {
 	.s3Text {
@@ -978,7 +1094,6 @@ SHOWCASE 3
 		font-size: 115% !important;
 	}
 }
-
 
 @media screen and (max-width: 900px) {
 	.showcase3 {
@@ -1069,6 +1184,25 @@ SHOWCASE 3
 		font-size: 93% !important;
 	}
 }
+
+@media screen and (max-width: 375px) {
+	.showcaseImage3 {
+		display: none;
+	}
+
+	.showcaseImage3m {
+		display: block;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(../img/showcase3.jpg);
+		color: white;
+		background-repeat: no-repeat;
+		background-size: 100% 600px;
+		height: 600px;
+		min-height: 600px;
+		overflow: auto;
+	}
+
+}
 /* ----------------------------------------
 SHOWCASE 4
  --------------------------------------- */
@@ -1084,6 +1218,7 @@ SHOWCASE 4
 	width: 70%;
 	text-align: center;
 }
+
 
 .mainSubHeading4 {
 	font-size: 53px;
@@ -1119,6 +1254,10 @@ SHOWCASE 4
 	text-decoration: none;
 	color: white;
 	background: black;
+}
+
+.s4Textm {
+	display: none;
 }
 
 @media screen and (max-width: 1150px) {
@@ -1190,6 +1329,35 @@ SHOWCASE 4
 	}
 }
 
+@media screen and (max-width: 375px) {
+	.showcase4 {
+		padding-bottom: 30px;
+		margin: 0 auto;
+		text-align: center;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.s4Text {
+		display: none;
+	}
+
+	.mainSubHeading4 {
+		font-size: 37px;
+	}
+
+	.s4Textm {
+		display: block;
+	}
+
+	.p4m {
+		margin-top: .7em;
+		font-size: 98% !important;
+		padding-left: 9px !important;
+		padding-right: 9px !important;
+	}
+}
+
 /* ----------------------------------------
 SHOWCASE 5
  --------------------------------------- */
@@ -1256,6 +1424,11 @@ SHOWCASE 5
 .c5680 {
 	display: none;
 }
+
+.mobile5 {
+	display: none;
+}
+
 
 /* Media Query for showcase 5 at 680px */
 @media screen and (max-width: 900px) {
@@ -1364,6 +1537,34 @@ SHOWCASE 5
 	}
 }
 
+@media screen and (max-width: 375px) {
+	.showcase5 {
+		display: none;
+	}
+
+	.mobile5 {
+		display: block;
+		margin-bottom: 40px;
+	}
+	
+	.mainSubHeading3m {
+		margin-top: .8em;
+		margin-left: 20px;
+		font-size: 37px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+	}
+
+	.mobile5 .mainSubHeading5680 {
+		margin-top: 40px;
+		font-size: 37px;
+	}
+
+	.p3m {
+		margin-left: 20px;
+	}
+}
+
 /* ----------------------------------------
 SHOWCASE 6
  --------------------------------------- */
@@ -1384,6 +1585,10 @@ SHOWCASE 6
 	margin: 0 auto;
 	width: 70%;
 	text-align: center;
+}
+
+.s6Textm {
+	display: none;
 }
 
 /* Media Query for showcase 6 at 900px */
@@ -1429,6 +1634,30 @@ SHOWCASE 6
 		margin-top: 1.2em;
 		font-size: 98% !important;
 	}
+}
+
+@media screen and (max-width: 375px) {
+	.s6Text {
+		display: none;
+	}
+
+	.s6Textm {
+		display: block;
+	}
+
+	.mainSubHeading6m {
+		font-size: 37px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+	}
+
+	.p6 {
+		margin-top: .8em;
+		text-align: center;
+		padding-right: 11px;
+		padding-left: 11px;
+	} 
 }
 
 /*-----------------------------------------
@@ -1653,4 +1882,4 @@ TEXT COLOURS
 	}
 }
 
-/* IPHONE*/
+
