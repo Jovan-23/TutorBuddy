@@ -31,7 +31,9 @@ body {
 HTML, BODY (SET SO MEDIA QUERIES DO NOT GO OUT OF BOUNDS)
 --------------------------------------- */
 @media screen and (max-width: 680px) {
-	html, body {
+
+	html,
+	body {
 		height: 100%;
 		width: 100%;
 	}
@@ -113,9 +115,9 @@ NAVIGATION BAR: LOGIN BUTTON
  --------------------------------------- */
 #loginButton {
 	width: 150px;
-    height: 43px;
-    padding: 0;
-    line-height: 43px;
+	height: 43px;
+	padding: 0;
+	line-height: 43px;
 	text-align: center;
 	position: relative;
 	text-transform: uppercase;
@@ -138,7 +140,7 @@ NAVIGATION BAR: LOGIN BUTTON
 	line-height: 43px;
 	transition: 0.5s;
 	opacity: 0;
- }
+}
 
 
 #loginButton:hover span {
@@ -157,8 +159,8 @@ NAVIGATION BAR: LOGIN BUTTON
 }
 
 #loginButton:focus {
-    outline: 0;
-    box-shadow: none!important;
+	outline: 0;
+	box-shadow: none !important;
 }
 
 /* Reduce button width, height font-size and spacing */
@@ -167,8 +169,8 @@ NAVIGATION BAR: LOGIN BUTTON
 		width: 135px;
 		height: 41.5px;
 		font-size: 85%;
-	}	
-} 
+	}
+}
 
 @media screen and (max-width: 800px) {
 	#loginButton {
@@ -176,23 +178,23 @@ NAVIGATION BAR: LOGIN BUTTON
 		height: 40px;
 		font-size: 78.5%;
 		margin-left: 80px;
-	}	
-} 
+	}
+}
 
 @media screen and (max-width: 680px) {
 	#loginButton {
 		margin-left: 0px;
-	}	
-} 
+	}
+}
 
 /* ----------------------------------------
 NAVIGATION BAR: SIGN UP BUTTON
  --------------------------------------- */
- #SignUpButton {
+#SignUpButton {
 	width: 150px;
-    height: 43px;
-    padding: 0;
-    line-height: 43px;
+	height: 43px;
+	padding: 0;
+	line-height: 43px;
 	text-align: center;
 	position: relative;
 	text-transform: uppercase;
@@ -200,9 +202,9 @@ NAVIGATION BAR: SIGN UP BUTTON
 	color: black;
 	background: transparent;
 	transition: all 0.5 linear;
- }
+}
 
- #SignUpButton span {
+#SignUpButton span {
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
@@ -233,8 +235,8 @@ NAVIGATION BAR: SIGN UP BUTTON
 }
 
 #SignUpButton:focus {
-    outline: 0;
-    box-shadow: none!important;
+	outline: 0;
+	box-shadow: none !important;
 }
 
 /* Reduce button width, height font-size and spacing */
@@ -243,16 +245,16 @@ NAVIGATION BAR: SIGN UP BUTTON
 		width: 135px;
 		height: 41.5px;
 		font-size: 85%;
-	}	
-} 
+	}
+}
 
 @media screen and (max-width: 800px) {
 	#SignUpButton {
 		width: 120px;
 		height: 40px;
 		font-size: 78.5%;
-	}	
-} 
+	}
+}
 
 /* ----------------------------------------
 SHOWCASE MAIN
@@ -282,6 +284,24 @@ SHOWCASE MAIN
 	font-size: 2rem;
 }
 
+@media screen and (max-width: 1450px) {
+	#showcase {
+		height: 95vh;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	#showcase {
+		height: 90vh;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	#showcase {
+		height: 85vh;
+	}
+}
+
 @media screen and (max-width: 900px) {
 	#showcase {
 		height: 80vh;
@@ -300,6 +320,24 @@ SHOWCASE MAIN
 	}
 }
 
+@media screen and (max-width: 600px) {
+	#showcase {
+		height: 66.5vh;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#showcase {
+		height: 60vh;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#showcase {
+		height: 55vh;
+	}
+}
+
 /* ----------------------------------------
 SHOWCASE 1
  --------------------------------------- */
@@ -312,14 +350,14 @@ SHOWCASE 1
 	background-image: url(../img/homepage19.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
-	background-size: 60%;	
+	background-size: 60%;
 	height: 800px;
 	min-height: 800px;
 	overflow: auto;
 }
 
 
- .mainSubHeading {
+.mainSubHeading {
 	font-size: 53px;
 	font-weight: 100;
 	font-family: Circular Std, sans-serif;
@@ -338,11 +376,12 @@ SHOWCASE 1
 	display: none;
 }
 
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 1150px) {
 	.showcase1 {
 		display: none;
 	}
-	
+
 	.showcase1680 {
 		display: block;
 		background: white;
@@ -353,7 +392,77 @@ SHOWCASE 1
 		width: 100%;
 	}
 
-	 .mainSubHeading1680 {
+	.mainSubHeading1680 {
+		margin-top: 16px;
+		padding-top: 40px;
+		font-size: 47px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+	}
+
+	.s1680Images {
+		width: 567px;
+		height: 400px;
+		float: right;
+		margin-left: 20px;
+	}
+
+	.p1 {
+		font-size: 122% !important;
+		margin: 30px;
+		padding-right: 10px;
+	}
+
+	#wrap1680 {
+		margin-top: 1.2em;
+		padding-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	#wrap1680 {
+		margin-top: 1.2em;
+		padding-bottom: 20px;
+	}
+
+	.s1680Images {
+		width: 507px;
+		height: 380px;
+		margin-left: 15px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	#wrap1680 {
+		margin-top: 1.2em;
+		padding-bottom: 5px;
+	}
+
+	.s1680Images {
+		width: 485px;
+		height: 370px;
+		margin-left: 17px;
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.showcase1 {
+		display: none;
+	}
+
+	.showcase1680 {
+		display: block;
+		background: white;
+	}
+
+	body {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	.mainSubHeading1680 {
 		margin-top: 8px;
 		padding-top: 40px;
 		font-size: 47px;
@@ -372,12 +481,12 @@ SHOWCASE 1
 	.p1 {
 		font-size: 109% !important;
 		margin: 30px;
-		padding-right:10px;
+		padding-right: 10px;
 	}
 
 	#wrap1680 {
 		margin-top: 1.2em;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 }
 
@@ -386,7 +495,7 @@ SHOWCASE 1
 	.showcase1 {
 		display: none;
 	}
-	
+
 	.showcase1680 {
 		display: block;
 		background: white;
@@ -397,7 +506,7 @@ SHOWCASE 1
 		width: 100%;
 	}
 
-	 .mainSubHeading1680 {
+	.mainSubHeading1680 {
 		margin-top: 8px;
 		padding-top: 40px;
 		font-size: 43px;
@@ -416,12 +525,19 @@ SHOWCASE 1
 	.p1 {
 		font-size: 98% !important;
 		margin: 30px;
-		padding-right:10px;
+		padding-right: 10px;
 	}
 
 	#wrap1680 {
 		margin-top: 3em;
 		padding-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.s1680Images {
+		float: none;
+		margin-left: 0;
 	}
 }
 
@@ -431,7 +547,7 @@ SHOWCASE 2
  --------------------------------------- */
 .showcase2 {
 	background-color: var(--light-color);
-	padding-bottom: 60px ;
+	padding-bottom: 60px;
 }
 
 .mainSubHeading2 {
@@ -446,7 +562,7 @@ SHOWCASE 2
 	margin-top: 6em;
 }
 
-.s2Description > .card {
+.s2Description>.card {
 	display: inline-block;
 }
 
@@ -458,21 +574,21 @@ SHOWCASE 2
 	margin-right: 3em;
 	margin-left: 3em;
 }
-  
+
 .content {
 	width: 100%;
 	height: 100%;
-	box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  	transition: transform 1s;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	transition: transform 1s;
 	transform-style: preserve-3d;
 }
-  
+
 .card:hover .content {
-	transform: rotateY( 180deg ) ;
+	transform: rotateY(180deg);
 	transition: transform 0.5s;
 	background: transparent;
 }
-  
+
 .front {
 	background: #eee;
 	position: absolute;
@@ -480,7 +596,7 @@ SHOWCASE 2
 	width: 100%;
 	background: white;
 	line-height: 300px;
-	color:black;
+	color: black;
 	text-align: center;
 	font-size: 60px;
 	border-radius: 5px;
@@ -511,12 +627,12 @@ SHOWCASE 2
 	background: transparent;
 	backface-visibility: hidden;
 }
-  
+
 .back {
 	background: transparent;
-	background:  var(--light-color) ;
+	background: var(--light-color);
 	color: white;
-	transform: rotateY( 180deg );
+	transform: rotateY(180deg);
 }
 
 .back h1 {
@@ -533,9 +649,9 @@ SHOWCASE 2
 	margin-top: 1.4em;
 	width: 260px;
 	height: 50px;
-    padding: 0;
-    display: inline-block;
-    line-height: 50px;
+	padding: 0;
+	display: inline-block;
+	line-height: 50px;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
@@ -567,6 +683,91 @@ SHOWCASE 2
 	text-align: center;
 }
 
+@media screen and (max-width: 1430px) {
+	.card {
+		width: 275px;
+		height: 275px;
+		margin-right: 2.2em;
+		margin-left: 2.2em;
+	}
+
+	.s2Information {
+		padding-top: 0em;
+	}
+
+	.s2Description {
+		margin-top: 4em;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.mainSubHeading2 {
+		margin-top: 3em;
+		padding-top: 70px;
+		font-size: 47px;
+		font-weight: 100;
+		font-family: Circular Std, sans-serif;
+		text-align: center;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.s2Description {
+		margin-top: 3.4em;
+	}
+
+	.card {
+		width: 250px;
+		height: 250px;
+		margin-right: 1.7em;
+		margin-left: 1.7em;
+	}
+
+	.front h1 {
+		font-size: 65% !important;
+		padding-right: 3%;
+		padding-left: 3%;
+	}
+
+	.back h1 {
+		font-size: 1.1rem;
+	}
+
+	.s2Information {
+		padding-top: 3.5em;
+		width: 79%;
+	}
+
+	.card3680 {
+		margin-top: 1.9em;
+	}
+
+	.s2Information {
+		padding-top: 2.5em;
+	}
+
+	.s2Information p {
+		font-size: 122% !important;
+	}
+
+	.flipButton {
+		margin-top: 1.4em;
+		width: 193px;
+		height: 43px;
+		line-height: 43px;
+		font-size: 89%;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.card {
+		width: 235px;
+		height: 235px;
+		margin-right: 1.45em;
+		margin-left: 1.45em;
+	}
+}
+
 @media screen and (max-width: 900px) {
 	.mainSubHeading2 {
 		margin-top: 8px;
@@ -582,24 +783,24 @@ SHOWCASE 2
 	.s2Description {
 		margin-top: 1.6em;
 	}
-	
+
 	.card {
 		width: 220px;
 		height: 220px;
 		margin-right: 1.3em;
 		margin-left: 1.3em;
 	}
-	
+
 	.front h1 {
 		font-size: 65% !important;
 		padding-right: 3%;
 		padding-left: 3%;
 	}
-	
+
 	.back h1 {
 		font-size: 1.1rem;
 	}
-	
+
 	.s2Information {
 		padding-top: 3.5em;
 		width: 79%;
@@ -642,24 +843,24 @@ SHOWCASE 2
 	.s2Description {
 		margin-top: 3em;
 	}
-	
+
 	.card {
 		width: 220px;
 		height: 220px;
 		margin-right: 1.3em;
 		margin-left: 1.3em;
 	}
-	
+
 	.front h1 {
 		font-size: 55% !important;
 		padding-right: 3%;
 		padding-left: 3%;
 	}
-	
+
 	.back h1 {
 		font-size: 1rem;
 	}
-	
+
 	.s2Information {
 		padding-top: 3.5em;
 		width: 79%;
@@ -686,10 +887,16 @@ SHOWCASE 2
 	}
 }
 
+@media screen and (max-width: 540px) {
+	.card505 {
+		margin-top: 1.9em;
+	}
+}
+
 /* ----------------------------------------
 SHOWCASE 3
  --------------------------------------- */
- .showcase3 {
+.showcase3 {
 	margin-top: 20px;
 	background: white;
 }
@@ -699,7 +906,7 @@ SHOWCASE 3
 	background-image: url(../img/showcase3.jpg);
 	background-repeat: no-repeat;
 	background-position: right center;
-	background-size: 800px 700px;	
+	background-size: 800px 700px;
 	height: 900px;
 	min-height: 900px;
 	overflow: auto;
@@ -724,6 +931,55 @@ SHOWCASE 3
 	width: 75px;
 }
 
+@media screen and (max-width: 1350px) {
+	.s3Text {
+		margin-right: 40%;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.showcase3 {
+		background: white;
+		margin-top: 0;
+	}
+
+	.mainSubHeading3 {
+		margin-top: 8px;
+		font-size: 47px;
+	}
+
+	.showcaseImage3 {
+		padding: 0 0%;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+			url(../img/showcase3.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 825px;
+		height: 825px;
+		min-height: 825px;
+		overflow: auto;
+	}
+
+	.s3Text {
+		background-color: rgba(0, 0, 0, .6);
+		color: white;
+		margin-right: 20%;
+		margin-top: 3.6em;
+		overflow: hidden;
+		background: transparent;
+		padding-left: 40px;
+		padding-bottom: 0px;
+	}
+
+	.s3Icon {
+		width: 75px;
+	}
+
+	.p3 {
+		font-size: 115% !important;
+	}
+}
+
+
 @media screen and (max-width: 900px) {
 	.showcase3 {
 		background: white;
@@ -737,15 +993,15 @@ SHOWCASE 3
 
 	.showcaseImage3 {
 		padding: 0 0%;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-		 url(../img/showcase3.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+			url(../img/showcase3.jpg);
 		background-repeat: no-repeat;
-		background-size: 100% 770px;	
+		background-size: 100% 770px;
 		height: 770px;
 		min-height: 770px;
 		overflow: auto;
 	}
-	
+
 	.s3Text {
 		background-color: rgba(0, 0, 0, .6);
 		color: white;
@@ -756,7 +1012,7 @@ SHOWCASE 3
 		padding-left: 40px;
 		padding-bottom: 0px;
 	}
-	
+
 	.s3Icon {
 		width: 75px;
 	}
@@ -779,15 +1035,15 @@ SHOWCASE 3
 
 	.showcaseImage3 {
 		padding: 0 0%;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-		 url(../img/showcase3.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+			url(../img/showcase3.jpg);
 		background-repeat: no-repeat;
-		background-size: 100% 750px;	
+		background-size: 100% 750px;
 		height: 750px;
 		min-height: 750px;
 		overflow: auto;
 	}
-	
+
 	.s3Text {
 		background-color: rgba(0, 0, 0, .6);
 		color: white;
@@ -798,7 +1054,7 @@ SHOWCASE 3
 		padding-left: 40px;
 		padding-bottom: 0px;
 	}
-	
+
 	.s3Icon {
 		width: 75px;
 	}
@@ -808,21 +1064,26 @@ SHOWCASE 3
 	}
 }
 
+@media screen and (max-width: 680px) {
+	.p3 {
+		font-size: 93% !important;
+	}
+}
 /* ----------------------------------------
 SHOWCASE 4
  --------------------------------------- */
- .showcase4 {
+.showcase4 {
 	background-color: var(--light-color);
 	margin-top: 20px;
 	padding-top: 80px;
 	padding-bottom: 80px;
- }
+}
 
- .s4Text {
-	 margin: 0 auto;
-	 width: 70%;
-	 text-align: center;
- }
+.s4Text {
+	margin: 0 auto;
+	width: 70%;
+	text-align: center;
+}
 
 .mainSubHeading4 {
 	font-size: 53px;
@@ -833,10 +1094,10 @@ SHOWCASE 4
 .buttonJoin {
 	margin-top: 2em;
 	width: 250px;
-    height: 80px;
-    padding: 0;
-    display: inline-block;
-    line-height: 80px;
+	height: 80px;
+	padding: 0;
+	display: inline-block;
+	line-height: 80px;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
@@ -858,6 +1119,12 @@ SHOWCASE 4
 	text-decoration: none;
 	color: white;
 	background: black;
+}
+
+@media screen and (max-width: 1150px) {
+	.showcase4 {
+		margin-top: 0px;
+	}
 }
 
 /* Media Query for showcase 6 at 680px */
@@ -882,11 +1149,10 @@ SHOWCASE 4
 		font-size: 109% !important;
 	}
 
-	
 	.buttonJoin {
 		margin-top: 1.2em;
 		width: 220px;
-    	height: 69px;
+		height: 69px;
 		line-height: 69px;
 		font-size: 98%;
 	}
@@ -914,11 +1180,11 @@ SHOWCASE 4
 		font-size: 98% !important;
 	}
 
-	
+
 	.buttonJoin {
 		margin-top: 1.2em;
 		width: 200px;
-    	height: 64px;
+		height: 64px;
 		line-height: 64px;
 		font-size: 95%;
 	}
@@ -932,17 +1198,21 @@ SHOWCASE 5
 	margin-top: 20px;
 	padding-top: 80px;
 	padding-bottom: 80px;
- }
+}
 
- .mainSubHeading5 {
+.mainSubHeading5 {
 	font-size: 53px;
 	font-weight: 100;
 	font-family: Circular Std, sans-serif;
 	text-align: center;
 }
 
+.c5 {
+	text-align: center;
+}
+
 .showcase5Image {
-	height: 550px;
+	height: 500px;
 }
 
 #changing_image {
@@ -954,10 +1224,10 @@ SHOWCASE 5
 	margin-left: 20px;
 	margin-right: 20px;
 	width: 150px;
-    height: 80px;
-    padding: 0;
-    display: inline-block;
-    line-height: 80px;
+	height: 80px;
+	padding: 0;
+	display: inline-block;
+	line-height: 80px;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
@@ -993,23 +1263,23 @@ SHOWCASE 5
 		background-color: white;
 		margin-top: 20px;
 		padding-top: 40px;
-	 }
-	
-	 .mainSubHeading5 {
+	}
+
+	.mainSubHeading5 {
 		font-size: 47px;
 		font-weight: 100;
 		font-family: Circular Std, sans-serif;
 		text-align: center;
 	}
-	
+
 	.showcase5Image {
 		height: 400px;
 	}
-	
+
 	#changing_image {
 		margin-top: 2em;
 	}
-	
+
 	.buttonOption {
 		margin-top: 2em;
 		margin-left: 15px;
@@ -1028,24 +1298,24 @@ SHOWCASE 5
 
 		font-size: 80%;
 	}
-	
+
 	.buttonOption1 {
 		color: white !important;
 		background: black !important;
 	}
-	
+
 	.buttonOption:focus {
 		background: black;
 		color: white;
 		text-decoration: none;
 	}
-	
+
 	.buttonOption:hover {
 		text-decoration: none;
 		background: black;
 		color: white;
 	}
-	
+
 }
 
 
@@ -1064,7 +1334,7 @@ SHOWCASE 5
 		margin-top: 8px;
 		padding-top: 40px;
 		padding-bottom: 40px;
-	 }
+	}
 
 	.mainSubHeading5680 {
 		font-size: 43px;
@@ -1091,30 +1361,53 @@ SHOWCASE 5
 		width: 350px;
 		height: 260px;
 		vertical-align: middle;
-	}	
+	}
 }
 
 /* ----------------------------------------
 SHOWCASE 6
  --------------------------------------- */
- .showcase6 {
+.showcase6 {
 	background-color: var(--light-color);
 	margin-top: 20px;
 	padding-top: 80px;
 	padding-bottom: 80px;
- }
+}
 
- .mainSubHeading6 {
+.mainSubHeading6 {
 	font-size: 53px;
 	font-weight: 100;
 	font-family: Circular Std, sans-serif;
- }
+}
 
- .s6Text {
-	 margin: 0 auto;
-	 width: 70%;
-	 text-align: center;
- }
+.s6Text {
+	margin: 0 auto;
+	width: 70%;
+	text-align: center;
+}
+
+/* Media Query for showcase 6 at 900px */
+@media screen and (max-width: 900px) {
+	.showcase6 {
+		margin-top: 8px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.mainSubHeading6 {
+		font-size: 47px;
+	}
+
+	.s6Text {
+		width: 83%;
+	}
+
+	.p6 {
+		margin-top: 1.2em;
+		font-size: 109% !important;
+	}
+}
+
 
 /* Media Query for showcase 6 at 680px */
 @media screen and (max-width: 680px) {
@@ -1122,9 +1415,9 @@ SHOWCASE 6
 		margin-top: 8px;
 		padding-top: 40px;
 		padding-bottom: 40px;
-	 }
+	}
 
-	 .mainSubHeading6 {
+	.mainSubHeading6 {
 		font-size: 43px;
 	}
 
@@ -1174,7 +1467,7 @@ a {
 	text-align: left;
 }
 
- /* ----------------------------------------
+/* ----------------------------------------
 FOOTER
  --------------------------------------- */
 footer .footer-cols {
@@ -1268,37 +1561,46 @@ TEXT COLOURS
 	.hide-on-small {
 		display: none;
 	}
+
 	#showcase {}
+
 	#showcase .container {
 		margin-top: 15vh;
 	}
+
 	#showcase h1 {
 		font-size: 3rem;
 	}
+
 	#showcase h2 {
 		font-size: 1.5rem;
 	}
+
 	nav {
 		height: auto;
 		border-bottom: 0;
 		background-color: white;
 	}
+
 	nav ul {
 		display: none;
 		height: auto;
 	}
+
 	nav li {
 		width: 100%;
 		float: left;
 		position: relative;
 	}
+
 	nav a {
 		text-align: left;
 		width: 100%;
 		text-indent: 25px;
-		background: #fff!important;
+		background: #fff !important;
 		border-bottom: 1px solid #555;
 	}
+
 	nav a#openup:after {
 		content: '|||';
 		transform: rotate(-90deg);
@@ -1312,6 +1614,7 @@ TEXT COLOURS
 		right: 5px;
 		top: 20px;
 	}
+
 	nav a#openup {
 		display: block;
 		background-color: #333;
@@ -1338,6 +1641,7 @@ TEXT COLOURS
 	.cards {
 		grid-template-columns: 1fr;
 	}
+
 	footer .footer-cols {
 		display: none;
 	}
