@@ -356,6 +356,10 @@ SHOWCASE 1
 	overflow: auto;
 }
 
+.sImagesm {
+	display: none;
+}
+
 
 .mainSubHeading {
 	font-size: 53px;
@@ -560,6 +564,16 @@ SHOWCASE 1
 
 	.pMobile {
 		display: block;
+	}
+
+	.s1680Images {
+		display: none;
+	}
+
+	.sImagesm {
+		display: block;
+		width: 340px;
+		height: 280px;
 	}
 }
 
