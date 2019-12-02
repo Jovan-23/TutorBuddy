@@ -1721,7 +1721,7 @@ TEXT COLOURS
     .hide-on-small {
         display: none;
     }
-    #showcase {}
+    /* #showcase {} */
     #showcase .container {
         margin-top: 15vh;
     }
@@ -1747,7 +1747,7 @@ TEXT COLOURS
     }
     nav a {
         text-align: left;
-        width: 100%;
+        width: 370px;
         text-indent: 25px;
         background: #fff !important;
         border-bottom: 1px solid #555;
