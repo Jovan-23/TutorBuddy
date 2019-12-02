@@ -120,17 +120,10 @@ $(document).ready(() => {
             alert("please fill out form");
             return;
         }
-        if ($("#GPA").val() < 2.0 || $("#GPA").val() > 4.0) {
+        if ($("#GPA").val() > 4.0) {
             $("#GPA").val(" ");
-            alert("please enter the GPA again");
+            alert("Max GPA is 4.0");
             return;
-        }
-
-        if ($("#Rate").val() <= 11 || $("#Rate").val() >= 30) {
-            $("#Rate").val(" ");
-            alert("please enter the rate again");
-            return;
-
         }
         let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending", "Rate": $("#Rate").val() };
 
