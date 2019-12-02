@@ -228,7 +228,7 @@ input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: rgb(232, 240, 254) !important;
 }
 
 
@@ -244,7 +244,7 @@ input[type=password] {
     margin: 0px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: rgb(232, 240, 254) !important;
 }
 
  ::placeholder {
