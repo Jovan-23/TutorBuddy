@@ -9,7 +9,10 @@ IMPORTED FONTS
     
     body {
         font-family: "Raleway", sans-serif;
-        background-color: rgb(140, 138, 138);
+        background-image: url('../img/back.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
         margin: 0;
         line-height: 1.9;
     }
