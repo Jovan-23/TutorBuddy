@@ -360,7 +360,7 @@ $(document).ready(() => {
                               "email" : value.email,
                               "school": value.school,
                               "subject": value.subject,
-                              "courseNumber": value.courseNumber},
+                              "course": value.course},
                           dataType: "json",
                           success: function (data) {
                             if(data.update=="ok"){
