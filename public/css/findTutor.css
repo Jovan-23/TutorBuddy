@@ -365,6 +365,7 @@ h1 {
 @media screen and (max-width: 580px) {
     .container {
         margin: 1%;
+        margin-top: 21%;
     }
     .topnav-left {
         float: left;
