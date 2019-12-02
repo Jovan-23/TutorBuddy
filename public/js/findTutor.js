@@ -57,7 +57,7 @@ $(document).ready(() => {
     //Action Listener for button "Find Tutor"
     $("#findTutor").click(() => {
         let userInput = { "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val() };
-        $("#inputForm").hide(); 
+        $("#inputForm").hide();
 
         //Get current time 
         var d = new Date();
@@ -73,7 +73,7 @@ $(document).ready(() => {
             //1)If the posted time is  past time
             //2)If the tutor email is the same as logged in tutee email
             //3)If the course is the selected course.
-            if (userInput.course == postedSeesionArray[i].course && 
+            if (userInput.course == postedSeesionArray[i].course &&
                 loggedinEmail !== postedSeesionArray[i].tutorEmail &&
                 n < poMillisec) {
 
@@ -105,17 +105,16 @@ $(document).ready(() => {
                     'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id ="' + myButtonId + '">' + 'Book </button>' +
                     '</div></div>');
 
-                    //action listener for book button.
+                //action listener for book button.
                 $("#" + myButtonId + "").click(() => {
                     let index = myButtonId.substr(6);
-                    let mySubject2 = postedSeesionArray [index].subject;
-                    let myCourse2 = postedSeesionArray [index].course;
-                    let myLocation2 = postedSeesionArray [index].location;
-                    let myTime2 = postedSeesionArray [index].time;
-                    let myDate2 = postedSeesionArray [index].date;
-                    let myTutorEmail2 = postedSeesionArray [index].tutorEmail;
-                    let myTutorName2 = postedSeesionArray [index].tutorName;
-                    let myRate2 = postedSeesionArray [index].Rate;
+                    let mySubject2 = postedSeesionArray[index].subject;
+                    let myCourse2 = postedSeesionArray[index].course;
+                    let myLocation2 = postedSeesionArray[index].location;
+                    let myTime2 = postedSeesionArray[index].time;
+                    let myDate2 = postedSeesionArray[index].date;
+                    let myTutorEmail2 = postedSeesionArray[index].tutorEmail;
+                    let myTutorName2 = postedSeesionArray[index].tutorName;
                     postID = postedSeesionArray[index]._id;
 
 
@@ -130,24 +129,22 @@ $(document).ready(() => {
                             "location": myLocation2,
                             "date": myDate2,
                             "time": myTime2,
-                            "Rate": myRate2
                         },
                         dataType: "json",
                     })
 
                     //Remove selected posted session from database.
                     $.ajax({
-                        type : "post",
+                        type: "post",
                         url: "deletePostedSessions",
-                        data:{
+                        data: {
                             "tutorEmail": myTutorEmail2,
                             "tutorName": myTutorName2,
                             "course": myCourse2,
                             "location": myLocation2,
                             "date": myDate2,
                             "time": myTime2,
-                            "Rate": myRate2,
-                            "_id" : postID
+                            "_id": postID
                         },
                         dataType: "json"
                     })
@@ -159,16 +156,16 @@ $(document).ready(() => {
                 })
             }
         }
-        
+
         //If no available tutor sessions found.
         if (!$.trim($('#result').html()).length) {
-            $('#result').html('<p>There is currently no available tutors for your selection.</p>');
+            $('#result').html('<p>Currently, there is no available tutors for your selection.</p>');
 
         }
-        
+
         //Back button and its action listener.
-        $("#result").append('<button style = "width: 30%; text-align : center; background-color : #428bca;' +
-            'border-radius : 10px; float : right; margin : 10px;' +
+        $("#backbtn").append('<button style = "width: 20%; text-align : center; background-color : #428bca;' +
+            'border-radius : 15px; float : right;' +
             'border: 1px solid transparent; cursor : pointer; color : #f9f9f9;" id = "back"> Back </button>');
         $("#back").click(() => {
             $("#result").hide();
