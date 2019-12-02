@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+   
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/admin.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/admin.js"></script>
+
+
+
+    <title>Tutor Buddy</title>
+</head>
+
+<body>
+    <!-- Showcase & Navigaton -->
+     <div id="showcase adminShowcase">
+            <nav id="navbar" class='cf'>
+                    <ul class='cf'>
+    
+                        <li class="hide-on-small">
+                            <a href='#' onclick="return false;" id="navTitle"><b></b></a>
+                        </li>
+                        <div class="topnav-right">
+                            
+                            <!-- Adding log in button-->
+                            <li>
+                                <a href='https://tutorbuddy-uvic.herokuapp.com' target="_blank">
+                                    <button id="visitSite">
+                                        <span>Visit Site</span>
+                                    </button>
+                                </a>
+                            </li>
+    
+                            <!-- Adding sign up button-->
+                            <li>
+                                <a href='#' onclick="return false;">
+                                    <button id="logOutButton">
+                                        <span>Log Out</span>
+                                    </button>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                    <a href='#' id='openup'>Tutor Buddy</a>
+                </nav>
+    </div>
+
+    <!-- Contains both the pending tutors and accepted tutors -->
+    <div class="allTutors">
+        <!-- Pending Tutors -->
+        <div class="wrapper">
+            <h1>Pending Tutors</h1><hr>
+            <div class="innerWrapper">
+                <div id="allCardContainerPendings"></div>
+            </div>
+        </div>
+
+        <!-- Current Tutors -->
+        <div class="wrapper">
+            <h1>Current Tutors</h1><hr>
+            <div class="innerWrapper">
+                <div id="allCardContainerCurrent"></div>
+            </div>
+        </div>
+
+        <!-- Pending Tutors Responsive -->
+        <div class="wrapper2">
+            <h1>Pending Tutors</h1><hr>
+            <div class="innerWrapper">
+                <div id="allCardContainerPendings"></div>
+            </div>
+        </div>
+
+        <!-- Current Tutors Responsive -->
+        <div class="wrapper2">
+            <h1>Current Tutors</h1><hr>
+                <div class="innerWrapper">
+                    <div id="allCardContainerCurrent"></div>
+                </div>
+            </div>
+    
+    </div>
+</body>
+
+</html>

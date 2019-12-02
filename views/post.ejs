@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/post.css">
+
+    <!-- Js -->
     <script src="/js/jquery.js"></script>
     <script src="/js/post.js"></script>
     <script src="/js/index.js"></script>
 
+    <!-- Title -->
     <title>Tutor Buddy</title>
 </head>
 
@@ -30,88 +28,60 @@
                 <ul class='cf'>
 
                     <li class="hide-on-small">
-                        <a href='index' style="font-size:24px"><b>Tutor Buddy</b></a>
+                        <a href='#' onclick="return false;" style="font-size:24px"><b>Tutor Buddy</b></a>
                     </li>
+                    <!-- Buttons at top-left navabar -->
                     <div class="topnav-left">
                         <li>
                             <a href='becomeTutor' style='font-size:17px'>
                                 <button class="iconBorderClickRemoval" id="bt" style='font-size:20px'><i class='fas fa-chalkboard-teacher'> Become
                                         Tutor</i></button>
-
                             </a>
                         </li>
                         <li>
                             <a href='findTutor' style='font-size:17px'>
                                 <button class="iconBorderClickRemoval" id="ft" style='font-size:20px'><i class='fas fa-search'> Find Tutor</i></button>
-
                             </a>
                         </li>
-
-
-
-
-
-
                     </div>
 
-
+                    <!-- Buttons at top-right navabar -->
                     <div class="topnav-right">
-
                         <li>
                             <a href='#' onclick="return false;" class="">
-                                <button class="iconBorderClickRemoval" id="post" style='font-size:20px'><i class='far fa-calendar-alt'></i></button>
-
+                                <button class="iconBorderClickRemoval" id="post" style='font-size:20px'><i class='far fa-calendar-plus'></i></button>
                             </a>
-
                         </li>
-
                         <li>
                             <a href='userProfile' class="ui item">
-                                <button class="iconBorderClickRemoval" id="profile"><i class='far fa-user' style="font-size:20px;"
-                                        id="edit"></i></button>
+                                <button class="iconBorderClickRemoval" id="profile"><i class='far fa-user' style="font-size:20px;" id="edit"></i></button>
                             </a>
-
                         </li>
                         <li>
                             <a href='/logout' class="">
-                                <button class="iconBorderClickRemoval" id="logout" style='font-size:20px'><i class='fas fa-sign-out-alt'></i></button>
-
+                                <button class="iconBorderClickRemoval" id="logout" style='font-size:20px'><i class='fas fa-power-off'></i></button>
                             </a>
-
                         </li>
 
                     </div>
-
-
-
-
-
                 </ul>
                 <a href='#' id='openup'>Tutor Buddy</a>
             </nav>
         </header>
-
     </div>
-
+    
     <!-- Post form -->
-
     <div class="container">
-
         <h1><b>Post Tutor Session</b></h1>
-        <!-- <p>Please select School, Subject, Course, Location, Date & Time.</p> -->
+       
         <hr>
-
-
         <!-- school dropdown -->
         <label for="school"><b>School</b></label>
         <div id="schoolDropDown">
             <select id="school" required>
-
                 <option value="UVic">University of Victoria</option>
-
             </select>
         </div>
-
         <!-- subject dropdown -->
         <label for="subject"><b>Subject</b></label>
         <div id="subjectDropDown">
@@ -119,7 +89,6 @@
 
             </select>
         </div>
-
         <!-- course dropdown -->
         <label for="course"><b>Course</b></label>
         <div id="courseDropDown">
@@ -130,25 +99,23 @@
 
         <!-- location dropdown -->
         <label for="location"><b>Location</b></label>
-
         <input id="location" type="text" placeholder="Type in Location" name="location" autocomplete="off" required>
 
         <!-- date dropdown -->
         <label for="date"><b>Date and Time</b></label>
+        <input type="datetime-local" name="text" id="dateTime" required>
 
-        <input type="datetime-local" name="dateTime" id="dateTime" required>
-      
+        <!-- Submit button-->
         <div class="clearfix">
-
             <button id="submitPost" name="submit" value="submit " class="postbtn"><b>Post</b></button>
         </div>
         <br>
-        <div class="extra">
-            <p style="font-size: 10pt;">Want to become a Tutor? <a class="ui item" href='becomeTutor'
-                    style="color:dodgerblue"><b>Become Tutor</b></a></p>
 
-            <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor'
-                    style="color:dodgerblue"><b>Find Tutor</b></a></p>
+        <!-- Find and Become tutor button at bottom of form-->
+        <div class="extra">
+            <p style="font-size: 10pt;">Want to become a Tutor? <a class="ui item" href='becomeTutor' style="color:dodgerblue"><b>Become Tutor</b></a></p>
+
+            <p style="font-size: 10pt;">Looking for a Tutor? <a class="ui item" href='findTutor' style="color:dodgerblue"><b>Find Tutor</b></a></p>
         </div>
 
     </div>

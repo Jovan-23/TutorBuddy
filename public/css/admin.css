@@ -1,0 +1,405 @@
+/* ----------------------------------------
+IMPORTED FONTS
+--------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,400i|Oswald|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans+Condensed:300|Open+Sans:400,400i|Oswald|Pacifico&display=swap');
+
+/* ----------------------------------------
+BODY
+--------------------------------------- */
+body {
+	font-family: "Raleway", sans-serif;
+	line-height: 1.9;
+}
+
+/* ----------------------------------------
+COLOURS
+--------------------------------------- */
+:root {
+	--primary-color: #b90415;
+	--primary-color-hover: #d3071b;
+	--secondary-color: #103063;
+	--secondary-color-hover: #143f85;
+	--light-color: #f4f4f4;
+}
+
+/* ----------------------------------------
+MAIN SHOWCASE
+ --------------------------------------- */
+ #adminShowcase {
+	 background: white !important;
+ }
+
+/* ----------------------------------------
+NAVIGATION BAR
+ --------------------------------------- */
+nav {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	height: auto;
+	width: 100%;
+	/*background-color: #e0e0e0f5!important; */
+	color: #eee;
+	position: fixed relative;
+	z-index: 1000;
+}
+
+/* For the title of the admin view on the navigation bar */
+#navTitle {
+	padding-left: 20px;
+}
+
+#navTitle:hover {
+	cursor: context-menu !important;
+}
+
+nav ul {
+	padding: 10px;
+	margin: 0;
+}
+
+/* Styles the navigation list items */
+nav li {
+	display: inline;
+	float: left;
+}
+
+.nav-colored {
+	background: white;
+}
+
+.nav-transparent {
+	background: transparent;
+}
+
+nav a {
+	font-size: 17px;
+	letter-spacing: 2.0px;
+	display: inline-block;
+	width: 190px;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 0;
+	color: #333;
+	text-decoration: none;
+}
+
+/* Size of the navigation title */
+#navTitle {
+	font-size: 24px;
+}
+
+/* Removes the underline from the nav title */
+#navTitle:hover {
+	text-decoration: none;
+}
+
+.navItemTitles {
+	font-size: 20px;
+}
+
+/*nav li:hover {
+	background-color: #444;
+}*/
+
+nav a#openup {
+	display: none;
+}
+
+/*-----------------------------------------
+ADDITIONAL NAVIGATION BAR INFORMATION
+ --------------------------------------- */
+ #mus2 {
+	background-color: white;
+}
+
+#signup {
+	background-color: transparent;
+}
+
+.topnav-right {
+	float: right;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #ccc;
+}
+
+#login {
+	background-color: transparent;
+	/* float: left; */
+}
+
+.cards {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: left;
+}
+
+/* ----------------------------------------
+NAVIGATION BAR: LOGIN BUTTON
+ --------------------------------------- */
+#visitSite {
+	width: 150px;
+    height: 43px;
+    padding: 0;
+    line-height: 43px;
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+	border: 1px solid black;
+	color: black;
+	background: transparent;
+	transition: all 0.5 linear;
+}
+
+#visitSite span {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#visitSite span::after {
+	content: '\279C';
+	position: absolute;
+	line-height: 43px;
+	transition: 0.5s;
+	opacity: 0;
+ }
+
+
+#visitSite:hover span {
+	padding-right: 25px;
+}
+
+#visitSite:hover span::after {
+	opacity: 1;
+	right: 0;
+}
+
+#visitSite:hover {
+	background: black;
+	color: white;
+	cursor: pointer;
+}
+
+#visitSite:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+/* Reduce button width, height font-size and spacing */
+@media screen and (max-width: 1100px) {
+	#visitSite {
+		width: 135px;
+		height: 41.5px;
+		font-size: 85%;
+	}	
+} 
+
+@media screen and (max-width: 800px) {
+	#visitSite {
+		width: 120px;
+		height: 40px;
+		font-size: 78.5%;
+		margin-left: 80px;
+	}	
+} 
+
+@media screen and (max-width: 680px) {
+	#visitSite {
+		margin-left: 0px;
+	}	
+} 
+
+/* ----------------------------------------
+NAVIGATION BAR: SIGN UP BUTTON
+ --------------------------------------- */
+ #logOutButton {
+	width: 150px;
+    height: 43px;
+    padding: 0;
+    line-height: 43px;
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+	border: 1px solid black;
+	color: black;
+	background: transparent;
+	transition: all 0.5 linear;
+ }
+
+ #logOutButton span {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#logOutButton span::after {
+	content: '\279C';
+	position: absolute;
+	line-height: 43px;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+#logOutButton:hover span {
+	padding-right: 25px;
+}
+
+#logOutButton:hover span::after {
+	opacity: 1;
+	right: 0;
+}
+
+#logOutButton:hover {
+	background: black;
+	color: white;
+	cursor: pointer;
+}
+
+#logOutButton:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+/* Reduce button width, height font-size and spacing */
+@media screen and (max-width: 1100px) {
+	#logOutButton {
+		width: 135px;
+		height: 41.5px;
+		font-size: 85%;
+	}	
+} 
+
+@media screen and (max-width: 800px) {
+	#logOutButton {
+		width: 120px;
+		height: 40px;
+		font-size: 78.5%;
+	}	
+} 
+
+/* ----------------------------------------
+BOTH PENDING AND CURRENT TUTORS
+ --------------------------------------- */
+/* Contains both pending and current tutors */
+ .allTutors {
+	width: 100%;
+}
+
+.wrapper {
+	float: left;
+	width: 50%;
+
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 2em;
+	padding-bottom: 2em;
+	display: block;
+}
+
+.innerWrapper {
+	margin-top: 1em;
+}
+
+.wrapper2 {
+	float: left;
+	width: 50%;
+
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 2em;
+	padding-bottom: 2em;
+	display: block;
+}
+
+@media screen and (max-width: 1050px) {
+	.wrapper {
+		display: none;
+	}
+}
+
+
+/* ----------------------------------------
+NAVIGATION BAR: MEDIA QUERIES
+ --------------------------------------- */
+ @media screen and (max-width: 680px) {
+	.hide-on-small {
+		display: none;
+	}
+	#showcase {}
+	#showcase .container {
+		margin-top: 15vh;
+	}
+	#showcase h1 {
+		font-size: 3rem;
+	}
+	#showcase h2 {
+		font-size: 1.5rem;
+	}
+	nav {
+		height: auto;
+		border-bottom: 0;
+		background-color: white;
+	}
+	nav ul {
+		display: none;
+		height: auto;
+	}
+	nav li {
+		width: 100%;
+		float: left;
+		position: relative;
+	}
+	nav a {
+		text-align: left;
+		width: 100%;
+		text-indent: 25px;
+		background: #fff!important;
+		border-bottom: 1px solid #555;
+	}
+	nav a#openup:after {
+		content: '|||';
+		transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		/* IE 9 */
+		-webkit-transform: rotate(-90deg);
+		/* Safari and Chrome */
+		height: 30px;
+		display: inline-block;
+		position: absolute;
+		right: 5px;
+		top: 20px;
+	}
+	nav a#openup {
+		display: block;
+		background-color: #333;
+		width: 100%;
+		position: relative;
+	}
+}
+
+.cf:before,
+.cf:after {
+	content: '';
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.cf {
+	zoom: 1;
+}
