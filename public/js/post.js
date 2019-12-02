@@ -8,15 +8,19 @@ $(document).ready(() => {
     url: "/getApprCourseInfo",
     dataType: "json",
     success: function (data1) {
-      console.log(data1);
-      let jsonstr={"subject":"",}
-        let data2={"subject":data1.data[0].subject,"course":[data1.data[0].course]};
+        console.log(data1);
+        if(data1.data!="none"){
+            console.log(data1);
+            let jsonstr={"subject":"",}
+              let data2={"subject":data1.data[0].subject,"course":[data1.data[0].course]};
+            
+              let data={"data":[data2]};
+        }else{
+            let data2={"subject":"","course":""};
+            let data={"data":[data2]};
+        }
       
-        let data={"data":[data2]};
-
-
-
-         console.log(data);
+       
       
         $("#subject").html('');
         $("#course").html('');

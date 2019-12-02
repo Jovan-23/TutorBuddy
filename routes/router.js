@@ -2,31 +2,33 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const credentials = require('./credentials.js');
+const postsession = require('./postSession.js');
 const tutorsession = require('./tutorsession.js');
-const DB = require('../modules/db.js');
+const tutorAppSession = require('./tutorAppSession.js');
+const courseHelper = require('./course.js');
 const adminSession = require('./adminSession.js');
-// for email notification
-const nodemailer = require('nodemailer');
 
-//  sender
-let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'tutorbuddy2019@gmail.com', // generated ethereal user
-      pass: 'tutor2019' // generated ethereal password
-    }
-});
 
+/**
+ * show index page
+ */
 router.get('/', (req, res) => {
     res.render('index');
 })
+/**
+ * show find tutor page
+ */
+router.get('/findTutor', (req, res) => {    
+    res.render('findTutor');
+})
 
+/**
+ * show user profile page
+ */
+router.get('/userProfile', (req, res) => {
+    res.render('userProfile');
+})
 
-router.post('/clogin', credentials.doLogin);
-router.post('/csignup', credentials.doRegister);
-router.get('/signUp', credentials.showRegister);
-router.get('/login', credentials.showLogin);
-router.get('/logout', credentials.logout);
 
 // get user booked sessions
 router.get('/getSessions', tutorsession.getTutorSessions);
@@ -45,104 +47,6 @@ router.get('/getAdminSession', adminSession.getAdminSession);
 router.post('/updateAdminSession', adminSession.updateAdminSession);
 router.post('/deleteTutor', adminSession.deleteTutor);
 
-
-router.get('/findTutor', (req, res) => {    
-        res.render('findTutor');
-})
-
-
-
-router.get('/post', (req, res) => {
-    res.render('post');
-})
-
-router.post('/doPost', (req, res) => {
-    
-    let reqData = req.body;
-     reqData.tutorEmail = req.session.userinfo.email;
-     reqData.tutorName = req.session.userinfo.username;
-    let email = req.session.userinfo.email;
-    let subject= req.body.subject;
-    let course=req.body.course;
-    let school=req.body.school;
-   
-
-   
-    
-
-
-    DB.find('TutorApplication', { email,school,subject,course}, (err, data) => {
-        if (err) throw err;
-       
-      
-        if (data.length ==1&&data[0].status=="accepted") {
-            console.log("accepted");
-            reqData.Rate=data[0].Rate;
-           
-            DB.insert('PostedSession', reqData, (err, data) => {
-              
-                if (!err) {
-                    res.json({ "post": "ok" })
-                } else {
-                    res.json({ "post": "fail" })
-                }
-            })
-           
-            return;
-        } else {
-           
-        }
-    })
-
-    
-   
-})
-router.get('/becomeTutor', (req, res) => {
-    res.render('becomeTutor');
-})
-
-
-router.post('/tutorApp', (req, res) => {
-   
-    let dataInfo = req.body;
-    dataInfo.email = req.session.userinfo.email;
-    dataInfo.tutorName = req.session.userinfo.username;
-
-    DB.insert('TutorApplication', dataInfo, (err, data) => {
-        if (!err) {
-            // send mail with defined transport object
-            let mailOption = {
-                from: 'tutorbuddy2019@gmail.com', // sender address
-                to: 'tutorbuddy2019@gmail.com', // list of receivers
-                subject: "TutorBuddy - New Application", // Subject line
-                text: "New Application",
-                html: '<p>You have received a new tutor application!</p> ' +
-                        '<h3>Tutor Application Information</h3> <ul> ' + '<li>Tutor Name: '  + req.session.userinfo.username +'</li>' + 
-                        '<li>Tutor Email: '  + req.session.userinfo.email +'</li>' + '<li>School: '  + dataInfo.school +' </li> ' + 
-                        ' <li>Subject: ' + dataInfo.subject + '</li> <li>Course: ' + dataInfo.course + '</li> '+
-                        ' <li>Education: ' + dataInfo.education + '</li> <li>GPA: ' + dataInfo.GPA + '</li> <li>Rate: ' + dataInfo.Rate + '</li></ul> '  // html body
-            };
-            // send the email
-            transporter.sendMail(mailOption, function(err, data) {
-                if(err) {
-                    console.log("Sending Email failed: ", err);
-                } else {
-                    console.log("Email Sent!");
-                }
-            });
-            res.json({ "apply": "ok" })
-        } else {
-            res.json({ "apply": "fail" })
-        }
-    })
-});
-
-
-
-router.get('/userProfile', (req, res) => {
-    res.render('userProfile');
-})
-
 // administrator view index page
 router.get('/admin', (req, res) => {
     res.render('admin');
@@ -158,37 +62,56 @@ router.get('/currentTutors', (req, res) => {
     res.render('currentTutors');
 })
 
-router.get('/getCourseInfo', (req, res) => {
 
-    
-    DB.find('Course',{} , (err, data) => {
-        if (err) throw err;
-       
-        if (data.length <= 0) {
-            console.log("error");
-            return;
-        } else {
-           res.json({"data":data})
-        }
-    })
-})
+/**
+ * user login
+ */
+router.post('/clogin', credentials.doLogin);
+/**
+ * user register
+ */
+router.post('/csignup', credentials.doRegister);
+/**
+ * show register page
+ */
+router.get('/signUp', credentials.showRegister);
+/**
+ * show login page
+ */
+router.get('/login', credentials.showLogin);
+/**
+ * user logout
+ */
+router.get('/logout', credentials.logout);
 
-router.get('/getApprCourseInfo', (req, res) => {
 
-    let reqData={"email":req.session.userinfo.email,"status":"accepted"};
-    DB.find('TutorApplication',reqData , (err, data) => {
-        if (err) throw err;
-       
-        console.log(data);
-        if (data.length <= 0) {
-          
-            res.json({"data":"none"});
-        } else {
-           res.json({"data":data})
-        }
-     
-    })
-})
+/**
+ * show tutor application page
+ */
+router.get('/becomeTutor',tutorAppSession.showTutorApp )
+
+/**
+ * do tutor application page
+ */
+router.post('/tutorApp',tutorAppSession.doTutorApp );
+
+/**
+ * show post session page
+ */
+router.get('/post', postsession.showPost);
+/**
+ * tutor post session
+ */
+router.post('/doPost', postsession.doPost );
+
+/**
+ * get course info
+ */
+router.get('/getCourseInfo',courseHelper.showCourseInfo );
+/**
+ * get approval course info
+ */
+router.get('/getApprCourseInfo', courseHelper.showApprCourseInfo);
 
 
 module.exports = router;

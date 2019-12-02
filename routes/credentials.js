@@ -1,5 +1,7 @@
 const DB = require('../modules/db.js');
-
+/**
+ * user register
+ */
 exports.doRegister = (req, res) => {
    
     let username = req.body.username;
@@ -30,7 +32,9 @@ exports.doRegister = (req, res) => {
         }
     })
 }
-
+/**
+ * user login
+ */
 exports.doLogin = (req, res) => {
    
     let email = req.body.email;
@@ -48,16 +52,22 @@ exports.doLogin = (req, res) => {
         }
     })
 }
-
+/**
+ * show register page
+ */
 exports.showRegister = (req, res) => {
     res.render('signUp');
 }
-
+/**
+ * show login page
+ */
 exports.showLogin = (req, res) => {
     res.render('login');
 }
 
-
+/**
+ * user logout
+ */
 exports.logout = (req, res) => {
     req.session.destroy((err) => {
         if (err) {
