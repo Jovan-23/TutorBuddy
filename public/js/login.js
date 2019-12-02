@@ -1,10 +1,9 @@
 // user login username, password
 $(document).ready(() => {
-  
+    /**
+     * user login
+     */
     $("#submitIN").click(() => {
-
-     
-
         /** Server request that saves user info to database */
         $.ajax({
           type: "post",
@@ -24,6 +23,7 @@ $(document).ready(() => {
               }
 
             } else{
+              alert("login fail");
               console.log(data.login);
             }
         }

@@ -53,7 +53,9 @@ function selectCourse() {
 
 $(document).ready(() => {
 
-    
+    /**
+     * get course info
+     */
     $.ajax({
         type: "get",
         url: "/getCourseInfo",
@@ -61,25 +63,25 @@ $(document).ready(() => {
         success: function (data) {
             $("#subject").html('');
             $("#course").html('');
-           
+
             for (let index = 0; index < data.data.length; index++) {
                 const element1 = data.data[index];
                 $("#subject").append('<option value="' + element1.subject + '">' + element1.subject + '</option>');
-                if(index==0){
+                if (index == 0) {
                     for (let index = 0; index < element1.course.length; index++) {
                         const element = element1.course[index];
                         $("#course").append('<option value="' + element + '">' + element + '</option>');
-    
+
                     }
 
                 }
-                
+
 
             }
 
-
-
-
+            /**
+             * set subject and course listener
+             */
             $("#subject").change(function () {
                 for (let index = 0; index < data.data.length; index++) {
                     const element1 = data.data[index];
@@ -94,7 +96,7 @@ $(document).ready(() => {
                     }
 
                 }
-               
+
             })
 
         }
@@ -110,14 +112,28 @@ $(document).ready(() => {
 
 
 
-
+    /**
+     * post request for tutor application
+     */
     $("#submitApp").click(() => {
-        if($("#education").val()==""||$("#school").val()==""||$("#subject").val()==""||$("#course").val()==""||$("#GPA").val()==""||$("#Rate").val()==""){
+        if ($("#education").val() == "" || $("#school").val() == "" || $("#subject").val() == "" || $("#course").val() == "" || $("#GPA").val() == "" || $("#Rate").val() == "") {
             alert("please fill out form");
             return;
         }
-        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending","Rate":$("#Rate").val() };
-       
+        if ($("#GPA").val() < 2.0 || $("#GPA").val() > 4.0) {
+            $("#GPA").val(" ");
+            alert("please enter the GPA again");
+            return;
+        }
+
+        if ($("#Rate").val() <= 11 || $("#Rate").val() >= 30) {
+            $("#Rate").val(" ");
+            alert("please enter the rate again");
+            return;
+
+        }
+        let app = { "education": $("#education").val(), "school": $("#school").val(), "subject": $("#subject").val(), "course": $("#course").val(), "GPA": $("#GPA").val(), "status": "pending", "Rate": $("#Rate").val() };
+
         /** Server request that saves user info to database */
         $.ajax({
             type: "post",
@@ -128,6 +144,10 @@ $(document).ready(() => {
                 console.log(data);
                 if (data.apply == "ok") {
                     window.location.href = "/userProfile";
+                } else if (data.apply == "application existing") {
+                    alert("application existing");
+                } else {
+                    alert("apply fail");
                 }
             }
 
