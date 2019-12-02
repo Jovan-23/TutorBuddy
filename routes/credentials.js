@@ -3,7 +3,7 @@ const DB = require('../modules/db.js');
  * user register
  */
 exports.doRegister = (req, res) => {
-   
+
     let username = req.body.username;
     let email = req.body.email;
     let password = req.body.password;
@@ -13,7 +13,7 @@ exports.doRegister = (req, res) => {
         if (err) throw err;
 
         if (data.length > 0) {
-            console.log("email taken");
+            res.json({ "signup": "email taken" });
             //email taken
             return;
         } else {
@@ -36,19 +36,20 @@ exports.doRegister = (req, res) => {
  * user login
  */
 exports.doLogin = (req, res) => {
-   
+
     let email = req.body.email;
     let password = req.body.password;
 
     DB.find('users', { email, password }, (err, data) => {
         if (err) throw err;
-        
+
         if (data.length > 0) {
             req.session.userinfo = data[0];
             req.app.locals['userinfo'] = data[0];
             res.json({ "login": "ok" })
+
         } else {
-            console.log("login fail");
+            res.json({"login":"fail"});
         }
     })
 }

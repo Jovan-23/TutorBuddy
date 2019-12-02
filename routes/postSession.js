@@ -21,7 +21,16 @@ exports.doPost = (req, res) => {
     let school=req.body.school;
 
     DB.find('TutorApplication', { email,school,subject,course}, (err, data) => {
+        console.log(data);
         if (err) throw err;
+        if(data.length==0){
+            res.json({"post":"submit application"});
+            return;
+        }
+        if(data.length==1&&data[0].status=="pending"){
+            res.json({"post":"application pending"});
+            return;
+        }
         if (data.length ==1&&data[0].status=="accepted") {
             console.log("accepted");
             reqData.Rate=data[0].Rate;
@@ -36,8 +45,6 @@ exports.doPost = (req, res) => {
             })
            
             return;
-        } else {
-           
         }
     })
 
