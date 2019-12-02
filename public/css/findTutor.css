@@ -265,6 +265,7 @@ hr {
 
 button {
     background-color: #f1f1f1;
+    margin: 8px 0;
     border: none;
     cursor: pointer;
     opacity: 0.9;
