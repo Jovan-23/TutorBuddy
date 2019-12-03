@@ -32,7 +32,7 @@ exports.updateAdminSession = (req, res) => {
                     '<p>Congratulations! Here are the informaton of the approved course: </p> ' + 
                     '<ul> <li>School: '  + req.body.school +' </li> ' + 
                         ' <li>Subject: ' + req.body.subject + '</li> <li>Course: ' + req.body.course + '</li></ul>'
-                    + '<p> Go ahead and post your first tutoring session with TutorBody! </p>' +
+                    + '<p> Go ahead and post your first tutoring session with TutorBuddy! </p>' +
                     '<p>Thank you,<br/>TutorBuddy</p>'
             };
         // send the email
